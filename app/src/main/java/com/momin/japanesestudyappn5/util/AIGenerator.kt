@@ -39,16 +39,16 @@ object AIGenerator {
             var conn: HttpURLConnection? = null
             try {
                 val modelName = when (attempt) {
-                    0 -> "gemini-2.0-flash"
-                    1 -> "gemini-2.5-flash"
-                    else -> "gemini-1.5-flash"
+                    0 -> "gemini-2.5-flash"
+                    1 -> "gemini-1.5-pro"
+                    else -> "gemini-2.5-pro"
                 }
                 val url = URL("https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$resolvedApiKey")
                 conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "POST"
                 conn.setRequestProperty("Content-Type", "application/json; charset=utf-8")
-                conn.connectTimeout = 12000
-                conn.readTimeout = 12000
+                conn.connectTimeout = 15000
+                conn.readTimeout = 15000
                 conn.doOutput = true
                 conn.doInput = true
 
@@ -75,7 +75,7 @@ object AIGenerator {
                 os.close()
 
                 val responseCode = conn.responseCode
-                Log.d("AIGenerator", "Response Code: $responseCode")
+                Log.d("AIGenerator", "Response Code ($modelName): $responseCode")
 
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     val stream = conn.inputStream
@@ -94,11 +94,11 @@ object AIGenerator {
                 } else {
                     val stream = conn.errorStream ?: conn.inputStream
                     val errorText = stream?.bufferedReader()?.use { it.readText() } ?: ""
-                    Log.e("AIGenerator", "Error code: $responseCode, body: $errorText")
+                    Log.e("AIGenerator", "Error code ($modelName): $responseCode, body: $errorText")
                     
                     if (responseCode == 429) {
-                        Log.w("AIGenerator", "Rate limited (429). Waiting before retry...")
-                        kotlinx.coroutines.delay(2000L * (attempt + 1))
+                        Log.w("AIGenerator", "Rate limited (429). Waiting 4 seconds before retry...")
+                        kotlinx.coroutines.delay(4000L)
                     }
                     
                     val parsedMessage = if (errorText.isNotEmpty()) {
