@@ -48,9 +48,6 @@ object AIGenerator {
                 conn.requestMethod = "POST"
                 conn.setRequestProperty("Content-Type", "application/json; charset=utf-8")
                 conn.setRequestProperty("x-goog-api-key", resolvedApiKey)
-                if (resolvedApiKey.startsWith("AQ.")) {
-                    conn.setRequestProperty("Authorization", "Bearer $resolvedApiKey")
-                }
                 conn.connectTimeout = 15000
                 conn.readTimeout = 15000
                 conn.doOutput = true
