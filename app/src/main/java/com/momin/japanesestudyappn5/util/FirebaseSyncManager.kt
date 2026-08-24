@@ -567,7 +567,9 @@ object FirebaseSyncManager {
                     Log.e(TAG, "setupBanListener snapshot listener: Fetched geminiApiKey='$geminiApiKey'")
                     if (geminiApiKey.isNotEmpty()) {
                         prefs.edit().putString("gemini_api_key", geminiApiKey).apply()
-                        Log.e(TAG, "setupBanListener snapshot listener: Saved geminiApiKey to SharedPreferences")
+                        Log.e(TAG, "setupBanListener snapshot listener: Saved custom geminiApiKey to SharedPreferences")
+                    } else {
+                        refreshSystemAiKey(context)
                     }
                 } else if (snapshot != null && !snapshot.exists()) {
                     Log.e(TAG, "setupBanListener snapshot listener: Snapshot does not exist! Suspending access.")
