@@ -4,16 +4,19 @@ plugins {
   alias(libs.plugins.kotlin.serialization)
 }
 
-// Dynamic Auto-Versioning helper using Gradle Providers for Configuration Cache compatibility
-val gitCommitCountProvider = providers.exec {
-    commandLine("git", "rev-list", "--count", "HEAD")
-    isIgnoreExitValue = true
-}.standardOutput.asText.map { out ->
-    out.trim().toIntOrNull() ?: 10
-}.orElse(10)
+// Dynamic Auto-Versioning helper using Gradle Providers with fail-safe fallback
+val autoVersionCode: Int = try {
+    providers.exec {
+        commandLine("git", "rev-list", "--count", "HEAD")
+        isIgnoreExitValue = true
+    }.standardOutput.asText.map { out ->
+        out.trim().toIntOrNull() ?: 12
+    }.getOrElse(12)
+} catch (t: Throwable) {
+    12
+}
 
-val autoVersionCode = gitCommitCountProvider.get()
-val autoVersionName = "2.0.${gitCommitCountProvider.get()}"
+val autoVersionName: String = "2.0.$autoVersionCode"
 
 android {
     namespace = "com.momin.japanesestudyappn5"
