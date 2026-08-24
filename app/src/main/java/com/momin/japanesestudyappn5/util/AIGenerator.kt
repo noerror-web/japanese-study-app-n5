@@ -38,7 +38,11 @@ object AIGenerator {
         while (attempt < maxRetries) {
             var conn: HttpURLConnection? = null
             try {
-                val modelName = if (attempt == 0) "gemini-2.5-flash" else "gemini-2.5-pro"
+                val modelName = when (attempt) {
+                    0 -> "gemini-3.6-flash"
+                    1 -> "gemini-2.5-flash"
+                    else -> "gemini-2.5-pro"
+                }
                 val url = URL("https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$resolvedApiKey")
                 conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "POST"
