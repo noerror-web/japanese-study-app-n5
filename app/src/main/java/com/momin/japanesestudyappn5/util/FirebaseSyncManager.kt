@@ -245,32 +245,49 @@ object FirebaseSyncManager {
                         }
 
                         Log.e(TAG, "validateLicenseKey: Key validation succeeded. isAdmin = $isAdmin")
-                        val geminiApiKey = (document.getString("gemini_api_key") ?: document.getString("geminiApiKey") ?: "").trim()
-                        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-                        val editor = prefs.edit()
-                            .putString("validated_license_key", cleanKey)
-                            .putBoolean("is_admin_mode", isAdmin)
-                            .putBoolean("offline_mode", false)
-                        if (geminiApiKey.isNotEmpty()) {
-                            editor.putString("gemini_api_key", geminiApiKey)
-                        } else {
-                            editor.remove("gemini_api_key")
-                        }
-                        editor.apply()
+                        val dbInst = FirebaseFirestore.getInstance()
+                        val hasDefaultAiAccess = document.getBoolean("hasDefaultAiAccess") == true || document.getBoolean("has_default_ai_access") == true || isAdmin
+                        var geminiApiKey = (document.getString("gemini_api_key") ?: document.getString("geminiApiKey") ?: "").trim()
 
-                        // Restore any existing progress data
-                        val progress = document.get("progress") as? Map<*, *>
-                        if (progress != null) {
-                            applyRestoredData(context, cleanKey, progress, geminiApiKey)
-                        } else {
-                            // If first launch, push current progress to cloud
-                            pushProgress(context)
+                        fun finalizeSave(finalKey: String) {
+                            val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                            val editor = prefs.edit()
+                                .putString("validated_license_key", cleanKey)
+                                .putBoolean("is_admin_mode", isAdmin)
+                                .putBoolean("offline_mode", false)
+                            if (finalKey.isNotEmpty()) {
+                                editor.putString("gemini_api_key", finalKey)
+                            } else {
+                                editor.remove("gemini_api_key")
+                            }
+                            editor.apply()
+
+                            val progress = document.get("progress") as? Map<*, *>
+                            if (progress != null) {
+                                applyRestoredData(context, cleanKey, progress, finalKey)
+                            } else {
+                                pushProgress(context)
+                            }
+
+                            _isBanned.value = false
+                            setupBanListener(context)
+                            setupSharedPreferenceListener(context)
+                            onSuccess(isAdmin)
                         }
 
-                        _isBanned.value = false
-                        setupBanListener(context)
-                        setupSharedPreferenceListener(context)
-                        onSuccess(isAdmin)
+                        if (geminiApiKey.isEmpty() && hasDefaultAiAccess) {
+                            dbInst.collection("system_config").document("ai_settings")
+                                .get()
+                                .addOnSuccessListener { aiDoc ->
+                                    val defaultKey = aiDoc?.getString("default_gemini_api_key")?.trim() ?: ""
+                                    finalizeSave(defaultKey)
+                                }
+                                .addOnFailureListener {
+                                    finalizeSave("")
+                                }
+                        } else {
+                            finalizeSave(geminiApiKey)
+                        }
                     } else {
                         // Check secondary "admin_keys" collection online if key wasn't in "licenses"
                         db.collection("admin_keys").document(cleanKey)
