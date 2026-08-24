@@ -1,0 +1,176 @@
+[
+  {
+    "japanese": "切ります",
+    "furigana": "きります",
+    "bangla": "কাটা/কেটে টুকরো টুকরো করা",
+    "english": "to cut"
+  },
+  {
+    "japanese": "送ります",
+    "furigana": "おくります",
+    "bangla": "পাঠানো",
+    "english": "to send"
+  },
+  {
+    "japanese": "あげます",
+    "furigana": "あげます",
+    "bangla": "দেওয়া",
+    "english": "to give"
+  },
+  {
+    "japanese": "もらいます",
+    "furigana": "もらいます",
+    "bangla": "পাওয়া/নেওয়া",
+    "english": "to receive"
+  },
+  {
+    "japanese": "貸します",
+    "furigana": "かします",
+    "bangla": "ধার দেওয়া",
+    "english": "to lend"
+  },
+  {
+    "japanese": "借ります",
+    "furigana": "かります",
+    "bangla": "ধার নেওয়া/ধার করা",
+    "english": "to borrow"
+  },
+  {
+    "japanese": "教えます",
+    "furigana": "おしえます",
+    "bangla": "শেখানো/শিক্ষাদান করা",
+    "english": "to teach"
+  },
+  {
+    "japanese": "習います",
+    "furigana": "ならいます",
+    "bangla": "শেখা",
+    "english": "to learn"
+  },
+  {
+    "japanese": "電話をかけます",
+    "furigana": "でんわをかけます",
+    "bangla": "[ফোন] করা",
+    "english": "to make a phone call"
+  },
+  {
+    "japanese": "手",
+    "furigana": "て",
+    "bangla": "হাত",
+    "english": "hand"
+  },
+  {
+    "japanese": "はし",
+    "furigana": "はし",
+    "bangla": "চপস্টিক (জাপানিরা আহারে ব্যবহার করে এমন কাঠি)",
+    "english": "chopsticks"
+  },
+  {
+    "japanese": "スプーン",
+    "furigana": "すぷーん",
+    "bangla": "চামচ",
+    "english": "spoon"
+  },
+  {
+    "japanese": "ナイフ",
+    "furigana": "ないふ",
+    "bangla": "ছুরি",
+    "english": "knife"
+  },
+  {
+    "japanese": "フォーク",
+    "furigana": "ふぉーく",
+    "bangla": "কাঁটাচামচ",
+    "english": "fork"
+  },
+  {
+    "japanese": "はさみ",
+    "furigana": "はさみ",
+    "bangla": "কাঁচি",
+    "english": "scissors"
+  },
+  {
+    "japanese": "パソコン",
+    "furigana": "ぱそこん",
+    "bangla": "(ব্যক্তিগত) কম্পিউটার",
+    "english": "personal computer"
+  },
+  {
+    "japanese": "ケータイ",
+    "furigana": "けーたい",
+    "bangla": "মোবাইল ফোন",
+    "english": "mobile phone"
+  },
+  {
+    "japanese": "メール",
+    "furigana": "めーる",
+    "bangla": "ই-মেইল",
+    "english": "email"
+  },
+  {
+    "japanese": "年賀状",
+    "furigana": "ねんがじょう",
+    "bangla": "নববর্ষের কার্ড",
+    "english": "New Year's card"
+  },
+  {
+    "japanese": "パンチ",
+    "furigana": "ぱんち",
+    "bangla": "(কাগজ ফুটো করার) পাঞ্চ মেশিন",
+    "english": "hole puncher"
+  },
+  {
+    "japanese": "ホッチキス",
+    "furigana": "ほっちきす",
+    "bangla": "স্ট্যাপলার",
+    "english": "stapler"
+  },
+  {
+    "japanese": "セロテープ",
+    "furigana": "せろてーぷ",
+    "bangla": "স্কচটেপ",
+    "english": "scotch tape"
+  },
+  {
+    "japanese": "消しゴム",
+    "furigana": "けしごむ",
+    "bangla": "রাবার/ইরেজার",
+    "english": "eraser"
+  },
+  {
+    "japanese": "紙",
+    "furigana": "かみ",
+    "bangla": "কাগজ",
+    "english": "paper"
+  },
+  {
+    "japanese": "花",
+    "furigana": "はな",
+    "bangla": "ফুল",
+    "english": "flower"
+  },
+  {
+    "japanese": "シャツ",
+    "furigana": "しゃつ",
+    "bangla": "শার্ট",
+    "english": "shirt"
+  },
+  {
+    "japanese": "プレゼント",
+    "furigana": "ぷれぜんと",
+    "bangla": "উপহার",
+    "english": "present/gift"
+  },
+  {
+    "japanese": "荷物",
+    "furigana": "にもつ",
+    "bangla": "মালপত্র, পার্সেল",
+    "english": "luggage/package"
+  },
+  {
+    "japanese": "お金",
+    "furigana": "おかね",
+    "bangla": "টাকা (অর্থ)",
+    "english": "money"
+  }
+]

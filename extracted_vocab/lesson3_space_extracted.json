@@ -1,0 +1,152 @@
+[
+  {
+    "japanese": "地下",
+    "furigana": "ちか",
+    "bangla": "পাতাল/ভূগর্ভস্থ",
+    "english": "Underground/Basement"
+  },
+  {
+    "japanese": "–階",
+    "furigana": "–かい (がい)",
+    "bangla": "–তলা",
+    "english": "–floor (counter for floors)"
+  },
+  {
+    "japanese": "何階*",
+    "furigana": "なんがい",
+    "bangla": "কয় তলা",
+    "english": "What floor?"
+  },
+  {
+    "japanese": "–円",
+    "furigana": "–えん",
+    "bangla": "–ইয়োন",
+    "english": "–Yen"
+  },
+  {
+    "japanese": "いくら",
+    "furigana": "いくら",
+    "bangla": "দাম কত",
+    "english": "How much (price)?"
+  },
+  {
+    "japanese": "百",
+    "furigana": "ひゃく",
+    "bangla": "শত",
+    "english": "Hundred"
+  },
+  {
+    "japanese": "千",
+    "furigana": "せん",
+    "bangla": "হাজার",
+    "english": "Thousand"
+  },
+  {
+    "japanese": "万",
+    "furigana": "まん",
+    "bangla": "দশ হাজার",
+    "english": "Ten thousand"
+  },
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅうC",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C / Exercise C"
+  },
+  {
+    "japanese": "すみません。",
+    "furigana": "すみません",
+    "bangla": "এই যে শুনেছেন। (কাউকে ডাকার জন্য)",
+    "english": "Excuse me. (to call someone)"
+  },
+  {
+    "japanese": "どうも。",
+    "furigana": "どうも",
+    "bangla": "ধন্যবাদ",
+    "english": "Thanks."
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "いらっしゃいませ。",
+    "furigana": "いらっしゃいませ",
+    "bangla": "স্বাগতম/কী লাগবে?/কী খুঁজছেন? (দোকানে ক্রেতাকে স্বাগত জানানোর সম্ভাষণ)",
+    "english": "Welcome/May I help you?/What are you looking for? (greeting to a customer in a shop)"
+  },
+  {
+    "japanese": "[〜を]見せてください。",
+    "furigana": "[〜を]みせてください",
+    "bangla": "অনুগ্রহ করে [~টা] দেখান",
+    "english": "Please show [~]."
+  },
+  {
+    "japanese": "じゃ",
+    "furigana": "じゃ",
+    "bangla": "তাহলে/ঠিক আছে/আচ্ছা",
+    "english": "Well then/Okay/Alright"
+  },
+  {
+    "japanese": "[〜を]ください。",
+    "furigana": "[〜を]ください",
+    "bangla": "অনুগ্রহ করে [~টা] দিন",
+    "english": "Please give me [~]."
+  },
+  {
+    "japanese": "イタリア",
+    "furigana": "イタリア",
+    "bangla": "ইতালি",
+    "english": "Italy"
+  },
+  {
+    "japanese": "スイス",
+    "furigana": "スイス",
+    "bangla": "সুইজারল্যান্ড",
+    "english": "Switzerland"
+  },
+  {
+    "japanese": "フランス",
+    "furigana": "フランス",
+    "bangla": "ফ্রান্স",
+    "english": "France"
+  },
+  {
+    "japanese": "ジャカルタ",
+    "furigana": "ジャカルタ",
+    "bangla": "জাকার্তা",
+    "english": "Jakarta"
+  },
+  {
+    "japanese": "バンコク",
+    "furigana": "バンコク",
+    "bangla": "ব্যাংকক",
+    "english": "Bangkok"
+  },
+  {
+    "japanese": "ベルリン",
+    "furigana": "ベルリン",
+    "bangla": "বার্লিন",
+    "english": "Berlin"
+  },
+  {
+    "japanese": "新大阪",
+    "furigana": "しんおおさか",
+    "bangla": "শিন্ওসাকা (ওসাকা-র একটি রেলস্টেশনের নাম)",
+    "english": "Shin-Osaka (name of a train station in Osaka)"
+  },
+  {
+    "japanese": "地下1階",
+    "furigana": "ちかいっかい",
+    "bangla": "রেস্টুরেন্ট",
+    "english": "1st basement floor (Restaurant)"
+  },
+  {
+    "japanese": "地下2階",
+    "furigana": "ちかにかい",
+    "bangla": "পার্কিং",
+    "english": "2nd basement floor (Parking)"
+  }
+]

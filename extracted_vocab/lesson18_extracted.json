@@ -1,0 +1,128 @@
+[
+  {
+    "japanese": "できます",
+    "furigana": "できます",
+    "bangla": "পারা (কিছু করতে)",
+    "english": "to be able to"
+  },
+  {
+    "japanese": "洗います",
+    "furigana": "あらいます",
+    "bangla": "ধোয়া/ধৌত করা",
+    "english": "to wash"
+  },
+  {
+    "japanese": "弾きます",
+    "furigana": "ひきます",
+    "bangla": "বাজানো (তারযুক্ত বাদ্যযন্ত্র, পিয়ানো ইত্যাদি)",
+    "english": "to play (a string instrument/piano)"
+  },
+  {
+    "japanese": "歌います",
+    "furigana": "うたいます",
+    "bangla": "গাওয়া",
+    "english": "to sing"
+  },
+  {
+    "japanese": "集めます",
+    "furigana": "あつめます",
+    "bangla": "সংগ্রহ করা/জমানো",
+    "english": "to collect/gather"
+  },
+  {
+    "japanese": "捨てます",
+    "furigana": "すてます",
+    "bangla": "ফেলে দেওয়া",
+    "english": "to throw away"
+  },
+  {
+    "japanese": "換えます",
+    "furigana": "かえます",
+    "bangla": "পরিবর্তন করা/বদলানো",
+    "english": "to exchange/change"
+  },
+  {
+    "japanese": "運転します",
+    "furigana": "うんてんします",
+    "bangla": "গাড়ি বা মেশিন চালানো",
+    "english": "to drive/operate"
+  },
+  {
+    "japanese": "予約します",
+    "furigana": "よやくします",
+    "bangla": "বুকিং দেওয়া/রিজার্ভেশন করা",
+    "english": "to reserve/book"
+  },
+  {
+    "japanese": "ピアノ",
+    "furigana": "ぴあの",
+    "bangla": "পিয়ানো",
+    "english": "piano"
+  },
+  {
+    "japanese": "メートル",
+    "furigana": "めーとる",
+    "bangla": "মিটার",
+    "english": "meter"
+  },
+  {
+    "japanese": "現金",
+    "furigana": "げんきん",
+    "bangla": "নগদ টাকা",
+    "english": "cash"
+  },
+  {
+    "japanese": "趣味",
+    "furigana": "しゅみ",
+    "bangla": "শখ",
+    "english": "hobby"
+  },
+  {
+    "japanese": "日記",
+    "furigana": "にっき",
+    "bangla": "ডায়েরি/দিনলিপি",
+    "english": "diary"
+  },
+  {
+    "japanese": "お祈り",
+    "furigana": "おいのり",
+    "bangla": "প্রার্থনা (~কে শিমাসু: প্রার্থনা করা)",
+    "english": "prayer (to pray)"
+  },
+  {
+    "japanese": "課長",
+    "furigana": "かちょう",
+    "bangla": "অফিসের শাখা প্রধান",
+    "english": "section manager"
+  },
+  {
+    "japanese": "部長",
+    "furigana": "ぶちょう",
+    "bangla": "অফিসের বিভাগীয় প্রধান",
+    "english": "department manager"
+  },
+  {
+    "japanese": "社長",
+    "furigana": "しゃちょう",
+    "bangla": "কোম্পানির প্রেসিডেন্ট বা প্রধান নির্বাহী",
+    "english": "president of a company/CEO"
+  },
+  {
+    "japanese": "動物",
+    "furigana": "どうぶつ",
+    "bangla": "পশু/প্রাণী",
+    "english": "animal"
+  },
+  {
+    "japanese": "馬",
+    "furigana": "うま",
+    "bangla": "ঘোড়া",
+    "english": "horse"
+  },
+  {
+    "japanese": "インターネット",
+    "furigana": "いんたーねっと",
+    "bangla": "ইন্টারনেট",
+    "english": "internet"
+  }
+]

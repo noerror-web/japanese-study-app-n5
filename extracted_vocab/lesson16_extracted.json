@@ -1,0 +1,176 @@
+[
+  {
+    "japanese": "乗ります",
+    "furigana": "のります",
+    "bangla": "চড়া [ট্রেনে~]",
+    "english": "To ride (a train, etc.)"
+  },
+  {
+    "japanese": "降ります",
+    "furigana": "おります",
+    "bangla": "নামা [ট্রেন থেকে~]",
+    "english": "To get off (a train, etc.)"
+  },
+  {
+    "japanese": "乗り換えます",
+    "furigana": "のりかえます",
+    "bangla": "পরিবর্তন করা (ট্রেন ইত্যাদি)",
+    "english": "To change (trains, etc.)"
+  },
+  {
+    "japanese": "浴びます",
+    "furigana": "あびます",
+    "bangla": "গোসল করা [শাওয়ার নেওয়া]",
+    "english": "To take (a shower)"
+  },
+  {
+    "japanese": "入れます",
+    "furigana": "いれます",
+    "bangla": "ভিতরে রাখা/ঢুকানো/ঢালা",
+    "english": "To put in"
+  },
+  {
+    "japanese": "出します",
+    "furigana": "だします",
+    "bangla": "বের করা/হাতে নেওয়া/পাঠানো",
+    "english": "To take out/send"
+  },
+  {
+    "japanese": "下ろします",
+    "furigana": "おろします",
+    "bangla": "উত্তোলন করা/উঠানো [টাকা~]",
+    "english": "To withdraw (money)"
+  },
+  {
+    "japanese": "入ります",
+    "furigana": "はいります",
+    "bangla": "ভর্তি হওয়া [বিশ্ববিদ্যালয়ে~]",
+    "english": "To enter (a university)"
+  },
+  {
+    "japanese": "出ます",
+    "furigana": "でます",
+    "bangla": "পাশ করা/বের হওয়া [বিশ্ববিদ্যালয় থেকে~]",
+    "english": "To graduate (from a university)"
+  },
+  {
+    "japanese": "押します",
+    "furigana": "おします",
+    "bangla": "চাপ দেওয়া",
+    "english": "To push"
+  },
+  {
+    "japanese": "飲みます",
+    "furigana": "のみます",
+    "bangla": "পান করা (এ্যালকোহল/মদ জাতীয় পানীয়)",
+    "english": "To drink (alcohol)"
+  },
+  {
+    "japanese": "始めます",
+    "furigana": "はじめます",
+    "bangla": "শুরু করা",
+    "english": "To start"
+  },
+  {
+    "japanese": "見学します",
+    "furigana": "けんがくします",
+    "bangla": "পরিদর্শন করা/শিক্ষার উদ্দেশ্যে দেখতে যাওয়া",
+    "english": "To tour/visit (for educational purposes)"
+  },
+  {
+    "japanese": "電話します",
+    "furigana": "でんわします",
+    "bangla": "টেলিফোন করা",
+    "english": "To make a phone call"
+  },
+  {
+    "japanese": "若い",
+    "furigana": "わかい",
+    "bangla": "কম বয়সী/তরুণ",
+    "english": "Young"
+  },
+  {
+    "japanese": "長い",
+    "furigana": "ながい",
+    "bangla": "লম্বা/দীর্ঘ",
+    "english": "Long"
+  },
+  {
+    "japanese": "短い",
+    "furigana": "みじかい",
+    "bangla": "খাটো",
+    "english": "Short"
+  },
+  {
+    "japanese": "明るい",
+    "furigana": "あかるい",
+    "bangla": "উজ্জ্বল",
+    "english": "Bright"
+  },
+  {
+    "japanese": "暗い",
+    "furigana": "くらい",
+    "bangla": "অন্ধকার",
+    "english": "Dark"
+  },
+  {
+    "japanese": "体",
+    "furigana": "からだ",
+    "bangla": "শরীর, স্বাস্থ্য",
+    "english": "Body/Health"
+  },
+  {
+    "japanese": "頭",
+    "furigana": "あたま",
+    "bangla": "মাথা",
+    "english": "Head"
+  },
+  {
+    "japanese": "髪",
+    "furigana": "かみ",
+    "bangla": "চুল",
+    "english": "Hair"
+  },
+  {
+    "japanese": "顔",
+    "furigana": "かお",
+    "bangla": "মুখমণ্ডল",
+    "english": "Face"
+  },
+  {
+    "japanese": "目",
+    "furigana": "め",
+    "bangla": "চোখ",
+    "english": "Eye"
+  },
+  {
+    "japanese": "耳",
+    "furigana": "みみ",
+    "bangla": "কান",
+    "english": "Ear"
+  },
+  {
+    "japanese": "鼻",
+    "furigana": "はな",
+    "bangla": "নাক",
+    "english": "Nose"
+  },
+  {
+    "japanese": "口",
+    "furigana": "くち",
+    "bangla": "মুখ",
+    "english": "Mouth"
+  },
+  {
+    "japanese": "歯",
+    "furigana": "は",
+    "bangla": "দাঁত",
+    "english": "Tooth"
+  },
+  {
+    "japanese": "おなか",
+    "furigana": "おなか",
+    "bangla": "পেট",
+    "english": "Stomach"
+  }
+]

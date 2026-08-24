@@ -1,0 +1,146 @@
+[
+  {
+    "japanese": "用事",
+    "furigana": "ようじ",
+    "bangla": "কাজ/কোনো করনীয় কাজ",
+    "english": "Errand/Business"
+  },
+  {
+    "japanese": "約束",
+    "furigana": "やくそく",
+    "bangla": "প্রতিজ্ঞা (~ [を] します: প্রতিজ্ঞা করা/কথা দেওয়া)",
+    "english": "Promise/Appointment"
+  },
+  {
+    "japanese": "アルバイト",
+    "furigana": "あるばいと",
+    "bangla": "খণ্ডকালীন কাজ (~を します: খণ্ডকালীন কাজ করা)",
+    "english": "Part-time job"
+  },
+  {
+    "japanese": "ご主人",
+    "furigana": "ごしゅじん",
+    "bangla": "অন্যের স্বামী",
+    "english": "Someone else's husband"
+  },
+  {
+    "japanese": "夫／主人",
+    "furigana": "おっと／しゅじん",
+    "bangla": "নিজের স্বামী",
+    "english": "My husband"
+  },
+  {
+    "japanese": "奥さん",
+    "furigana": "おくさん",
+    "bangla": "অন্যের স্ত্রী",
+    "english": "Someone else's wife"
+  },
+  {
+    "japanese": "妻／家内",
+    "furigana": "つま／かない",
+    "bangla": "নিজের স্ত্রী",
+    "english": "My wife"
+  },
+  {
+    "japanese": "子ども",
+    "furigana": "こども",
+    "bangla": "শিশু/বাচ্চা/সন্তান",
+    "english": "Child"
+  },
+  {
+    "japanese": "よく",
+    "furigana": "よく",
+    "bangla": "ভালভাবে, বেশ",
+    "english": "Well/Often"
+  },
+  {
+    "japanese": "だいたい",
+    "furigana": "だいたい",
+    "bangla": "মোটামুটি",
+    "english": "Mostly/Approximately"
+  },
+  {
+    "japanese": "たくさん",
+    "furigana": "たくさん",
+    "bangla": "প্রচুর/অনেক",
+    "english": "Many/A lot"
+  },
+  {
+    "japanese": "少し",
+    "furigana": "すこし",
+    "bangla": "অল্প/সামান্য",
+    "english": "A little"
+  },
+  {
+    "japanese": "全然",
+    "furigana": "ぜんぜん",
+    "bangla": "একদম না (নেতিবাচক বাক্যে ব্যবহৃত হয়)",
+    "english": "Not at all (used with negative verbs)"
+  },
+  {
+    "japanese": "早く、速く",
+    "furigana": "はやく",
+    "bangla": "তাড়াতাড়ি/দ্রুত",
+    "english": "Early/Fast"
+  },
+  {
+    "japanese": "～から",
+    "furigana": "～から",
+    "bangla": "～কারণে/বলে",
+    "english": "Because of/Since"
+  },
+  {
+    "japanese": "どうして",
+    "furigana": "どうして",
+    "bangla": "কেন/কী কারণে",
+    "english": "Why"
+  },
+  {
+    "japanese": "貸して ください。",
+    "furigana": "かして ください",
+    "bangla": "অনুগ্রহ করে ধার দিন।",
+    "english": "Please lend it to me."
+  },
+  {
+    "japanese": "いいですよ。",
+    "furigana": "いいですよ",
+    "bangla": "কোনো অসুবিধা নেই।",
+    "english": "Sure/That's fine."
+  },
+  {
+    "japanese": "残念です [が]",
+    "furigana": "ざんねん です",
+    "bangla": "দুঃখজনক/আফসোস",
+    "english": "It's a pity / I'm sorry [but]"
+  },
+  {
+    "japanese": "ああ",
+    "furigana": "ああ",
+    "bangla": "ওহ",
+    "english": "Oh"
+  },
+  {
+    "japanese": "いっしょに いかがですか。",
+    "furigana": "いっしょに いかがですか",
+    "bangla": "আপনি কি আমাদের সাথে আসবেন?",
+    "english": "Would you like to come with us?"
+  },
+  {
+    "japanese": "[～は] ちょっと……。",
+    "furigana": "[～は] ちょっと……",
+    "bangla": "[～] একটু অসুবিধা আছে। (সবিনয়ে কারো কোনো প্রস্তাব/আমন্ত্রণ নাকচ করা)",
+    "english": "[~] is a bit difficult... (Polite way of declining an invitation)"
+  },
+  {
+    "japanese": "だめですか。",
+    "furigana": "だめですか",
+    "bangla": "অসম্ভব নাকি?",
+    "english": "Is it no good?"
+  },
+  {
+    "japanese": "また 今度 お願いします。",
+    "furigana": "また こんど おねがいします",
+    "bangla": "পরে অন্য কোনো সময় যাওয়া যাবে। (অন্যের অনুভূতিতে আঘাত না করে, পরোক্ষভাবে কোনো প্রস্তাব নাকচ করা)",
+    "english": "Maybe another time. (Polite way of declining a request/invitation)"
+  }
+]

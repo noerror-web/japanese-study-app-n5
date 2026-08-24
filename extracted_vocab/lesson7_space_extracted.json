@@ -1,0 +1,116 @@
+[
+  {
+    "japanese": "切符",
+    "furigana": "きっぷ",
+    "bangla": "টিকেট",
+    "english": "Ticket"
+  },
+  {
+    "japanese": "クリスマス",
+    "furigana": "クリスマス",
+    "bangla": "ক্রিসমাস/বড়দিন",
+    "english": "Christmas"
+  },
+  {
+    "japanese": "父",
+    "furigana": "ちち",
+    "bangla": "(নিজের) বাবা",
+    "english": "(My) father"
+  },
+  {
+    "japanese": "母",
+    "furigana": "はは",
+    "bangla": "(নিজের) মা",
+    "english": "(My) mother"
+  },
+  {
+    "japanese": "お父さん",
+    "furigana": "おとうさん",
+    "bangla": "(অন্যের) বাবা (নিজের বাবাকে ডাকার সময়ও ব্যবহৃত হয়)",
+    "english": "(Someone else's) father (also used when referring to one's own father)"
+  },
+  {
+    "japanese": "お母さん",
+    "furigana": "おかあさん",
+    "bangla": "(অন্যের) মা (নিজের মাকে ডাকার সময়ও ব্যবহৃত হয়)",
+    "english": "(Someone else's) mother (also used when referring to one's own mother)"
+  },
+  {
+    "japanese": "もう",
+    "furigana": "もう",
+    "bangla": "ইতোমধ্যে/এইরূইত্যা",
+    "english": "Already"
+  },
+  {
+    "japanese": "まだ",
+    "furigana": "まだ",
+    "bangla": "এখনো",
+    "english": "Still/Yet"
+  },
+  {
+    "japanese": "これから",
+    "furigana": "これから",
+    "bangla": "এখন থেকে",
+    "english": "From now on"
+  },
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅうC",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "[〜、] すてきですね。",
+    "furigana": "[〜、] すてきですね。",
+    "bangla": "[এই〜টি] চমৎকার তো!",
+    "english": "This is wonderful! / How lovely!"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "いらっしゃい。",
+    "furigana": "いらっしゃい。",
+    "bangla": "আসুন/স্বাগতম (শাব্দিক অর্থ: স্বাগতম)",
+    "english": "Welcome/Come in (Literally: Welcome)"
+  },
+  {
+    "japanese": "どうぞ おあがり ください。",
+    "furigana": "どうぞ おあがり ください。",
+    "bangla": "প্লিজ, ভিতরে আসুন। (শাব্দিক অর্থ: উঠে আসুন)",
+    "english": "Please, come in. (Literally: Please ascend/come up)"
+  },
+  {
+    "japanese": "失礼します。",
+    "furigana": "しつれいします。",
+    "bangla": "আপনাদের বিরক্ত করছি।",
+    "english": "Excuse me (for interrupting/intruding), I'm sorry."
+  },
+  {
+    "japanese": "[〜は] いかがですか。",
+    "furigana": "[〜は] いかがですか。",
+    "bangla": "[〜] চলবে নাকি? (কাউকে কিছু সাধার সময় বলা হয়)",
+    "english": "How about [~]? (Used when offering something)"
+  },
+  {
+    "japanese": "いただきます。",
+    "furigana": "いただきます。",
+    "bangla": "খাওয়া শুরু করলাম/গ্রহণ করছি। (কিছু খাওয়া বা পান করার আগে ব্যবহৃত অভিব্যক্তি)",
+    "english": "I humbly receive/eat/drink. (Expression used before eating or drinking)"
+  },
+  {
+    "japanese": "ごちそうさまでした。",
+    "furigana": "ごちそうさまでした。",
+    "bangla": "খাবারটি সুস্বাদু ছিল। (কিছু খাওয়া বা পান করার পরে ব্যবহৃত অভিব্যক্তি)",
+    "english": "It was a delicious meal. / Thank you for the meal. (Expression used after eating or drinking)"
+  },
+  {
+    "japanese": "スペイン",
+    "furigana": "スペイン",
+    "bangla": "স্পেন",
+    "english": "Spain"
+  }
+]

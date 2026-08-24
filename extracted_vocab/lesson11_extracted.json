@@ -1,0 +1,188 @@
+[
+  {
+    "japanese": "います",
+    "furigana": "います",
+    "bangla": "আছে [বাচ্চা~]",
+    "english": "exist (for animate objects like children)"
+  },
+  {
+    "japanese": "います",
+    "furigana": "います",
+    "bangla": "থাকা/অবস্থান করা [জাপানে~]",
+    "english": "stay/be (in a place like Japan)"
+  },
+  {
+    "japanese": "かかります",
+    "furigana": "かかります",
+    "bangla": "লাগা (সময়, টাকা ইত্যাদি)",
+    "english": "take (time, money, etc.)"
+  },
+  {
+    "japanese": "やすみます",
+    "furigana": "やすみます",
+    "bangla": "ছুটি নেওয়া [কোম্পানি থেকে~]",
+    "english": "take a day off (from work/company)"
+  },
+  {
+    "japanese": "ひとつ",
+    "furigana": "ひとつ",
+    "bangla": "একটি (গণনা করার ক্ষেত্রে)",
+    "english": "one thing"
+  },
+  {
+    "japanese": "ふたつ",
+    "furigana": "ふたつ",
+    "bangla": "দুইটি",
+    "english": "two things"
+  },
+  {
+    "japanese": "みっつ",
+    "furigana": "みっつ",
+    "bangla": "তিনটি",
+    "english": "three things"
+  },
+  {
+    "japanese": "よっつ",
+    "furigana": "よっつ",
+    "bangla": "চারটি",
+    "english": "four things"
+  },
+  {
+    "japanese": "いつつ",
+    "furigana": "いつつ",
+    "bangla": "পাঁচটি",
+    "english": "five things"
+  },
+  {
+    "japanese": "むっつ",
+    "furigana": "むっつ",
+    "bangla": "ছয়টি",
+    "english": "six things"
+  },
+  {
+    "japanese": "ななつ",
+    "furigana": "ななつ",
+    "bangla": "সাতটি",
+    "english": "seven things"
+  },
+  {
+    "japanese": "やっつ",
+    "furigana": "やっつ",
+    "bangla": "আটটি",
+    "english": "eight things"
+  },
+  {
+    "japanese": "ここのつ",
+    "furigana": "ここのつ",
+    "bangla": "নয়টি",
+    "english": "nine things"
+  },
+  {
+    "japanese": "とお",
+    "furigana": "とお",
+    "bangla": "দশটি",
+    "english": "ten things"
+  },
+  {
+    "japanese": "いくつ",
+    "furigana": "いくつ",
+    "bangla": "কয়টি",
+    "english": "how many things"
+  },
+  {
+    "japanese": "ひとり",
+    "furigana": "ひとり",
+    "bangla": "একজন",
+    "english": "one person"
+  },
+  {
+    "japanese": "ふたり",
+    "furigana": "ふたり",
+    "bangla": "দুইজন",
+    "english": "two people"
+  },
+  {
+    "japanese": "〜にん",
+    "furigana": "〜にん",
+    "bangla": "— জন",
+    "english": "counter for people"
+  },
+  {
+    "japanese": "〜だい",
+    "furigana": "〜だい",
+    "bangla": "— টি (মেশিন, গাড়ি ইত্যাদি গণনা করার জন্য সংখ্যাবাচক প্রত্যয়)",
+    "english": "counter for machines/cars"
+  },
+  {
+    "japanese": "〜まい",
+    "furigana": "〜まい",
+    "bangla": "— খানা (কাগজ, ডাকটিকেট ইত্যাদি গণনা করার জন্য সংখ্যাবাচক প্রত্যয়)",
+    "english": "counter for flat objects (paper, stamps, etc.)"
+  },
+  {
+    "japanese": "〜かい",
+    "furigana": "〜かい",
+    "bangla": "— বার",
+    "english": "counter for occurrences/times"
+  },
+  {
+    "japanese": "りんご",
+    "furigana": "りんご",
+    "bangla": "আপেল",
+    "english": "apple"
+  },
+  {
+    "japanese": "みかん",
+    "furigana": "みかん",
+    "bangla": "কমলা",
+    "english": "mandarin orange"
+  },
+  {
+    "japanese": "サンドイッチ",
+    "furigana": "サンドイッチ",
+    "bangla": "স্যান্ডউইচ",
+    "english": "sandwich"
+  },
+  {
+    "japanese": "カレー",
+    "furigana": "カレー",
+    "bangla": "তরকারি [ভাতসহ]",
+    "english": "curry (with rice)"
+  },
+  {
+    "japanese": "アイスクリーム",
+    "furigana": "アイスクリーム",
+    "bangla": "আইসক্রিম",
+    "english": "ice cream"
+  },
+  {
+    "japanese": "きって",
+    "furigana": "きって",
+    "bangla": "ডাকটিকেট",
+    "english": "postage stamp"
+  },
+  {
+    "japanese": "はがき",
+    "furigana": "はがき",
+    "bangla": "পোস্টকার্ড",
+    "english": "postcard"
+  },
+  {
+    "japanese": "ふうとう",
+    "furigana": "ふうとう",
+    "bangla": "খাম/লেফাফা",
+    "english": "envelope"
+  },
+  {
+    "japanese": "りょうしん",
+    "furigana": "りょうしん",
+    "bangla": "বাবা-মা",
+    "english": "parents"
+  },
+  {
+    "japanese": "きょうだい",
+    "furigana": "きょうだい",
+    "bangla": "ভাই-বোন",
+    "english": "siblings"
+  }
+]

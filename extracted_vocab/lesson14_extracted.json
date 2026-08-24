@@ -1,0 +1,152 @@
+[
+  {
+    "japanese": "つけます",
+    "furigana": "つけます",
+    "bangla": "জ্বালানো/চালানো/অন করা",
+    "english": "To turn on / switch on"
+  },
+  {
+    "japanese": "消します",
+    "furigana": "けします",
+    "bangla": "নিভিয়ে দেওয়া/বন্ধ করা/অফ করা",
+    "english": "To turn off / switch off"
+  },
+  {
+    "japanese": "開けます",
+    "furigana": "あけます",
+    "bangla": "খোলা (দরজা/জানালা)",
+    "english": "To open (door/window)"
+  },
+  {
+    "japanese": "閉めます",
+    "furigana": "しめます",
+    "bangla": "বন্ধ করা (দরজা/জানালা)",
+    "english": "To close (door/window)"
+  },
+  {
+    "japanese": "急ぎます",
+    "furigana": "いそぎます",
+    "bangla": "তাড়াতাড়ি করা",
+    "english": "To hurry / rush"
+  },
+  {
+    "japanese": "待ちます",
+    "furigana": "まちます",
+    "bangla": "অপেক্ষা করা",
+    "english": "To wait"
+  },
+  {
+    "japanese": "持ちます",
+    "furigana": "もちます",
+    "bangla": "ধরে রাখা/বহন করা",
+    "english": "To hold / carry"
+  },
+  {
+    "japanese": "取ります",
+    "furigana": "とります",
+    "bangla": "তোলা/নেওয়া",
+    "english": "To take / pick up"
+  },
+  {
+    "japanese": "手伝います",
+    "furigana": "てつだいます",
+    "bangla": "সাহায্য করা (কোন কাজে)",
+    "english": "To help (with work)"
+  },
+  {
+    "japanese": "呼びます",
+    "furigana": "よびます",
+    "bangla": "ডাকা",
+    "english": "To call"
+  },
+  {
+    "japanese": "話します",
+    "furigana": "はなします",
+    "bangla": "কথা বলা",
+    "english": "To speak / talk"
+  },
+  {
+    "japanese": "使います",
+    "furigana": "つかいます",
+    "bangla": "ব্যবহার করা",
+    "english": "To use"
+  },
+  {
+    "japanese": "止めます",
+    "furigana": "とめます",
+    "bangla": "থামানো",
+    "english": "To stop / park"
+  },
+  {
+    "japanese": "見せます",
+    "furigana": "みせます",
+    "bangla": "দেখানো",
+    "english": "To show"
+  },
+  {
+    "japanese": "教えます",
+    "furigana": "おしえます",
+    "bangla": "বলা/জানানো [ঠিকানা~]",
+    "english": "To tell / inform [address~]"
+  },
+  {
+    "japanese": "座ります",
+    "furigana": "すわります",
+    "bangla": "বসা",
+    "english": "To sit"
+  },
+  {
+    "japanese": "立ちます",
+    "furigana": "たちます",
+    "bangla": "দাঁড়ানো",
+    "english": "To stand"
+  },
+  {
+    "japanese": "入ります",
+    "furigana": "はいります",
+    "bangla": "প্রবেশ করা [কফি শপে~]",
+    "english": "To enter [a coffee shop~]"
+  },
+  {
+    "japanese": "出ます",
+    "furigana": "でます",
+    "bangla": "বের হওয়া [কফি শপ থেকে~]",
+    "english": "To exit / leave [a coffee shop~]"
+  },
+  {
+    "japanese": "降ります",
+    "furigana": "ふります",
+    "bangla": "পড়া/হওয়া [বৃষ্টি~]",
+    "english": "To fall [rain~]"
+  },
+  {
+    "japanese": "コピーします",
+    "furigana": "コピーします",
+    "bangla": "ফোটোকপি করা",
+    "english": "To photocopy"
+  },
+  {
+    "japanese": "電気",
+    "furigana": "でんき",
+    "bangla": "বিদ্যুৎ, লাইট",
+    "english": "Electricity / Light"
+  },
+  {
+    "japanese": "エアコン",
+    "furigana": "エアコン",
+    "bangla": "এয়ার কন্ডিশনার/এসি",
+    "english": "Air conditioner"
+  },
+  {
+    "japanese": "パスポート",
+    "furigana": "パスポート",
+    "bangla": "পাসপোর্ট",
+    "english": "Passport"
+  },
+  {
+    "japanese": "名前",
+    "furigana": "なまえ",
+    "bangla": "নাম",
+    "english": "Name"
+  }
+]

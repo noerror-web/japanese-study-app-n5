@@ -1,0 +1,140 @@
+[
+  {
+    "japanese": "遊びます",
+    "furigana": "あそびます",
+    "bangla": "আনন্দ করা, খেলাধুলা করা",
+    "english": "to play / to have fun"
+  },
+  {
+    "japanese": "泳ぎます",
+    "furigana": "およぎます",
+    "bangla": "সাঁতার কাটা",
+    "english": "to swim"
+  },
+  {
+    "japanese": "迎えます",
+    "furigana": "むかえます",
+    "bangla": "কাউকে এগিয়ে আনা/নেওয়া, গ্রহণ করা",
+    "english": "to welcome / to meet someone"
+  },
+  {
+    "japanese": "疲れます",
+    "furigana": "つかれます",
+    "bangla": "ক্লান্ত হওয়া (ক্লান্ত হয়েছি বোঝাতে 「つかれました」 হয়)",
+    "english": "to get tired"
+  },
+  {
+    "japanese": "結婚します",
+    "furigana": "けっこんします",
+    "bangla": "বিয়ে করা",
+    "english": "to marry"
+  },
+  {
+    "japanese": "買い物します",
+    "furigana": "かいものします",
+    "bangla": "কেনাকাটা করা",
+    "english": "to go shopping"
+  },
+  {
+    "japanese": "食事します",
+    "furigana": "しょくじします",
+    "bangla": "আহার করা/খাওয়া",
+    "english": "to have a meal"
+  },
+  {
+    "japanese": "散歩します",
+    "furigana": "さんぽします",
+    "bangla": "হাঁটাহাটি করা",
+    "english": "to take a walk"
+  },
+  {
+    "japanese": "[公園を〜]",
+    "furigana": "[こうえんを〜]",
+    "bangla": "[পার্কে〜]",
+    "english": "[in the park]"
+  },
+  {
+    "japanese": "大変 [な]",
+    "furigana": "たいへん [な]",
+    "bangla": "কষ্টকর/কঠোর",
+    "english": "hard / tough"
+  },
+  {
+    "japanese": "欲しい",
+    "furigana": "ほしい",
+    "bangla": "চাওয়া (কোনো বস্তু)",
+    "english": "to want (something)"
+  },
+  {
+    "japanese": "広い",
+    "furigana": "ひろい",
+    "bangla": "প্রশস্ত/বড়",
+    "english": "wide / spacious"
+  },
+  {
+    "japanese": "狭い",
+    "furigana": "せまい",
+    "bangla": "অপ্রশস্ত/ছোট (কক্ষ ইত্যাদি)",
+    "english": "narrow / small"
+  },
+  {
+    "japanese": "プール",
+    "furigana": "プール",
+    "bangla": "সুইমিং পুল",
+    "english": "swimming pool"
+  },
+  {
+    "japanese": "川",
+    "furigana": "かわ",
+    "bangla": "নদী",
+    "english": "river"
+  },
+  {
+    "japanese": "美術",
+    "furigana": "びじゅつ",
+    "bangla": "চারুকলা",
+    "english": "fine arts"
+  },
+  {
+    "japanese": "釣り",
+    "furigana": "つり",
+    "bangla": "মাছ ধরা (~কে লিশ মাৎ: মাছ ধরা)",
+    "english": "fishing"
+  },
+  {
+    "japanese": "スキー",
+    "furigana": "スキー",
+    "bangla": "স্কী (~কে লিশ মাৎ: স্কী করা)",
+    "english": "skiing"
+  },
+  {
+    "japanese": "週末",
+    "furigana": "しゅうまつ",
+    "bangla": "সপ্তাহান্ত (সাপ্তাহিক ছুটির দিন)",
+    "english": "weekend"
+  },
+  {
+    "japanese": "[お] 正月",
+    "furigana": "[お] しょうがつ",
+    "bangla": "নববর্ষ",
+    "english": "New Year"
+  },
+  {
+    "japanese": "〜ごろ",
+    "furigana": "〜ごろ",
+    "bangla": "〜টার দিকে (সময়)",
+    "english": "around (a time)"
+  },
+  {
+    "japanese": "何か",
+    "furigana": "なにか",
+    "bangla": "কিছু একটা",
+    "english": "something"
+  },
+  {
+    "japanese": "どこか",
+    "furigana": "どこか",
+    "bangla": "কোথাও",
+    "english": "somewhere"
+  }
+]

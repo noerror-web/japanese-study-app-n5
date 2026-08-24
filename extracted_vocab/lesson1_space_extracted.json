@@ -1,0 +1,134 @@
+[
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅう",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "初めまして。",
+    "furigana": "はじめまして",
+    "bangla": "হ্যালো (প্রথম পরিচয়ের সময় বলা অভিব্যক্তি)",
+    "english": "Hello (expression used during first introductions)"
+  },
+  {
+    "japanese": "～から 来ました。",
+    "furigana": "き",
+    "bangla": "~ থেকে এসেছি (নিজের দেশের নাম বলা)",
+    "english": "I came from ~ (stating one's country)"
+  },
+  {
+    "japanese": "[どうぞ] よろしく [お願いします]。",
+    "furigana": "ねが",
+    "bangla": "আপনার সাথে পরিচিত হয়ে খুশি হলাম (নিজের পরিচয় দেওয়ার সময় সবচেয়ে বলা কথা)",
+    "english": "Pleased to meet you (most commonly said when introducing oneself)"
+  },
+  {
+    "japanese": "失礼ですが",
+    "furigana": "しつれい",
+    "bangla": "কিছু মনে করবেন না (কাউকে নাম/ঠিকানা ইত্যাদি ব্যক্তিগত বিষয়ে প্রশ্ন করার সময় বলা হয়)",
+    "english": "Excuse me, but... (said when asking someone's name/address or other personal information)"
+  },
+  {
+    "japanese": "お名前は?",
+    "furigana": "なまえ",
+    "bangla": "আপনার নাম?",
+    "english": "What is your name?"
+  },
+  {
+    "japanese": "こちらは～さんです。",
+    "furigana": "",
+    "bangla": "ইনি হচ্ছেন ~সাহেব/মিজ~",
+    "english": "This is Mr./Ms. ~"
+  },
+  {
+    "japanese": "アメリカ",
+    "furigana": "",
+    "bangla": "আমেরিকা/মার্কিন যুক্তরাষ্ট্র",
+    "english": "America/United States"
+  },
+  {
+    "japanese": "イギリス",
+    "furigana": "",
+    "bangla": "যুক্তরাজ্য",
+    "english": "United Kingdom"
+  },
+  {
+    "japanese": "インド",
+    "furigana": "",
+    "bangla": "ভারত",
+    "english": "India"
+  },
+  {
+    "japanese": "インドネシア",
+    "furigana": "",
+    "bangla": "ইন্দোনেশিয়া",
+    "english": "Indonesia"
+  },
+  {
+    "japanese": "韓国",
+    "furigana": "かんこく",
+    "bangla": "দক্ষিণ কোরিয়া",
+    "english": "South Korea"
+  },
+  {
+    "japanese": "タイ",
+    "furigana": "",
+    "bangla": "থাইল্যান্ড",
+    "english": "Thailand"
+  },
+  {
+    "japanese": "中国",
+    "furigana": "ちゅうごく",
+    "bangla": "চীন",
+    "english": "China"
+  },
+  {
+    "japanese": "ドイツ",
+    "furigana": "",
+    "bangla": "জার্মানি",
+    "english": "Germany"
+  },
+  {
+    "japanese": "日本",
+    "furigana": "にほん",
+    "bangla": "জাপান",
+    "english": "Japan"
+  },
+  {
+    "japanese": "バングラデシュ*",
+    "furigana": "",
+    "bangla": "বাংলাদেশ",
+    "english": "Bangladesh"
+  },
+  {
+    "japanese": "ブラジル",
+    "furigana": "",
+    "bangla": "ব্রাজিল",
+    "english": "Brazil"
+  },
+  {
+    "japanese": "IMC/パワー電気/ブラジルエアー",
+    "furigana": "でんき",
+    "bangla": "(কাল্পনিক কোম্পানি)",
+    "english": "(Fictional company)"
+  },
+  {
+    "japanese": "AKC",
+    "furigana": "",
+    "bangla": "(কাল্পনিক প্রতিষ্ঠান)",
+    "english": "(Fictional organization)"
+  },
+  {
+    "japanese": "神戸病院",
+    "furigana": "こうべびょういん",
+    "bangla": "(কাল্পনিক হাসপাতাল)",
+    "english": "(Fictional hospital)"
+  },
+  {
+    "japanese": "さくら大学/富士大学",
+    "furigana": "だいがく / ふじ だいがく",
+    "bangla": "(কাল্পনিক বিশ্ববিদ্যালয়)",
+    "english": "(Fictional university)"
+  }
+]

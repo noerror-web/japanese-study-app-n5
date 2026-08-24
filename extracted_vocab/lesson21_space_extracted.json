@@ -1,0 +1,158 @@
+[
+  {
+    "japanese": "試合",
+    "furigana": "しあい",
+    "bangla": "খেলা, ম্যাচ (～を します: ম্যাচ খেলা)",
+    "english": "Match/Game (do a match)"
+  },
+  {
+    "japanese": "意見",
+    "furigana": "いけん",
+    "bangla": "মতামত",
+    "english": "Opinion"
+  },
+  {
+    "japanese": "話",
+    "furigana": "はなし",
+    "bangla": "কথা, বক্তৃতা, গল্প (～を します: কথা, গল্প করা)",
+    "english": "Talk/Story/Speech (talk/tell a story)"
+  },
+  {
+    "japanese": "地球",
+    "furigana": "ちきゅう",
+    "bangla": "পৃথিবী",
+    "english": "Earth"
+  },
+  {
+    "japanese": "月",
+    "furigana": "つき",
+    "bangla": "চাঁদ",
+    "english": "Moon"
+  },
+  {
+    "japanese": "最近",
+    "furigana": "さいきん",
+    "bangla": "সম্প্রতি/ইদানীং",
+    "english": "Recently/Lately"
+  },
+  {
+    "japanese": "たぶん",
+    "furigana": "たぶん",
+    "bangla": "সম্ভবত, হয়ত",
+    "english": "Probably/Maybe"
+  },
+  {
+    "japanese": "きっと",
+    "furigana": "きっと",
+    "bangla": "নিশ্চিতভাবে/খুব সম্ভবত",
+    "english": "Surely/Almost certainly"
+  },
+  {
+    "japanese": "ほんとうに",
+    "furigana": "ほんとうに",
+    "bangla": "সত্যিই",
+    "english": "Really/Truly"
+  },
+  {
+    "japanese": "そんなに",
+    "furigana": "そんなに",
+    "bangla": "তেমন ... নয় (নেতিবাচক অর্থে)",
+    "english": "Not so much (in negative context)"
+  },
+  {
+    "japanese": "～について",
+    "furigana": "～について",
+    "bangla": "～ সম্পর্কে/～ বিষয়ে",
+    "english": "About/Regarding"
+  },
+  {
+    "japanese": "久(ひさ)しぶりですね。",
+    "furigana": "ひさしぶりですね。",
+    "bangla": "অনেকদিন পর দেখা, তাই না?",
+    "english": "Long time no see, right?"
+  },
+  {
+    "japanese": "～でも 飲(の)みませんか。",
+    "furigana": "～でも のみませんか。",
+    "bangla": "～জাতীয় কিছু পান করবেন নাকি?",
+    "english": "Would you like to drink something like ~?"
+  },
+  {
+    "japanese": "もちろん",
+    "furigana": "もちろん",
+    "bangla": "অবশ্যই",
+    "english": "Of course"
+  },
+  {
+    "japanese": "もう 帰(かえ)らないと……。",
+    "furigana": "もう かえらないと……。",
+    "bangla": "আমাকে এখনই ফিরতে হবে।",
+    "english": "I must return now/I have to go home now."
+  },
+  {
+    "japanese": "アインシュタイン",
+    "furigana": "アインシュタイン",
+    "bangla": "আলবার্ট আইনস্টাইন (১৮৭৯-১৯৫৫)",
+    "english": "Albert Einstein (1879-1955)"
+  },
+  {
+    "japanese": "ガガーリン",
+    "furigana": "ガガーリン",
+    "bangla": "ইউরি আলেক্সিয়েভিচ গ্যাগারিন (১৯৩৪-১৯৬৮)",
+    "english": "Yuri Alekseyevich Gagarin (1934-1968)"
+  },
+  {
+    "japanese": "ガリレオ",
+    "furigana": "ガリレオ",
+    "bangla": "গ্যালিলিও গ্যালিলি (১৫৬৪-১৬৪২)",
+    "english": "Galileo Galilei (1564-1642)"
+  },
+  {
+    "japanese": "キング牧師",
+    "furigana": "キングぼくし",
+    "bangla": "মার্টিন লুথার কিং জুনিয়র (১৯২৯-১৯৬৮)",
+    "english": "Martin Luther King Jr. (1929-1968)"
+  },
+  {
+    "japanese": "フランクリン",
+    "furigana": "フランクリン",
+    "bangla": "বেঞ্জামিন ফ্রাঙ্কলিন (১৭০৬-১৭৯০)",
+    "english": "Benjamin Franklin (1706-1790)"
+  },
+  {
+    "japanese": "かぐや姫",
+    "furigana": "かぐやひめ",
+    "bangla": "কাগুয়া-হিমে/রাজকন্যা কাগুয়া (জাপানি রূপকথা তাকেতোরি মনোগাতারি-র মূল চরিত্র)",
+    "english": "Kaguya-hime/Princess Kaguya (Main character of Japanese folktale Tale of the Bamboo Cutter)"
+  },
+  {
+    "japanese": "天神祭",
+    "furigana": "てんじんまつり",
+    "bangla": "তেনজিন উৎসব (ওসাকার একটি উৎসব)",
+    "english": "Tenjin Matsuri (A festival in Osaka)"
+  },
+  {
+    "japanese": "吉野山",
+    "furigana": "よしのやま",
+    "bangla": "ইয়োশিনো পর্বত (নারা জেলার একটি পাহাড়)",
+    "english": "Mount Yoshino (A mountain in Nara Prefecture)"
+  },
+  {
+    "japanese": "カンガルー",
+    "furigana": "カンガルー",
+    "bangla": "ক্যাঙ্গারু",
+    "english": "Kangaroo"
+  },
+  {
+    "japanese": "キャプテン・クック",
+    "furigana": "キャプテン・クック",
+    "bangla": "ক্যাপ্টেন জেমস কুক (১৭২৮-১৭৭৯)",
+    "english": "Captain James Cook (1728-1779)"
+  },
+  {
+    "japanese": "ヨーネン",
+    "furigana": "ヨーネン",
+    "bangla": "ইয়োনেন (কাল্পনিক কোম্পানি)",
+    "english": "Yonen (Fictional company)"
+  }
+]

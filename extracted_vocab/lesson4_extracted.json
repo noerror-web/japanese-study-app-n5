@@ -1,0 +1,200 @@
+[
+  {
+    "japanese": "起きます",
+    "furigana": "おきます",
+    "bangla": "ঘুম থেকে জাগা",
+    "english": "To wake up"
+  },
+  {
+    "japanese": "寝ます",
+    "furigana": "ねます",
+    "bangla": "ঘুমানো",
+    "english": "To sleep"
+  },
+  {
+    "japanese": "働きます",
+    "furigana": "はたらきます",
+    "bangla": "কাজ করা",
+    "english": "To work"
+  },
+  {
+    "japanese": "休みます",
+    "furigana": "やすみます",
+    "bangla": "বিশ্রাম নেওয়া, ছুটি নেওয়া",
+    "english": "To rest, to take a day off"
+  },
+  {
+    "japanese": "勉強します",
+    "furigana": "べんきょうします",
+    "bangla": "লেখা পড়া করা",
+    "english": "To study"
+  },
+  {
+    "japanese": "終わります",
+    "furigana": "おわります",
+    "bangla": "শেষ করা",
+    "english": "To finish"
+  },
+  {
+    "japanese": "デパート",
+    "furigana": "デパート",
+    "bangla": "ডিপার্টমেন্টাল স্টোর",
+    "english": "Department store"
+  },
+  {
+    "japanese": "銀行",
+    "furigana": "ぎんこう",
+    "bangla": "ব্যাংক",
+    "english": "Bank"
+  },
+  {
+    "japanese": "郵便局",
+    "furigana": "ゆうびんきょく",
+    "bangla": "ডাকঘর",
+    "english": "Post office"
+  },
+  {
+    "japanese": "図書館",
+    "furigana": "としょかん",
+    "bangla": "পাঠাগার/লাইব্রেরি",
+    "english": "Library"
+  },
+  {
+    "japanese": "美術館",
+    "furigana": "びじゅつかん",
+    "bangla": "জাদুঘর/আর্ট মিউজিয়াম",
+    "english": "Art museum"
+  },
+  {
+    "japanese": "今",
+    "furigana": "いま",
+    "bangla": "এখন",
+    "english": "Now"
+  },
+  {
+    "japanese": "ー時",
+    "furigana": "ーじ",
+    "bangla": "–টা (ঘণ্টা)",
+    "english": "– o'clock (hour)"
+  },
+  {
+    "japanese": "ー分 (ーぷん)",
+    "furigana": "ーふん (ーぷん)",
+    "bangla": "–মিনিট",
+    "english": "– minute(s)"
+  },
+  {
+    "japanese": "半",
+    "furigana": "はん",
+    "bangla": "সাড়ে (৩০ মিনিট)",
+    "english": "Half (30 minutes)"
+  },
+  {
+    "japanese": "何時",
+    "furigana": "なんじ",
+    "bangla": "কয়টা (সময়)",
+    "english": "What time?"
+  },
+  {
+    "japanese": "何分*",
+    "furigana": "なんぷん*",
+    "bangla": "কয় মিনিট",
+    "english": "How many minutes?"
+  },
+  {
+    "japanese": "午前",
+    "furigana": "ごぜん",
+    "bangla": "পূর্বাহ্ণ/সকাল",
+    "english": "A.M./Morning"
+  },
+  {
+    "japanese": "午後",
+    "furigana": "ごご",
+    "bangla": "অপরাহ্ণ/বিকেল",
+    "english": "P.M./Afternoon"
+  },
+  {
+    "japanese": "朝",
+    "furigana": "あさ",
+    "bangla": "সকাল/প্রভাত",
+    "english": "Morning/Dawn"
+  },
+  {
+    "japanese": "昼",
+    "furigana": "ひる",
+    "bangla": "দুপুর",
+    "english": "Noon/Daytime"
+  },
+  {
+    "japanese": "晩 (夜)",
+    "furigana": "ばん (よる)",
+    "bangla": "সন্ধ্যা (রাত)",
+    "english": "Evening (Night)"
+  },
+  {
+    "japanese": "おととい",
+    "furigana": "おととい",
+    "bangla": "গতপরশু",
+    "english": "The day before yesterday"
+  },
+  {
+    "japanese": "きのう",
+    "furigana": "きのう",
+    "bangla": "গতকাল",
+    "english": "Yesterday"
+  },
+  {
+    "japanese": "きょう",
+    "furigana": "きょう",
+    "bangla": "আজ",
+    "english": "Today"
+  },
+  {
+    "japanese": "あした",
+    "furigana": "あした",
+    "bangla": "আগামীকাল",
+    "english": "Tomorrow"
+  },
+  {
+    "japanese": "あさって",
+    "furigana": "あさって",
+    "bangla": "আগামীপরশু",
+    "english": "The day after tomorrow"
+  },
+  {
+    "japanese": "今朝",
+    "furigana": "けさ",
+    "bangla": "আজ সকাল",
+    "english": "This morning"
+  },
+  {
+    "japanese": "今晩",
+    "furigana": "こんばん",
+    "bangla": "আজ রাত",
+    "english": "Tonight"
+  },
+  {
+    "japanese": "休み",
+    "furigana": "やすみ",
+    "bangla": "ছুটি",
+    "english": "Rest, holiday, day off"
+  },
+  {
+    "japanese": "昼休み",
+    "furigana": "ひるやすみ",
+    "bangla": "মধ্যাহ্নভোজের বিরতি",
+    "english": "Lunch break"
+  },
+  {
+    "japanese": "試験",
+    "furigana": "しけん",
+    "bangla": "পরীক্ষা",
+    "english": "Examination, test"
+  },
+  {
+    "japanese": "会議",
+    "furigana": "かいぎ",
+    "bangla": "সভা/মিটিং (~কেします; সভা করা)",
+    "english": "Meeting (to hold a meeting)"
+  }
+]

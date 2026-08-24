@@ -1,0 +1,158 @@
+[
+  {
+    "japanese": "置きます",
+    "furigana": "おきます",
+    "bangla": "রাখা",
+    "english": "to put"
+  },
+  {
+    "japanese": "作ります、造ります",
+    "furigana": "つくります",
+    "bangla": "তৈরি করা/বানানো",
+    "english": "to make"
+  },
+  {
+    "japanese": "売ります",
+    "furigana": "うります",
+    "bangla": "বিক্রি করা",
+    "english": "to sell"
+  },
+  {
+    "japanese": "知ります",
+    "furigana": "しります",
+    "bangla": "জানা/চেনা",
+    "english": "to know"
+  },
+  {
+    "japanese": "住みます",
+    "furigana": "すみます",
+    "bangla": "বাস করা",
+    "english": "to live"
+  },
+  {
+    "japanese": "研究します",
+    "furigana": "けんきゅうします",
+    "bangla": "গবেষণা করা",
+    "english": "to research"
+  },
+  {
+    "japanese": "資料",
+    "furigana": "しりょう",
+    "bangla": "নথিপত্র/সংগ্রহীত কাগজপত্র",
+    "english": "materials/data"
+  },
+  {
+    "japanese": "カタログ",
+    "furigana": "カタログ",
+    "bangla": "ক্যাটালগ",
+    "english": "catalog"
+  },
+  {
+    "japanese": "時刻表",
+    "furigana": "じこくひょう",
+    "bangla": "সময়সূচী/টাইমটেবিল",
+    "english": "timetable"
+  },
+  {
+    "japanese": "服",
+    "furigana": "ふく",
+    "bangla": "কাপড়/পোশাক",
+    "english": "clothes"
+  },
+  {
+    "japanese": "製品",
+    "furigana": "せいひん",
+    "bangla": "পণ্য/উৎপাদিত পণ্য",
+    "english": "product"
+  },
+  {
+    "japanese": "ソフト",
+    "furigana": "ソフト",
+    "bangla": "সফটওয়্যার",
+    "english": "software"
+  },
+  {
+    "japanese": "電子辞書",
+    "furigana": "でんしじしょ",
+    "bangla": "ইলেকট্রনিক ডিকশনারি/অভিধান",
+    "english": "electronic dictionary"
+  },
+  {
+    "japanese": "経済",
+    "furigana": "けいざい",
+    "bangla": "অর্থনীতি",
+    "english": "economy"
+  },
+  {
+    "japanese": "市役所",
+    "furigana": "しやくしょ",
+    "bangla": "সিটি অফিস",
+    "english": "city office"
+  },
+  {
+    "japanese": "高校",
+    "furigana": "こうこう",
+    "bangla": "উচ্চ মাধ্যমিক বিদ্যালয়/কলেজ",
+    "english": "high school"
+  },
+  {
+    "japanese": "歯医者",
+    "furigana": "はいしゃ",
+    "bangla": "দাঁতের ডাক্তার/ক্লিনিক",
+    "english": "dentist"
+  },
+  {
+    "japanese": "独身",
+    "furigana": "どくしん",
+    "bangla": "অবিবাহিত",
+    "english": "single/unmarried"
+  },
+  {
+    "japanese": "すみません",
+    "furigana": "すみません",
+    "bangla": "দুঃখিত",
+    "english": "excuse me/sorry"
+  },
+  {
+    "japanese": "皆さん",
+    "furigana": "みなさん",
+    "bangla": "উপস্থিত সুধীবৃন্দ (জনসম্বোধন করার সময়)",
+    "english": "everyone"
+  },
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅうC",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "conversation"
+  },
+  {
+    "japanese": "思い出します",
+    "furigana": "おもいだします",
+    "bangla": "মনে করা/মনে পড়া",
+    "english": "to remember/recall"
+  },
+  {
+    "japanese": "いらっしゃいます",
+    "furigana": "いらっしゃいます",
+    "bangla": "আছেন/থাকেন (ই-মাস -এর সম্মানসূচক রূপ)",
+    "english": "to be (polite form of iru)"
+  },
+  {
+    "japanese": "日本橋",
+    "furigana": "にほんばし",
+    "bangla": "নিহনবাশি (জাপানের একটি বিশেষ এলাকার নাম)",
+    "english": "Nihonbashi (place name)"
+  },
+  {
+    "japanese": "みんなのインタビュー",
+    "furigana": "みんなのインタビュー",
+    "bangla": "টেকনিশিয়ান (অপরিচিত)",
+    "english": "Everyone's interview"
+  }
+]

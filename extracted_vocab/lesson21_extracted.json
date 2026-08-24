@@ -1,0 +1,164 @@
+[
+  {
+    "japanese": "思います",
+    "furigana": "おもいます",
+    "bangla": "মনে করা/মনে হওয়া",
+    "english": "to think"
+  },
+  {
+    "japanese": "言います",
+    "furigana": "いいます",
+    "bangla": "বলা",
+    "english": "to say"
+  },
+  {
+    "japanese": "勝ちます",
+    "furigana": "かちます",
+    "bangla": "জয়লাভ করা",
+    "english": "to win"
+  },
+  {
+    "japanese": "負けます",
+    "furigana": "まけます",
+    "bangla": "পরাজিত হওয়া",
+    "english": "to lose"
+  },
+  {
+    "japanese": "あります",
+    "furigana": "あります",
+    "bangla": "অনুষ্ঠিত হওয়া",
+    "english": "to be held (event)"
+  },
+  {
+    "japanese": "お祭り",
+    "furigana": "おまつり",
+    "bangla": "উৎসব",
+    "english": "festival"
+  },
+  {
+    "japanese": "役に立ちます",
+    "furigana": "やくにたちます",
+    "bangla": "কাজে আসা/কাজে লাগা",
+    "english": "to be useful"
+  },
+  {
+    "japanese": "動きます",
+    "furigana": "うごきます",
+    "bangla": "নড়াচড়া করা, কাজ করা",
+    "english": "to move/work"
+  },
+  {
+    "japanese": "やめます",
+    "furigana": "やめます",
+    "bangla": "ছেড়ে দেওয়া [কোম্পানি/চাকরি ~], হাল ছেড়ে দেওয়া",
+    "english": "to quit/stop"
+  },
+  {
+    "japanese": "会社",
+    "furigana": "かいしゃ",
+    "bangla": "কোম্পানি",
+    "english": "company"
+  },
+  {
+    "japanese": "気をつけます",
+    "furigana": "きをつけます",
+    "bangla": "সতর্ক থাকা",
+    "english": "to be careful"
+  },
+  {
+    "japanese": "留学します",
+    "furigana": "りゅうがくします",
+    "bangla": "বিদেশে পড়তে যাওয়া",
+    "english": "to study abroad"
+  },
+  {
+    "japanese": "むだ",
+    "furigana": "むだ",
+    "bangla": "অপ্রয়োজনীয়/বৃথা",
+    "english": "wasteful/useless"
+  },
+  {
+    "japanese": "不便",
+    "furigana": "ふべん",
+    "bangla": "অসুবিধাজনক",
+    "english": "inconvenient"
+  },
+  {
+    "japanese": "すごい",
+    "furigana": "すごい",
+    "bangla": "অসম্ভব/অসাধারণ (বিস্ময়, আবেগ ইত্যাদি প্রকাশে ব্যবহৃত হয়)",
+    "english": "amazing/awesome"
+  },
+  {
+    "japanese": "ほんとう",
+    "furigana": "ほんとう",
+    "bangla": "সত্য",
+    "english": "truth/real"
+  },
+  {
+    "japanese": "うそ",
+    "furigana": "うそ",
+    "bangla": "মিথ্যা",
+    "english": "lie"
+  },
+  {
+    "japanese": "自動車",
+    "furigana": "じどうしゃ",
+    "bangla": "গাড়ি/অটোমোবাইল",
+    "english": "car"
+  },
+  {
+    "japanese": "交通",
+    "furigana": "こうつう",
+    "bangla": "পরিবহন/যাতায়াত ব্যবস্থা",
+    "english": "traffic/transportation"
+  },
+  {
+    "japanese": "物価",
+    "furigana": "ぶっか",
+    "bangla": "পণ্যের দাম/দ্রব্যমূল্য",
+    "english": "prices of commodities"
+  },
+  {
+    "japanese": "放送",
+    "furigana": "ほうそう",
+    "bangla": "ঘোষণা, সম্প্রচার",
+    "english": "broadcast"
+  },
+  {
+    "japanese": "ニュース",
+    "furigana": "にゅーす",
+    "bangla": "নিউজ/সংবাদ",
+    "english": "news"
+  },
+  {
+    "japanese": "アニメ",
+    "furigana": "あにめ",
+    "bangla": "অ্যানিমে (জাপানি অ্যানিমেশন মুভি)",
+    "english": "anime"
+  },
+  {
+    "japanese": "マンガ",
+    "furigana": "まんが",
+    "bangla": "মাঙ্গা (কমিকস)",
+    "english": "manga"
+  },
+  {
+    "japanese": "デザイン",
+    "furigana": "でざいん",
+    "bangla": "ডিজাইন, নকশা, শিল্পকর্ম",
+    "english": "design"
+  },
+  {
+    "japanese": "夢",
+    "furigana": "ゆめ",
+    "bangla": "স্বপ্ন",
+    "english": "dream"
+  },
+  {
+    "japanese": "天才",
+    "furigana": "てんさい",
+    "bangla": "মেধাবী, বুদ্ধিমান",
+    "english": "genius"
+  }
+]

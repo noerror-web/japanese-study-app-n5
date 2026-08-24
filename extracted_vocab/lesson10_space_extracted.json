@@ -1,0 +1,140 @@
+[
+  {
+    "japanese": "喫茶店",
+    "furigana": "きっさてん",
+    "bangla": "কফি শপ/ক্যাফে",
+    "english": "Coffee shop / Cafe"
+  },
+  {
+    "japanese": "~屋",
+    "furigana": "~や",
+    "bangla": "~দোকান",
+    "english": "~shop"
+  },
+  {
+    "japanese": "乗り場",
+    "furigana": "のりば",
+    "bangla": "বাস/ট্যাক্সি স্ট্যান্ড",
+    "english": "Bus/Taxi stand"
+  },
+  {
+    "japanese": "県",
+    "furigana": "けん",
+    "bangla": "প্রিফেকচার (বাংলাদেশের জেলার মত)",
+    "english": "Prefecture (Like a district in Bangladesh)"
+  },
+  {
+    "japanese": "上",
+    "furigana": "うえ",
+    "bangla": "উপরে",
+    "english": "Above / On"
+  },
+  {
+    "japanese": "下",
+    "furigana": "した",
+    "bangla": "নিচে",
+    "english": "Below / Under"
+  },
+  {
+    "japanese": "前",
+    "furigana": "まえ",
+    "bangla": "সামনে/পূর্বে",
+    "english": "In front of / Before"
+  },
+  {
+    "japanese": "後ろ",
+    "furigana": "うしろ",
+    "bangla": "পিছনে",
+    "english": "Behind"
+  },
+  {
+    "japanese": "右",
+    "furigana": "みぎ",
+    "bangla": "ডান (দিকে)",
+    "english": "Right side"
+  },
+  {
+    "japanese": "左",
+    "furigana": "ひだり",
+    "bangla": "বাম (দিকে)",
+    "english": "Left side"
+  },
+  {
+    "japanese": "中",
+    "furigana": "なか",
+    "bangla": "ভিতরে/মধ্যে",
+    "english": "Inside"
+  },
+  {
+    "japanese": "外",
+    "furigana": "そと",
+    "bangla": "বাইরে",
+    "english": "Outside"
+  },
+  {
+    "japanese": "隣",
+    "furigana": "となり",
+    "bangla": "পাশে",
+    "english": "Next to"
+  },
+  {
+    "japanese": "近く",
+    "furigana": "ちかく",
+    "bangla": "নিকটে/কাছে",
+    "english": "Near"
+  },
+  {
+    "japanese": "間",
+    "furigana": "あいだ",
+    "bangla": "মাঝখানে (দুইটার)",
+    "english": "Between (two things)"
+  },
+  {
+    "japanese": "~や~ [など]",
+    "furigana": "~や~ [など]",
+    "bangla": "~এবং~ [ইত্যাদি]",
+    "english": "~and~ [etc.]"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "[どうも]すみません。",
+    "furigana": "[どうも]すみません。",
+    "bangla": "অনেক ধন্যবাদ।",
+    "english": "Thank you very much."
+  },
+  {
+    "japanese": "ナンプラー",
+    "furigana": "ナンプラー",
+    "bangla": "নাম প্লা (রান্নায় ব্যবহৃত থাই মশলা)",
+    "english": "Nam pla (Thai fish sauce used in cooking)"
+  },
+  {
+    "japanese": "コーナー",
+    "furigana": "コーナー",
+    "bangla": "কর্নার (বিশেষ কোনো পণ্যের)",
+    "english": "Corner (section for a specific product)"
+  },
+  {
+    "japanese": "一番下",
+    "furigana": "いちばんした",
+    "bangla": "সবচেয়ে নিচে",
+    "english": "Bottommost / At the very bottom"
+  },
+  {
+    "japanese": "東京ディズニーランド",
+    "furigana": "とうきょうディズニーランド",
+    "bangla": "টোকিও ডিজিনিল্যান্ড",
+    "english": "Tokyo Disneyland"
+  },
+  {
+    "japanese": "アジアストア",
+    "furigana": "アジアストア",
+    "bangla": "কাল্পনিক সুপার মার্কেট",
+    "english": "Imaginary Super Market"
+  }
+]

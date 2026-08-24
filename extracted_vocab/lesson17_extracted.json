@@ -1,0 +1,140 @@
+[
+  {
+    "japanese": "覚えます",
+    "furigana": "おぼえます",
+    "bangla": "মুখস্থ করা/মনে রাখা",
+    "english": "Memorize/Remember"
+  },
+  {
+    "japanese": "忘れます",
+    "furigana": "わすれます",
+    "bangla": "ভুলে যাওয়া",
+    "english": "Forget"
+  },
+  {
+    "japanese": "なくします",
+    "furigana": "なくします",
+    "bangla": "হারিয়ে ফেলা",
+    "english": "Lose"
+  },
+  {
+    "japanese": "払います",
+    "furigana": "はらいます",
+    "bangla": "পরিশোধ করা",
+    "english": "Pay"
+  },
+  {
+    "japanese": "返します",
+    "furigana": "かえします",
+    "bangla": "ফেরত দেওয়া",
+    "english": "Return"
+  },
+  {
+    "japanese": "出かけます",
+    "furigana": "でかけます",
+    "bangla": "বাইরে যাওয়া",
+    "english": "Go out"
+  },
+  {
+    "japanese": "脱ぎます",
+    "furigana": "ぬぎます",
+    "bangla": "খোলা (কাপড়, জুতা ইত্যাদি)",
+    "english": "Take off (clothes, shoes, etc.)"
+  },
+  {
+    "japanese": "持って 行きます",
+    "furigana": "もって いきます",
+    "bangla": "(কিছু) নিয়ে যাওয়া",
+    "english": "Take (something) along"
+  },
+  {
+    "japanese": "持って 来ます",
+    "furigana": "もって きます",
+    "bangla": "(কিছু) নিয়ে আসা",
+    "english": "Bring (something) along"
+  },
+  {
+    "japanese": "心配します",
+    "furigana": "しんぱいします",
+    "bangla": "চিন্তা করা/টেনশন করা",
+    "english": "Worry"
+  },
+  {
+    "japanese": "残業します",
+    "furigana": "ざんぎょうします",
+    "bangla": "ওভারটাইম কাজ করা",
+    "english": "Work overtime"
+  },
+  {
+    "japanese": "出張します",
+    "furigana": "しゅっちょうします",
+    "bangla": "চাকরির কাজে সংক্ষিপ্ত সময়ের জন্য অন্য শহর বা দেশে যাওয়া",
+    "english": "Go on a business trip"
+  },
+  {
+    "japanese": "飲みます [薬を～]",
+    "furigana": "のみます [くすりを～]",
+    "bangla": "পান করা/সেবন করা [ওষুধ ～]",
+    "english": "Drink/Take [medicine]"
+  },
+  {
+    "japanese": "入ります [おふろに～]",
+    "furigana": "はいります [おふろに～]",
+    "bangla": "ঢোকা [বাথটবে/স্নানাগারে ～]",
+    "english": "Enter/Take [a bath]"
+  },
+  {
+    "japanese": "大切[な]",
+    "furigana": "たいせつ[な]",
+    "bangla": "প্রয়োজনীয়/দরকারি/গুরুত্বপূর্ণ",
+    "english": "Important"
+  },
+  {
+    "japanese": "大丈夫[な]",
+    "furigana": "だいじょうぶ[な]",
+    "bangla": "ঠিক আছে/অসুবিধা নেই",
+    "english": "It's okay/No problem"
+  },
+  {
+    "japanese": "危ない",
+    "furigana": "あぶない",
+    "bangla": "বিপজ্জনক",
+    "english": "Dangerous"
+  },
+  {
+    "japanese": "禁煙",
+    "furigana": "きんえん",
+    "bangla": "ধুমপান নিষেধ",
+    "english": "No smoking"
+  },
+  {
+    "japanese": "[健康]保険証",
+    "furigana": "[けんこう]ほけんしょう",
+    "bangla": "[স্বাস্থ্য] বীমার কার্ড",
+    "english": "[Health] Insurance card"
+  },
+  {
+    "japanese": "熱",
+    "furigana": "ねつ",
+    "bangla": "জ্বর",
+    "english": "Fever"
+  },
+  {
+    "japanese": "病気",
+    "furigana": "びょうき",
+    "bangla": "অসুখ/রোগ",
+    "english": "Sickness/Disease"
+  },
+  {
+    "japanese": "薬",
+    "furigana": "くすり",
+    "bangla": "ওষুধ",
+    "english": "Medicine"
+  },
+  {
+    "japanese": "[お]ふろ",
+    "furigana": "[お]ふろ",
+    "bangla": "বাথটাব (জাপানি স্টাইলের)/স্নানাগার",
+    "english": "Bath"
+  }
+]

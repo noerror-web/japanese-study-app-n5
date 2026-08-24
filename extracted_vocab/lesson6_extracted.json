@@ -1,0 +1,176 @@
+[
+  {
+    "japanese": "食べます",
+    "furigana": "たべます",
+    "bangla": "খাওয়া",
+    "english": "To eat"
+  },
+  {
+    "japanese": "飲みます",
+    "furigana": "のみます",
+    "bangla": "পান করা",
+    "english": "To drink"
+  },
+  {
+    "japanese": "吸います",
+    "furigana": "すいます [たばこを〜]",
+    "bangla": "ধূমপান করা [সিগারেট~]",
+    "english": "To smoke [cigarettes~]"
+  },
+  {
+    "japanese": "見ます",
+    "furigana": "みます",
+    "bangla": "দেখা",
+    "english": "To see, to watch"
+  },
+  {
+    "japanese": "聞きます",
+    "furigana": "ききます",
+    "bangla": "শোনা",
+    "english": "To listen, to hear"
+  },
+  {
+    "japanese": "読みます",
+    "furigana": "よみます",
+    "bangla": "পড়া",
+    "english": "To read"
+  },
+  {
+    "japanese": "書きます",
+    "furigana": "かきます",
+    "bangla": "লেখা (かきます দিয়ে ছবি আঁকাও বোঝায়। তবে বইতে সেক্ষেত্রে হিরাগানায় লেখা আছে)",
+    "english": "To write (Kakimasu also means to draw pictures. However, in books, it is written in hiragana in that case.)"
+  },
+  {
+    "japanese": "買います",
+    "furigana": "かいます",
+    "bangla": "কেনা/ক্রয় করা",
+    "english": "To buy"
+  },
+  {
+    "japanese": "撮ります",
+    "furigana": "とります",
+    "bangla": "তোলা/উঠানো",
+    "english": "To take (a photo), to pick up"
+  },
+  {
+    "japanese": "写真",
+    "furigana": "[しゃしんを〜]",
+    "bangla": "[ফটো~]",
+    "english": "[to take a photo~]"
+  },
+  {
+    "japanese": "します",
+    "furigana": "します",
+    "bangla": "করা",
+    "english": "To do"
+  },
+  {
+    "japanese": "会います",
+    "furigana": "あいます",
+    "bangla": "দেখা করা",
+    "english": "To meet"
+  },
+  {
+    "japanese": "友達",
+    "furigana": "[ともだちに〜]",
+    "bangla": "[বন্ধুর সাথে~]",
+    "english": "[to meet a friend~]"
+  },
+  {
+    "japanese": "ご飯",
+    "furigana": "ごはん",
+    "bangla": "ভাত, খাবার",
+    "english": "Cooked rice, meal"
+  },
+  {
+    "japanese": "朝ごはん",
+    "furigana": "あさごはん*",
+    "bangla": "সকালের নাস্তা",
+    "english": "Breakfast"
+  },
+  {
+    "japanese": "昼ごはん",
+    "furigana": "ひるごはん",
+    "bangla": "দুপুরের খাবার",
+    "english": "Lunch"
+  },
+  {
+    "japanese": "晩ごはん",
+    "furigana": "ばんごはん*",
+    "bangla": "রাতের খাবার",
+    "english": "Dinner"
+  },
+  {
+    "japanese": "パン",
+    "furigana": "パン",
+    "bangla": "পাউরুটি/ব্রেড",
+    "english": "Bread"
+  },
+  {
+    "japanese": "卵",
+    "furigana": "たまご",
+    "bangla": "ডিম",
+    "english": "Egg"
+  },
+  {
+    "japanese": "肉",
+    "furigana": "にく",
+    "bangla": "মাংস",
+    "english": "Meat"
+  },
+  {
+    "japanese": "魚",
+    "furigana": "さかな",
+    "bangla": "মাছ",
+    "english": "Fish"
+  },
+  {
+    "japanese": "野菜",
+    "furigana": "やさい",
+    "bangla": "শাকসবজি",
+    "english": "Vegetables"
+  },
+  {
+    "japanese": "果物",
+    "furigana": "くだもの",
+    "bangla": "ফলমূল",
+    "english": "Fruits"
+  },
+  {
+    "japanese": "水",
+    "furigana": "みず",
+    "bangla": "পানি",
+    "english": "Water"
+  },
+  {
+    "japanese": "お茶",
+    "furigana": "おちゃ",
+    "bangla": "চা, সবুজ চা",
+    "english": "Tea, green tea"
+  },
+  {
+    "japanese": "紅茶",
+    "furigana": "こうちゃ",
+    "bangla": "চা",
+    "english": "Black tea"
+  },
+  {
+    "japanese": "牛乳",
+    "furigana": "ぎゅうにゅう (ミルク)",
+    "bangla": "(গরুর) দুধ",
+    "english": "Milk (cow's milk)"
+  },
+  {
+    "japanese": "ジュース",
+    "furigana": "ジュース",
+    "bangla": "ফলের রস/জুস",
+    "english": "Fruit juice/Juice"
+  },
+  {
+    "japanese": "ビール",
+    "furigana": "ビール",
+    "bangla": "বিয়ার",
+    "english": "Beer"
+  }
+]

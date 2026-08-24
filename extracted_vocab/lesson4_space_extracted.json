@@ -1,0 +1,170 @@
+[
+  {
+    "japanese": "映画",
+    "furigana": "えいが",
+    "bangla": "সিনেমা",
+    "english": "Cinema"
+  },
+  {
+    "japanese": "毎朝",
+    "furigana": "まいあさ",
+    "bangla": "প্রতিদিন সকাল/রোজ সকাল",
+    "english": "Every morning / Daily morning"
+  },
+  {
+    "japanese": "毎晩",
+    "furigana": "まいばん",
+    "bangla": "প্রতি রাত/রোজ রাত",
+    "english": "Every night / Daily night"
+  },
+  {
+    "japanese": "毎日",
+    "furigana": "まいにち",
+    "bangla": "প্রতিদিন/রোজ",
+    "english": "Every day / Daily"
+  },
+  {
+    "japanese": "月曜日",
+    "furigana": "げつようび",
+    "bangla": "সোমবার",
+    "english": "Monday"
+  },
+  {
+    "japanese": "火曜日",
+    "furigana": "かようび",
+    "bangla": "মঙ্গলবার",
+    "english": "Tuesday"
+  },
+  {
+    "japanese": "水曜日",
+    "furigana": "すいようび",
+    "bangla": "বুধবার",
+    "english": "Wednesday"
+  },
+  {
+    "japanese": "木曜日",
+    "furigana": "もくようび",
+    "bangla": "বৃহস্পতিবার",
+    "english": "Thursday"
+  },
+  {
+    "japanese": "金曜日",
+    "furigana": "きんようび",
+    "bangla": "শুক্রবার",
+    "english": "Friday"
+  },
+  {
+    "japanese": "土曜日",
+    "furigana": "どようび",
+    "bangla": "শনিবার",
+    "english": "Saturday"
+  },
+  {
+    "japanese": "日曜日",
+    "furigana": "にちようび",
+    "bangla": "রবিবার",
+    "english": "Sunday"
+  },
+  {
+    "japanese": "何曜日",
+    "furigana": "なんようび",
+    "bangla": "কী বার",
+    "english": "Which day of the week"
+  },
+  {
+    "japanese": "〜から",
+    "furigana": "〜から",
+    "bangla": "~হইতে/~হতে বা থেকে",
+    "english": "From~"
+  },
+  {
+    "japanese": "〜まで",
+    "furigana": "〜まで",
+    "bangla": "~পর্যন্ত",
+    "english": "Until~"
+  },
+  {
+    "japanese": "〜と〜",
+    "furigana": "〜と〜",
+    "bangla": "~এবং~ (দুই বিশেষ্যকে সংযুক্ত করতে ব্যবহৃত হয়)",
+    "english": "~and~ (used to connect two nouns)"
+  },
+  {
+    "japanese": "大変ですね。",
+    "furigana": "たいへんですね。",
+    "bangla": "খুব কষ্টকর, তাই না? (সহানুভূতি প্রকাশের সময় ব্যবহৃত হয়)",
+    "english": "It's tough, isn't it? (Used to express sympathy)"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "番号",
+    "furigana": "ばんごう",
+    "bangla": "নম্বর",
+    "english": "Number"
+  },
+  {
+    "japanese": "何番",
+    "furigana": "なんばん",
+    "bangla": "কত নম্বর",
+    "english": "What number / How many numbers"
+  },
+  {
+    "japanese": "そちら",
+    "furigana": "そちら",
+    "bangla": "সেখানে/আপনার ওখানে",
+    "english": "There / Your place"
+  },
+  {
+    "japanese": "ニューヨーク",
+    "furigana": "ニューヨーク",
+    "bangla": "নিউইয়র্ক",
+    "english": "New York"
+  },
+  {
+    "japanese": "ペキン",
+    "furigana": "ペキン",
+    "bangla": "বেইজিং (বেইজিং)",
+    "english": "Beijing"
+  },
+  {
+    "japanese": "ロサンゼルス",
+    "furigana": "ロサンゼルス",
+    "bangla": "লস এঞ্জেলেস",
+    "english": "Los Angeles"
+  },
+  {
+    "japanese": "ロンドン",
+    "furigana": "ロンドン",
+    "bangla": "লন্ডন",
+    "english": "London"
+  },
+  {
+    "japanese": "あすか",
+    "furigana": "あすか",
+    "bangla": "কাল্পনিক জাপানি রেস্টুরেন্ট",
+    "english": "Fictional Japanese restaurant"
+  },
+  {
+    "japanese": "アップル銀行",
+    "furigana": "アップルぎんこう",
+    "bangla": "কাল্পনিক ব্যাংক",
+    "english": "Fictional bank"
+  },
+  {
+    "japanese": "みどり図書館",
+    "furigana": "みどりとしょかん",
+    "bangla": "কাল্পনিক লাইব্রেরি",
+    "english": "Fictional library"
+  },
+  {
+    "japanese": "やまと美術館",
+    "furigana": "やまとびじゅつかん",
+    "bangla": "কাল্পনিক আট মিউজিয়াম/জাদুঘর",
+    "english": "Fictional art museum/gallery"
+  }
+]

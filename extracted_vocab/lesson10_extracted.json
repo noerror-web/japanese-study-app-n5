@@ -1,0 +1,164 @@
+[
+  {
+    "japanese": "あります",
+    "furigana": "あります",
+    "bangla": "আছে/অবস্থিত (জড় বস্তু সম্পর্কে বলতে)",
+    "english": "to have/to be located (for inanimate objects)"
+  },
+  {
+    "japanese": "います",
+    "furigana": "います",
+    "bangla": "আছে/থাকা (জীবিত, নড়াচড়া করে এমন কিছু সম্পর্কে বলতে)",
+    "english": "to have/to be (for living things)"
+  },
+  {
+    "japanese": "いろいろ [な]",
+    "furigana": "いろいろ",
+    "bangla": "বিভিন্ন রকমের",
+    "english": "various"
+  },
+  {
+    "japanese": "男の人",
+    "furigana": "おとこのひと",
+    "bangla": "পুরুষ",
+    "english": "man"
+  },
+  {
+    "japanese": "女の人",
+    "furigana": "おんなのひと",
+    "bangla": "নারী, মহিলা",
+    "english": "woman"
+  },
+  {
+    "japanese": "男の子",
+    "furigana": "おとこのこ",
+    "bangla": "বালক/ছেলে",
+    "english": "boy"
+  },
+  {
+    "japanese": "女の子",
+    "furigana": "おんなのこ",
+    "bangla": "বালিকা/মেয়ে",
+    "english": "girl"
+  },
+  {
+    "japanese": "犬",
+    "furigana": "いぬ",
+    "bangla": "কুকুর",
+    "english": "dog"
+  },
+  {
+    "japanese": "猫",
+    "furigana": "ねこ",
+    "bangla": "বিড়াল",
+    "english": "cat"
+  },
+  {
+    "japanese": "パンダ",
+    "furigana": "パンダ",
+    "bangla": "পান্ডা",
+    "english": "panda"
+  },
+  {
+    "japanese": "象",
+    "furigana": "ぞう",
+    "bangla": "হাতি",
+    "english": "elephant"
+  },
+  {
+    "japanese": "木",
+    "furigana": "き",
+    "bangla": "গাছ",
+    "english": "tree"
+  },
+  {
+    "japanese": "物",
+    "furigana": "もの",
+    "bangla": "বস্তু",
+    "english": "thing"
+  },
+  {
+    "japanese": "電池",
+    "furigana": "でんち",
+    "bangla": "ব্যাটারি",
+    "english": "battery"
+  },
+  {
+    "japanese": "箱",
+    "furigana": "はこ",
+    "bangla": "বাক্স",
+    "english": "box"
+  },
+  {
+    "japanese": "スイッチ",
+    "furigana": "スイッチ",
+    "bangla": "সুইচ",
+    "english": "switch"
+  },
+  {
+    "japanese": "冷蔵庫",
+    "furigana": "れいぞうこ",
+    "bangla": "ফ্রিজ/রেফ্রিজারেটর",
+    "english": "refrigerator"
+  },
+  {
+    "japanese": "テーブル",
+    "furigana": "テーブル",
+    "bangla": "টেবিল",
+    "english": "table"
+  },
+  {
+    "japanese": "ベッド",
+    "furigana": "ベッド",
+    "bangla": "খাট/বিছানা",
+    "english": "bed"
+  },
+  {
+    "japanese": "棚",
+    "furigana": "たな",
+    "bangla": "শেলফ/তাক",
+    "english": "shelf"
+  },
+  {
+    "japanese": "ドア",
+    "furigana": "ドア",
+    "bangla": "দরজা",
+    "english": "door"
+  },
+  {
+    "japanese": "窓",
+    "furigana": "まど",
+    "bangla": "জানালা",
+    "english": "window"
+  },
+  {
+    "japanese": "ポスト",
+    "furigana": "ポスト",
+    "bangla": "পোস্ট বক্স",
+    "english": "mailbox"
+  },
+  {
+    "japanese": "ビル",
+    "furigana": "ビル",
+    "bangla": "বিল্ডিং/ভবন",
+    "english": "building"
+  },
+  {
+    "japanese": "ATM",
+    "furigana": "エーティーエム",
+    "bangla": "এটিএম মেশিন/এটিএম বুথ",
+    "english": "ATM"
+  },
+  {
+    "japanese": "コンビニ",
+    "furigana": "コンビニ",
+    "bangla": "কনভিনিয়েন্স স্টোর",
+    "english": "convenience store"
+  },
+  {
+    "japanese": "公園",
+    "furigana": "こうえん",
+    "bangla": "পার্ক/উদ্যান",
+    "english": "park"
+  }
+]

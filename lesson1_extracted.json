@@ -1,0 +1,128 @@
+[
+  {
+    "japanese": "わたし",
+    "furigana": "わたし",
+    "bangla": "আমি",
+    "english": "I"
+  },
+  {
+    "japanese": "あなた",
+    "furigana": "あなた",
+    "bangla": "আপনি",
+    "english": "You"
+  },
+  {
+    "japanese": "あの人",
+    "furigana": "あのひと (あの かた)",
+    "bangla": "ওই ব্যক্তি/সেই ব্যক্তি (あの かた হচ্ছে あのひと-এর মার্জিত রূপ)",
+    "english": "That person/those people (Ano kata is the polite form of Anohito)"
+  },
+  {
+    "japanese": "〜さん",
+    "furigana": "〜さん",
+    "bangla": "~সাহেব/~মিজ~ (ভদ্রভাবে সম্বোধন করার সময় পুরুষ/মহিলা উভয়ের নামের শেষে সংযুক্ত প্রত্যয়)",
+    "english": "~Mr./Ms./Mrs.~ (A suffix attached to the end of both male and female names when addressing politely)"
+  },
+  {
+    "japanese": "〜ちゃん",
+    "furigana": "〜ちゃん",
+    "bangla": "(~さん-এর পরিবর্তে শিশুদের সম্বোধন করার সময় নামের শেষে সংযুক্ত প্রত্যয়)",
+    "english": "~chan (A suffix attached to the end of names when addressing children, instead of ~san)"
+  },
+  {
+    "japanese": "〜人",
+    "furigana": "〜じん",
+    "bangla": "~জন (নাগরিকত্ব নির্দেশক প্রত্যয়। যেমন: আমেরিকা জিন আমেরিকান/মার্কিন নাগরিক)",
+    "english": "~person/people (A suffix indicating nationality/citizenship. E.g., アメリカ人 (Amerikajin) American/US citizen)"
+  },
+  {
+    "japanese": "先生",
+    "furigana": "せんせい",
+    "bangla": "শিক্ষক, প্রশিক্ষক (নিজের পেশা বলার সময় ব্যবহৃত হয় না)",
+    "english": "Teacher, instructor (Not used when stating one's own profession)"
+  },
+  {
+    "japanese": "教師",
+    "furigana": "きょうし",
+    "bangla": "শিক্ষক, প্রশিক্ষক",
+    "english": "Teacher, instructor"
+  },
+  {
+    "japanese": "学生",
+    "furigana": "がくせい",
+    "bangla": "ছাত্র-ছাত্রী/শিক্ষার্থী",
+    "english": "Student/Learner"
+  },
+  {
+    "japanese": "会社員",
+    "furigana": "かいしゃいん",
+    "bangla": "কোম্পানির চাকুরীজীবী (কর্মচারী/কর্মকর্তা)",
+    "english": "Company employee (Staff/Officer)"
+  },
+  {
+    "japanese": "社員",
+    "furigana": "しゃいん",
+    "bangla": "কর্মচারী/কর্মকর্তা (কোম্পানির নামের সাথে একত্রে ব্যবহার করা হয়। যেমন: IMC の しゃいん)",
+    "english": "Employee/Officer (Used together with a company's name. E.g., IMC no shain - IMC employee)"
+  },
+  {
+    "japanese": "銀行員",
+    "furigana": "ぎんこういん",
+    "bangla": "ব্যাংক কর্মী/ব্যাংকার",
+    "english": "Bank employee/Banker"
+  },
+  {
+    "japanese": "医者",
+    "furigana": "いしゃ",
+    "bangla": "চিকিৎসক/ডাক্তার",
+    "english": "Physician/Doctor"
+  },
+  {
+    "japanese": "研究者",
+    "furigana": "けんきゅうしゃ",
+    "bangla": "গবেষক, বিদ্বান/পণ্ডিত",
+    "english": "Researcher, scholar/pundit"
+  },
+  {
+    "japanese": "大学",
+    "furigana": "だいがく",
+    "bangla": "বিশ্ববিদ্যালয়",
+    "english": "University"
+  },
+  {
+    "japanese": "病院",
+    "furigana": "びょういん",
+    "bangla": "হাসপাতাল",
+    "english": "Hospital"
+  },
+  {
+    "japanese": "だれ",
+    "furigana": "だれ (どなた)",
+    "bangla": "কে (どなた হচ্ছে だれ-র মার্জিত রূপ)",
+    "english": "Who (Donata is the polite form of Dare)"
+  },
+  {
+    "japanese": "歳",
+    "furigana": "〜さい",
+    "bangla": "~বছর (বয়স বোঝাতে)",
+    "english": "~years old (to indicate age)"
+  },
+  {
+    "japanese": "何歳",
+    "furigana": "なんさい (おいくつ)",
+    "bangla": "বয়স কত? (おいくつ হচ্ছেなんさい-এর মার্জিত রূপ)",
+    "english": "How old? (Oikutsu is the polite form of Nansai)"
+  },
+  {
+    "japanese": "はい",
+    "furigana": "はい",
+    "bangla": "হ্যাঁ",
+    "english": "Yes"
+  },
+  {
+    "japanese": "いいえ",
+    "furigana": "いいえ",
+    "bangla": "না",
+    "english": "No"
+  }
+]

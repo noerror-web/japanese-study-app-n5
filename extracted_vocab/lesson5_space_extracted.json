@@ -1,0 +1,170 @@
+[
+  {
+    "japanese": "何月",
+    "furigana": "なんがつ",
+    "bangla": "কোন মাস",
+    "english": "Which month"
+  },
+  {
+    "japanese": "1日",
+    "furigana": "ついたち",
+    "bangla": "এক তারিখ",
+    "english": "The first day (of the month)"
+  },
+  {
+    "japanese": "2日",
+    "furigana": "ふつか",
+    "bangla": "দুই তারিখ/দুই দিন",
+    "english": "The second day (of the month) / Two days"
+  },
+  {
+    "japanese": "3日",
+    "furigana": "みっか",
+    "bangla": "তিন তারিখ/তিন দিন",
+    "english": "The third day (of the month) / Three days"
+  },
+  {
+    "japanese": "4日",
+    "furigana": "よっか",
+    "bangla": "চার তারিখ/চার দিন",
+    "english": "The fourth day (of the month) / Four days"
+  },
+  {
+    "japanese": "5日",
+    "furigana": "いつか",
+    "bangla": "পাঁচ তারিখ/পাঁচ দিন",
+    "english": "The fifth day (of the month) / Five days"
+  },
+  {
+    "japanese": "6日",
+    "furigana": "むいか",
+    "bangla": "ছয় তারিখ/ছয় দিন",
+    "english": "The sixth day (of the month) / Six days"
+  },
+  {
+    "japanese": "7日",
+    "furigana": "なのか",
+    "bangla": "সাত তারিখ/সাত দিন",
+    "english": "The seventh day (of the month) / Seven days"
+  },
+  {
+    "japanese": "8日",
+    "furigana": "ようか",
+    "bangla": "আট তারিখ/আট দিন",
+    "english": "The eighth day (of the month) / Eight days"
+  },
+  {
+    "japanese": "9日",
+    "furigana": "ここのか",
+    "bangla": "নয় তারিখ/নয় দিন",
+    "english": "The ninth day (of the month) / Nine days"
+  },
+  {
+    "japanese": "10日",
+    "furigana": "とおか",
+    "bangla": "দশ তারিখ/দশ দিন",
+    "english": "The tenth day (of the month) / Ten days"
+  },
+  {
+    "japanese": "14日",
+    "furigana": "じゅうよっか",
+    "bangla": "চৌদ্দ তারিখ/চৌদ্দ দিন",
+    "english": "The fourteenth day (of the month) / Fourteen days"
+  },
+  {
+    "japanese": "20日",
+    "furigana": "はつか",
+    "bangla": "বিশ তারিখ/বিশ দিন",
+    "english": "The twentieth day (of the month) / Twenty days"
+  },
+  {
+    "japanese": "24日",
+    "furigana": "にじゅうよっか",
+    "bangla": "চব্বিশ তারিখ/চব্বিশ দিন",
+    "english": "The twenty-fourth day (of the month) / Twenty-four days"
+  },
+  {
+    "japanese": "－日",
+    "furigana": "－にち",
+    "bangla": "– তারিখ/– দিন",
+    "english": "– day (of the month) / – days"
+  },
+  {
+    "japanese": "何日",
+    "furigana": "なんにち",
+    "bangla": "কত তারিখ/কত দিন",
+    "english": "Which day (of the month) / How many days"
+  },
+  {
+    "japanese": "いつ",
+    "furigana": "いつ",
+    "bangla": "কখন/কবে",
+    "english": "When"
+  },
+  {
+    "japanese": "誕生日",
+    "furigana": "たんじょうび",
+    "bangla": "জন্মদিন",
+    "english": "Birthday"
+  },
+  {
+    "japanese": "そうですね。",
+    "furigana": "そうですね",
+    "bangla": "হ্যাঁ, তাই তো।",
+    "english": "Yes, that's right. / Indeed."
+  },
+  {
+    "japanese": "[どうも] ありがとう ございました。",
+    "furigana": "どうもありがとうございました",
+    "bangla": "আপনাকে অনেক (অসংখ্য) ধন্যবাদ।",
+    "english": "Thank you very much (many thanks)."
+  },
+  {
+    "japanese": "どう いたしまして。",
+    "furigana": "どういたしまして",
+    "bangla": "না, না, এমন কী আর করেছি।",
+    "english": "You're welcome. / Don't mention it."
+  },
+  {
+    "japanese": "一番線",
+    "furigana": "いちばんせん",
+    "bangla": "– নম্বর প্লাটফর্ম",
+    "english": "Platform No. –"
+  },
+  {
+    "japanese": "次の",
+    "furigana": "つぎの",
+    "bangla": "পরের/পরবর্তী",
+    "english": "Next / Following"
+  },
+  {
+    "japanese": "普通",
+    "furigana": "ふつう",
+    "bangla": "লোকাল ট্রেন",
+    "english": "Local train"
+  },
+  {
+    "japanese": "急行",
+    "furigana": "きゅうこう",
+    "bangla": "র‍্যাপিড ট্রেন",
+    "english": "Rapid train / Express train"
+  },
+  {
+    "japanese": "特急",
+    "furigana": "とっきゅう",
+    "bangla": "এক্সপ্রেস ট্রেন",
+    "english": "Express train"
+  },
+  {
+    "japanese": "甲子園",
+    "furigana": "こうしえん",
+    "bangla": "কোশিয়েন (ওসাকার পাশের একটি শহরের/রেলওয়ে স্টেশনের নাম)",
+    "english": "Koshien (Name of a city/railway station next to Osaka)"
+  },
+  {
+    "japanese": "大阪城",
+    "furigana": "おおさかじょう",
+    "bangla": "ওসাকা ক্যাসেল বা দুর্গ (ওসাকার বিখ্যাত দুর্গ)",
+    "english": "Osaka Castle (Osaka's famous castle/fortress)"
+  }
+]

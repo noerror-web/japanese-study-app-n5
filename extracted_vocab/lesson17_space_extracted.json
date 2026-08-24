@@ -1,0 +1,80 @@
+[
+  {
+    "japanese": "上着",
+    "furigana": "うわぎ",
+    "bangla": "শার্টের উপর পরার কোট বা জ্যাকেট",
+    "english": "Coat or jacket worn over a shirt"
+  },
+  {
+    "japanese": "下着",
+    "furigana": "したぎ",
+    "bangla": "জামার ভিতরে বা নিচে পরার পোশাক, অন্তর্বাস",
+    "english": "Underwear"
+  },
+  {
+    "japanese": "2、3日",
+    "furigana": "に、さんにち",
+    "bangla": "দুই, তিনদিন দু-তিনদিন",
+    "english": "Two or three days"
+  },
+  {
+    "japanese": "2、3〜",
+    "furigana": "に、さん〜",
+    "bangla": "দুই, তিন/দু-তিন/দু-এক (~তে গণনাবাচক সংখ্যা বসে)",
+    "english": "Two or three... (followed by a counter)"
+  },
+  {
+    "japanese": "〜までに",
+    "furigana": "〜までに",
+    "bangla": "〜এর মধ্যে (সময়সীমা বোঝাতে)",
+    "english": "By... (indicating a deadline)"
+  },
+  {
+    "japanese": "ですから",
+    "furigana": "ですから",
+    "bangla": "সেজন্য/তাই",
+    "english": "Therefore / So"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "どうしましたか。",
+    "furigana": "どうしましたか。",
+    "bangla": "কী হয়েছে?",
+    "english": "What is wrong? / What happened?"
+  },
+  {
+    "japanese": "のど",
+    "furigana": "のど",
+    "bangla": "গলা",
+    "english": "Throat"
+  },
+  {
+    "japanese": "痛いです。",
+    "furigana": "いたいです。",
+    "bangla": "[~] ব্যাথা (আছে/করে)।",
+    "english": "It hurts."
+  },
+  {
+    "japanese": "かぜ",
+    "furigana": "かぜ",
+    "bangla": "ঠান্ডা (লাগা)",
+    "english": "Cold (illness)"
+  },
+  {
+    "japanese": "それから",
+    "furigana": "それから",
+    "bangla": "এছাড়াও",
+    "english": "And then / Furthermore"
+  },
+  {
+    "japanese": "お大事に。",
+    "furigana": "おだいじに。",
+    "bangla": "আপনার দ্রুত আরোগ্য কামনা করি। (অসুস্থ কাউকে উদ্দেশ্যে করে বলা হয়)",
+    "english": "Take care. (said to someone who is ill)"
+  }
+]

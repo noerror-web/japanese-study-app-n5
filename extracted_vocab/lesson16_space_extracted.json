@@ -1,0 +1,188 @@
+[
+  {
+    "japanese": "足",
+    "furigana": "あし",
+    "bangla": "পা",
+    "english": "Leg/Foot"
+  },
+  {
+    "japanese": "背",
+    "furigana": "せ",
+    "bangla": "মেরুদণ্ড/উচ্চতা",
+    "english": "Back/Height"
+  },
+  {
+    "japanese": "サービス",
+    "furigana": "さーびす",
+    "bangla": "সেবা/সার্ভিস",
+    "english": "Service"
+  },
+  {
+    "japanese": "ジョギング",
+    "furigana": "じょぎんぐ",
+    "bangla": "জোগিং (～を します: জোগিং করা)",
+    "english": "Jogging (to jog)"
+  },
+  {
+    "japanese": "シャワー",
+    "furigana": "しゃわー",
+    "bangla": "শাওয়ার/গোসল",
+    "english": "Shower"
+  },
+  {
+    "japanese": "緑",
+    "furigana": "みどり",
+    "bangla": "সবুজ (গাছপালা অর্থেও)",
+    "english": "Green (also meaning plants/foliage)"
+  },
+  {
+    "japanese": "[お]寺",
+    "furigana": "[お]てら",
+    "bangla": "বৌদ্ধ মন্দির",
+    "english": "Buddhist Temple"
+  },
+  {
+    "japanese": "神社",
+    "furigana": "じんじゃ",
+    "bangla": "শিন্তো মন্দির",
+    "english": "Shinto Shrine"
+  },
+  {
+    "japanese": "～番",
+    "furigana": "～ばん",
+    "bangla": "～ নম্বর",
+    "english": "Number"
+  },
+  {
+    "japanese": "どうやって",
+    "furigana": "どうやって",
+    "bangla": "কীভাবে",
+    "english": "How to do something"
+  },
+  {
+    "japanese": "どの～",
+    "furigana": "どの～",
+    "bangla": "কোনটি/কোন ব্যক্তি (৩ এর অধিকের ক্ষেত্রে)",
+    "english": "Which (for more than 3 people/things)"
+  },
+  {
+    "japanese": "どれ",
+    "furigana": "どれ",
+    "bangla": "কোনটি (৩ এর অধিক বিষয় সম্পর্কে বলতে)",
+    "english": "Which one (for more than 3 things)"
+  },
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅう",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "すごいですね。",
+    "furigana": "すごいですね",
+    "bangla": "অসাধারণ তো!",
+    "english": "That's amazing/great!"
+  },
+  {
+    "japanese": "[いいえ、] まだまだです。",
+    "furigana": "いいえ、まだまだです",
+    "bangla": "না না, এখনও অনেক [শেখার] বাকি।",
+    "english": "No, I still have a lot to learn."
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "お引き出しですか。",
+    "furigana": "おひきだしですか",
+    "bangla": "টাকা উঠাবেন নাকি?",
+    "english": "Are you withdrawing money?"
+  },
+  {
+    "japanese": "まず",
+    "furigana": "まず",
+    "bangla": "প্রথমে",
+    "english": "First"
+  },
+  {
+    "japanese": "次に",
+    "furigana": "つぎに",
+    "bangla": "তারপর/অতঃপর",
+    "english": "Next"
+  },
+  {
+    "japanese": "キャッシュカード",
+    "furigana": "きゃっしゅかーど",
+    "bangla": "ক্যাশকার্ড",
+    "english": "Cash card/ATM card"
+  },
+  {
+    "japanese": "暗証番号",
+    "furigana": "あんしょうばんごう",
+    "bangla": "গোপন নম্বর (পিন)",
+    "english": "PIN number"
+  },
+  {
+    "japanese": "金額",
+    "furigana": "きんがく",
+    "bangla": "টাকার পরিমাণ",
+    "english": "Amount of money"
+  },
+  {
+    "japanese": "確認",
+    "furigana": "かくにん",
+    "bangla": "নিশ্চিতকরণ/কনফার্ম (～します: নিশ্চিত করা)",
+    "english": "Confirmation (to confirm)"
+  },
+  {
+    "japanese": "ボタン",
+    "furigana": "ぼたん",
+    "bangla": "বাটন/বোতাম",
+    "english": "Button"
+  },
+  {
+    "japanese": "JR",
+    "furigana": "じぇいあーる",
+    "bangla": "জে আর/জাপান রেলওয়ে",
+    "english": "JR (Japan Railways)"
+  },
+  {
+    "japanese": "雪祭り",
+    "furigana": "ゆきまつり",
+    "bangla": "তুষার উৎসব",
+    "english": "Snow Festival"
+  },
+  {
+    "japanese": "バンドン",
+    "furigana": "ばんどん",
+    "bangla": "বান্দুং (ইন্দোনেশিয়ার একটি শহর)",
+    "english": "Bandung (A city in Indonesia)"
+  },
+  {
+    "japanese": "フランケン",
+    "furigana": "ふらんけん",
+    "bangla": "ফ্রাঙ্কেন (জার্মানির একটি শহর)",
+    "english": "Franken (A region/city in Germany)"
+  },
+  {
+    "japanese": "ベラクルス",
+    "furigana": "べらくるす",
+    "bangla": "ভেরাক্রুজ (মেক্সিকোর একটি শহর)",
+    "english": "Veracruz (A city in Mexico)"
+  },
+  {
+    "japanese": "梅田",
+    "furigana": "うめだ",
+    "bangla": "ওসাকা শহরের একটি অঞ্চলের নাম",
+    "english": "Umeda (A district in Osaka)"
+  },
+  {
+    "japanese": "大学前",
+    "furigana": "だいがくまえ",
+    "bangla": "কাল্পনিক বাসস্টপ",
+    "english": "Daigakumae (Fictional bus stop name - University Front)"
+  }
+]

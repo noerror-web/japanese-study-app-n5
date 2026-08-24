@@ -1,0 +1,110 @@
+[
+  {
+    "japanese": "要ります",
+    "furigana": "いります",
+    "bangla": "প্রয়োজন আছে [ভিসা ~]",
+    "english": "to need [visa]"
+  },
+  {
+    "japanese": "調べます",
+    "furigana": "しらべます",
+    "bangla": "খোঁজ করা/অনুসন্ধান করা",
+    "english": "to check/investigate"
+  },
+  {
+    "japanese": "修理します",
+    "furigana": "しゅうりします",
+    "bangla": "মেরামত করা",
+    "english": "to repair"
+  },
+  {
+    "japanese": "僕",
+    "furigana": "ぼく",
+    "bangla": "আমি (পুরুষ কর্তৃক ব্যবহৃত わたし-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "I (casual form used by males)"
+  },
+  {
+    "japanese": "君",
+    "furigana": "きみ",
+    "bangla": "তুমি (সমপর্যায়ের বা নিম্নপর্যায়ের কাউকে সম্বোধনের সময় ব্যবহৃত あなた-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "you (casual form used for friends or subordinates)"
+  },
+  {
+    "japanese": "~君",
+    "furigana": "~くん",
+    "bangla": "মিস্টার (সমপর্যায়ের বা নিম্নপর্যায়ের কাউকে সম্বোধনের সময় ব্যবহৃত さん-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ। সাধারণত নিজের চেয়ে বয়সে ছোট ছেলে/পুরুষকে সম্বোধনের ক্ষেত্রে ব্যবহৃত হয়)",
+    "english": "Mr. (casual suffix for boys/men)"
+  },
+  {
+    "japanese": "うん",
+    "furigana": "うん",
+    "bangla": "হ্যাঁ (はい-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "yes (casual)"
+  },
+  {
+    "japanese": "ううん",
+    "furigana": "ううん",
+    "bangla": "না (いいえ-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "no (casual)"
+  },
+  {
+    "japanese": "ことば",
+    "furigana": "ことば",
+    "bangla": "শব্দ/ভাষা",
+    "english": "word/language"
+  },
+  {
+    "japanese": "着物",
+    "furigana": "きもの",
+    "bangla": "কিমোনো (জাপানের ঐতিহ্যবাহী পোশাক)",
+    "english": "kimono (traditional Japanese clothing)"
+  },
+  {
+    "japanese": "ビザ",
+    "furigana": "ビザ",
+    "bangla": "ভিসা",
+    "english": "visa"
+  },
+  {
+    "japanese": "初め",
+    "furigana": "はじめ",
+    "bangla": "প্রথমে/শুরুর দিকে",
+    "english": "beginning"
+  },
+  {
+    "japanese": "終わり",
+    "furigana": "おわり",
+    "bangla": "শেষ",
+    "english": "end"
+  },
+  {
+    "japanese": "こっち",
+    "furigana": "こっち",
+    "bangla": "এই দিকে, এই স্থান (こちら-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "this way/this place (casual)"
+  },
+  {
+    "japanese": "そっち",
+    "furigana": "そっち",
+    "bangla": "শ্রোতার কাছের দিক বা স্থান (そちら-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "that way/that place (near listener, casual)"
+  },
+  {
+    "japanese": "あっち",
+    "furigana": "あっち",
+    "bangla": "ঐ দিক, ঐ স্থান (あちら-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "that way/that place over there (casual)"
+  },
+  {
+    "japanese": "どっち",
+    "furigana": "どっち",
+    "bangla": "কোনটি (দু'টি জিনিসের মধ্যে), কোনদিকে, কোথায় (どちら-এর অনানুষ্ঠানিক/নৈমিত্তিক রূপ)",
+    "english": "which one/which way (casual)"
+  },
+  {
+    "japanese": "みんなで",
+    "furigana": "みんなで",
+    "bangla": "সবাই মিলে",
+    "english": "all together"
+  }
+]

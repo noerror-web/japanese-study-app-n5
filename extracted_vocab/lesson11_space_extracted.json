@@ -1,0 +1,182 @@
+[
+  {
+    "japanese": "兄",
+    "furigana": "あに",
+    "bangla": "বড় ভাই (নিজের)",
+    "english": "Older brother (own)"
+  },
+  {
+    "japanese": "お兄さん",
+    "furigana": "おにいさん",
+    "bangla": "বড় ভাই (অন্যের)",
+    "english": "Older brother (someone else's)"
+  },
+  {
+    "japanese": "姉",
+    "furigana": "あね",
+    "bangla": "বড় বোন (নিজের)",
+    "english": "Older sister (own)"
+  },
+  {
+    "japanese": "お姉さん",
+    "furigana": "おねえさん",
+    "bangla": "বড় বোন (অন্যের)",
+    "english": "Older sister (someone else's)"
+  },
+  {
+    "japanese": "弟",
+    "furigana": "おとうと",
+    "bangla": "ছোট ভাই (নিজের)",
+    "english": "Younger brother (own)"
+  },
+  {
+    "japanese": "弟さん",
+    "furigana": "おとうとさん",
+    "bangla": "ছোট ভাই (অন্যের)",
+    "english": "Younger brother (someone else's)"
+  },
+  {
+    "japanese": "妹",
+    "furigana": "いもうと",
+    "bangla": "ছোট বোন (নিজের)",
+    "english": "Younger sister (own)"
+  },
+  {
+    "japanese": "妹さん",
+    "furigana": "いもうとさん",
+    "bangla": "ছোট বোন (অন্যের)",
+    "english": "Younger sister (someone else's)"
+  },
+  {
+    "japanese": "外国",
+    "furigana": "がいこく",
+    "bangla": "বিদেশ",
+    "english": "Foreign country"
+  },
+  {
+    "japanese": "留学生",
+    "furigana": "りゅうがくせい",
+    "bangla": "বিদেশি ছাত্র-ছাত্রী",
+    "english": "International student"
+  },
+  {
+    "japanese": "クラス",
+    "furigana": "クラス",
+    "bangla": "ক্লাস/শ্রেণিকক্ষ",
+    "english": "Class/Classroom"
+  },
+  {
+    "japanese": "時間",
+    "furigana": "じかん",
+    "bangla": "ঘণ্টা",
+    "english": "Hour"
+  },
+  {
+    "japanese": "週間",
+    "furigana": "しゅうかん",
+    "bangla": "সপ্তাহ",
+    "english": "Week"
+  },
+  {
+    "japanese": "か月",
+    "furigana": "かげつ",
+    "bangla": "মাস",
+    "english": "Month"
+  },
+  {
+    "japanese": "年",
+    "furigana": "ねん",
+    "bangla": "বছর",
+    "english": "Year"
+  },
+  {
+    "japanese": "~ぐらい",
+    "furigana": "~ぐらい",
+    "bangla": "প্রায়~",
+    "english": "Approximately~"
+  },
+  {
+    "japanese": "どのくらい",
+    "furigana": "どのくらい",
+    "bangla": "কতক্ষণ/কতদিন",
+    "english": "How long/How much time"
+  },
+  {
+    "japanese": "全部で",
+    "furigana": "ぜんぶで",
+    "bangla": "সর্বমোট",
+    "english": "In total"
+  },
+  {
+    "japanese": "みんな",
+    "furigana": "みんな",
+    "bangla": "সকল/সব",
+    "english": "Everyone/All"
+  },
+  {
+    "japanese": "~だけ",
+    "furigana": "~だけ",
+    "bangla": "মাত্র~",
+    "english": "Only~"
+  },
+  {
+    "japanese": "かしこまりました。",
+    "furigana": "かしこまりました",
+    "bangla": "বুঝেছি/ঠিক আছে।",
+    "english": "Certainly/Understood."
+  },
+  {
+    "japanese": "いい[お]天気ですね。",
+    "furigana": "いいおてんきですね",
+    "bangla": "কী চমৎকার/ভাল আবহাওয়া, তাই না?",
+    "english": "Nice weather, isn't it?"
+  },
+  {
+    "japanese": "お出かけですか。",
+    "furigana": "おでかけですか",
+    "bangla": "বাইরে যাচ্ছেন নাকি?",
+    "english": "Are you going out?"
+  },
+  {
+    "japanese": "ちょっと ~まで。",
+    "furigana": "ちょっと ~まで",
+    "bangla": "একটু ~পর্যন্ত।",
+    "english": "Just to..."
+  },
+  {
+    "japanese": "行ってらっしゃい。",
+    "furigana": "いってらっしゃい",
+    "bangla": "সাবধানে যাবেন/ঘুরে আসুন।",
+    "english": "Have a nice trip/See you later (departure greeting)"
+  },
+  {
+    "japanese": "行って きます。",
+    "furigana": "いってきます",
+    "bangla": "আমি একটু আসছি/হ্যাঁ, আসি।",
+    "english": "I'm leaving (I'll be back)"
+  },
+  {
+    "japanese": "船便",
+    "furigana": "ふなびん",
+    "bangla": "সী-মেইল",
+    "english": "Surface mail"
+  },
+  {
+    "japanese": "航空便",
+    "furigana": "こうくうびん",
+    "bangla": "এয়ার মেইল",
+    "english": "Air mail"
+  },
+  {
+    "japanese": "お願いします。",
+    "furigana": "おねがいします",
+    "bangla": "প্লিজ। (কিছুর জন্য বিনীতভাবে অনুরোধ করা)",
+    "english": "Please (polite request)"
+  },
+  {
+    "japanese": "オーストラリア",
+    "furigana": "オーストラリア",
+    "bangla": "অস্ট্রেলিয়া",
+    "english": "Australia"
+  }
+]

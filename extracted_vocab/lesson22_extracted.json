@@ -1,0 +1,128 @@
+[
+  {
+    "japanese": "着ます",
+    "furigana": "きます",
+    "bangla": "পরা/পরিধান করা (শার্ট ইত্যাদি)",
+    "english": "to wear (shirt, etc.)"
+  },
+  {
+    "japanese": "はきます",
+    "furigana": "はきます",
+    "bangla": "পরা/পরিধান করা (জুতা, প্যান্ট ইত্যাদি)",
+    "english": "to wear (shoes, pants, etc.)"
+  },
+  {
+    "japanese": "かぶります",
+    "furigana": "かぶります",
+    "bangla": "পরা/লাগানো (টুপি ইত্যাদি)",
+    "english": "to wear (hat, etc.)"
+  },
+  {
+    "japanese": "かけます",
+    "furigana": "かけます",
+    "bangla": "পরা/লাগানো [চশমা ~]",
+    "english": "to wear [glasses]"
+  },
+  {
+    "japanese": "します",
+    "furigana": "します",
+    "bangla": "পরা/লাগানো [টাই ~]",
+    "english": "to wear [tie]"
+  },
+  {
+    "japanese": "生まれます",
+    "furigana": "うまれます",
+    "bangla": "জন্মগ্রহণ করা",
+    "english": "to be born"
+  },
+  {
+    "japanese": "わたしたち",
+    "furigana": "わたしたち",
+    "bangla": "আমরা",
+    "english": "we"
+  },
+  {
+    "japanese": "コート",
+    "furigana": "コート",
+    "bangla": "কোট",
+    "english": "coat"
+  },
+  {
+    "japanese": "セーター",
+    "furigana": "セーター",
+    "bangla": "সুয়েটার",
+    "english": "sweater"
+  },
+  {
+    "japanese": "スーツ",
+    "furigana": "スーツ",
+    "bangla": "সুট",
+    "english": "suit"
+  },
+  {
+    "japanese": "帽子",
+    "furigana": "ぼうし",
+    "bangla": "টুপি/হ্যাট",
+    "english": "hat"
+  },
+  {
+    "japanese": "眼鏡",
+    "furigana": "めがね",
+    "bangla": "চশমা",
+    "english": "glasses"
+  },
+  {
+    "japanese": "ケーキ",
+    "furigana": "ケーキ",
+    "bangla": "কেক",
+    "english": "cake"
+  },
+  {
+    "japanese": "お弁当",
+    "furigana": "おべんとう",
+    "bangla": "বক্সলাঞ্চ",
+    "english": "boxed lunch"
+  },
+  {
+    "japanese": "ロボット",
+    "furigana": "ロボット",
+    "bangla": "রোবট",
+    "english": "robot"
+  },
+  {
+    "japanese": "ユーモア",
+    "furigana": "ユーモア",
+    "bangla": "হিডুমার/রসবোধ",
+    "english": "humor"
+  },
+  {
+    "japanese": "都合",
+    "furigana": "つごう",
+    "bangla": "অবস্থা, সুবিধা-অসুবিধা",
+    "english": "convenience/circumstance"
+  },
+  {
+    "japanese": "よく",
+    "furigana": "よく",
+    "bangla": "প্রায়ই",
+    "english": "often"
+  },
+  {
+    "japanese": "練習C",
+    "furigana": "れんしゅうC",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "えーと",
+    "furigana": "えーと",
+    "bangla": "আচ্ছা",
+    "english": "well"
+  },
+  {
+    "japanese": "おめでとうございます",
+    "furigana": "おめでとうございます",
+    "bangla": "অভিনন্দন (জন্মদিন, বিয়ে, নববর্ষ ইত্যাদিতে ব্যবহৃত)",
+    "english": "Congratulations (used for birthday, wedding, new year, etc.)"
+  }
+]

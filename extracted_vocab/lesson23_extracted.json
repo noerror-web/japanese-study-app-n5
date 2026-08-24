@@ -1,0 +1,140 @@
+[
+  {
+    "japanese": "聞きます",
+    "furigana": "ききます",
+    "bangla": "জিজ্ঞাসা করা [শিক্ষককে ～]",
+    "english": "to ask [the teacher]"
+  },
+  {
+    "japanese": "回します",
+    "furigana": "まわします",
+    "bangla": "ঘুরানো",
+    "english": "to turn"
+  },
+  {
+    "japanese": "引きます",
+    "furigana": "ひきます",
+    "bangla": "টানা",
+    "english": "to pull"
+  },
+  {
+    "japanese": "変えます",
+    "furigana": "かえます",
+    "bangla": "পরিবর্তন করা/বদলানো",
+    "english": "to change"
+  },
+  {
+    "japanese": "触ります",
+    "furigana": "さわります",
+    "bangla": "স্পর্শ করা [দরজা ～]",
+    "english": "to touch [the door]"
+  },
+  {
+    "japanese": "出ます",
+    "furigana": "でます",
+    "bangla": "বের হওয়া [বাকি খুচরা টাকা ～]",
+    "english": "to come out [change]"
+  },
+  {
+    "japanese": "歩きます",
+    "furigana": "あるきます",
+    "bangla": "হাঁটা",
+    "english": "to walk"
+  },
+  {
+    "japanese": "渡ります",
+    "furigana": "わたります",
+    "bangla": "পার হওয়া [ব্রীজ/পূল ～]",
+    "english": "to cross [a bridge]"
+  },
+  {
+    "japanese": "曲がります",
+    "furigana": "まがります",
+    "bangla": "বাঁক নেওয়া/মোড় ঘোরা [ডানদিকে ～]",
+    "english": "to turn [to the right]"
+  },
+  {
+    "japanese": "寂しい",
+    "furigana": "さびしい",
+    "bangla": "একাকী",
+    "english": "lonely"
+  },
+  {
+    "japanese": "お湯",
+    "furigana": "おゆ",
+    "bangla": "গরম পানি",
+    "english": "hot water"
+  },
+  {
+    "japanese": "音",
+    "furigana": "おと",
+    "bangla": "শব্দ",
+    "english": "sound"
+  },
+  {
+    "japanese": "サイズ",
+    "furigana": "サイズ",
+    "bangla": "সাইজ",
+    "english": "size"
+  },
+  {
+    "japanese": "故障",
+    "furigana": "こしょう",
+    "bangla": "নষ্ট (～します: নষ্ট হওয়া)",
+    "english": "breakdown / out of order"
+  },
+  {
+    "japanese": "道",
+    "furigana": "みち",
+    "bangla": "রাস্তা/পথ",
+    "english": "road/street"
+  },
+  {
+    "japanese": "交差点",
+    "furigana": "こうさてん",
+    "bangla": "চৌরাস্তা/চৌমাথা",
+    "english": "intersection"
+  },
+  {
+    "japanese": "信号",
+    "furigana": "しんごう",
+    "bangla": "ট্রাফিক সিগন্যাল/ট্রাফিক লাইট",
+    "english": "traffic light"
+  },
+  {
+    "japanese": "角",
+    "furigana": "かど",
+    "bangla": "মোড়",
+    "english": "corner"
+  },
+  {
+    "japanese": "橋",
+    "furigana": "はし",
+    "bangla": "ব্রীজ/পূল",
+    "english": "bridge"
+  },
+  {
+    "japanese": "駐車場",
+    "furigana": "ちゅうしゃじょう",
+    "bangla": "পার্কিং-এর স্থান",
+    "english": "parking lot"
+  },
+  {
+    "japanese": "建物",
+    "furigana": "たてもの",
+    "bangla": "ভবন",
+    "english": "building"
+  },
+  {
+    "japanese": "何回も",
+    "furigana": "なんかいも",
+    "bangla": "বারবার",
+    "english": "many times"
+  },
+  {
+    "japanese": "目",
+    "furigana": "め",
+    "bangla": "- তম (ধারাবাহিকতা/সিরিয়াল বোঝাতে)",
+    "english": "suffix for ordinal numbers (e.g., 1st, 2nd)"
+  }
+]

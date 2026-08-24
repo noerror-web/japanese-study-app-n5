@@ -1,0 +1,68 @@
+[
+  {
+    "japanese": "のどが かわきます",
+    "furigana": "喉が渇きます",
+    "bangla": "গলা শুকানো (গলা শুকিয়ে গেছে বলতে 「のどが かわきました」 রূপে ব্যবহৃত হয়)",
+    "english": "To be thirsty (used as 'I am thirsty' when in past form)"
+  },
+  {
+    "japanese": "おなかが すきます",
+    "furigana": "お腹が空きます",
+    "bangla": "ক্ষুধা লাগা (ক্ষুধা লেগেছে বলতে 「おなかが すきました」 রূপে ব্যবহৃত হয়)",
+    "english": "To be hungry (used as 'I am hungry' when in past form)"
+  },
+  {
+    "japanese": "そう しましょう。",
+    "furigana": "そう しましょう。",
+    "bangla": "তাই করা যাক (কারও প্রস্তাবের সাথে সহমত প্রকাশের সময় ব্যবহৃত হয়)",
+    "english": "Let's do that (used to agree with someone's suggestion)"
+  },
+  {
+    "japanese": "ご注文は？",
+    "furigana": "ごちゅうもんは？",
+    "bangla": "আপনাকে কী দেব? (রেস্টুরেন্টের ওয়েটার বলে থাকে)",
+    "english": "May I take your order? (used by restaurant waiters)"
+  },
+  {
+    "japanese": "定食",
+    "furigana": "ていしょく",
+    "bangla": "সেট খাবার/ সেট মেনু",
+    "english": "Set meal"
+  },
+  {
+    "japanese": "牛どん",
+    "furigana": "ぎゅうどん",
+    "bangla": "বাটিতে ভাতের উপর গরুর মাংস দেওয়া খাবার",
+    "english": "Gyudon (beef bowl)"
+  },
+  {
+    "japanese": "少々 お待ち ください。",
+    "furigana": "しょうしょう おまち ください。",
+    "bangla": "অনুগ্রহকরে [একটু] অপেক্ষা করুন।",
+    "english": "Please wait a moment."
+  },
+  {
+    "japanese": "〜で ございます。",
+    "furigana": "〜で ございます。",
+    "bangla": "(です এর মার্জিত রূপ হিসেবে ব্যবহৃত)",
+    "english": "To be (polite form of です)"
+  },
+  {
+    "japanese": "別々に",
+    "furigana": "べつべつに",
+    "bangla": "আলাদাভাবে",
+    "english": "Separately"
+  },
+  {
+    "japanese": "アキックス",
+    "furigana": "アキックス",
+    "bangla": "কাল্পনিক কোম্পানি",
+    "english": "Akix (fictional company)"
+  },
+  {
+    "japanese": "おはようテレビ",
+    "furigana": "おはようテレビ",
+    "bangla": "কাল্পনিক টেলিভিশন অনুষ্ঠান",
+    "english": "Ohayou TV (fictional TV program)"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "japanese": "つくえ",
+    "furigana": "つくえ",
+    "bangla": "ডেক্স/টেবিল",
+    "english": "Desk/Table"
+  },
+  {
+    "japanese": "いす",
+    "furigana": "いす",
+    "bangla": "চেয়ার",
+    "english": "Chair"
+  },
+  {
+    "japanese": "チョコレート",
+    "furigana": "チョコレート",
+    "bangla": "চকোলেট",
+    "english": "Chocolate"
+  },
+  {
+    "japanese": "コーヒー",
+    "furigana": "コーヒー",
+    "bangla": "কফি",
+    "english": "Coffee"
+  },
+  {
+    "japanese": "[お] 土産",
+    "furigana": "おみやげ",
+    "bangla": "স্মারক উপহার/উপহার",
+    "english": "Souvenir/Gift"
+  },
+  {
+    "japanese": "英語",
+    "furigana": "えいご",
+    "bangla": "ইংরেজি ভাষা",
+    "english": "English language"
+  },
+  {
+    "japanese": "日本語",
+    "furigana": "にほんご",
+    "bangla": "জাপানি ভাষা",
+    "english": "Japanese language"
+  },
+  {
+    "japanese": "〜語",
+    "furigana": "〜ご",
+    "bangla": "~ভাষা",
+    "english": "~language"
+  },
+  {
+    "japanese": "何",
+    "furigana": "なん",
+    "bangla": "কী",
+    "english": "What"
+  },
+  {
+    "japanese": "そう",
+    "furigana": "そう",
+    "bangla": "তাই",
+    "english": "So / That's right"
+  },
+  {
+    "japanese": "練習 C",
+    "furigana": "れんしゅう C",
+    "bangla": "অনুশীলন C",
+    "english": "Practice C"
+  },
+  {
+    "japanese": "あのう",
+    "furigana": "あのう",
+    "bangla": "একটু শুনবেন? (সংকেতের সাথে কাউকে কিছু বলার সময়ে)",
+    "english": "Excuse me? / Um... (Used to get someone's attention or when hesitating)"
+  },
+  {
+    "japanese": "えっ",
+    "furigana": "えっ",
+    "bangla": "এ!/আরে! (বিস্মিত হওয়ার অভিব্যক্তি)",
+    "english": "Eh!/Oh! (Expression of surprise)"
+  },
+  {
+    "japanese": "どうぞ。",
+    "furigana": "どうぞ。",
+    "bangla": "নিন/প্লিজ (কিছু একটা কাউকে এগিয়ে দেওয়ার সময়)",
+    "english": "Please; Here you go. (When offering something)"
+  },
+  {
+    "japanese": "[どうも] ありがとう [ございます]",
+    "furigana": "どうも ありがとう ございます",
+    "bangla": "অনেক অনেক ধন্যবাদ",
+    "english": "Thank you very much"
+  },
+  {
+    "japanese": "そうですか。",
+    "furigana": "そうですか。",
+    "bangla": "ও আচ্ছা, তাই নাকি",
+    "english": "Oh, is that so? / Really?"
+  },
+  {
+    "japanese": "違います。",
+    "furigana": "ちがいます。",
+    "bangla": "না, আপনি ভুল করছেন/না, তা নয়",
+    "english": "No, you are mistaken. / No, that's not it."
+  },
+  {
+    "japanese": "あ",
+    "furigana": "あ",
+    "bangla": "ও! (কিছু একটা খেয়াল হলে বলা)",
+    "english": "Oh! (Expression of sudden realization or noticing something)"
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "これから お世話に なります。",
+    "furigana": "これから おせわに なります。",
+    "bangla": "এখন থেকে আপনাদের সহযোগিতা কামনা করছি।",
+    "english": "I look forward to your kind cooperation from now on. / I will be in your care from now on."
+  },
+  {
+    "japanese": "こちらこそ [どうぞ] よろしく [お願いします] 。",
+    "furigana": "こちらこそ どうぞ よろしく おねがいします。",
+    "bangla": "আমিও আপনার সহযোগিতা কামনা করছি। ([দোজো] ইয়োরোশুকু [ওনেগাইশিমাসু] এর প্রতি উত্তরে বলা হয়)",
+    "english": "It is I who should say so; The pleasure is mine. (Said in response to \"Yoroshiku Onegaishimasu\")"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "japanese": "簡単",
+    "furigana": "かんたん",
+    "bangla": "সহজ",
+    "english": "Easy/Simple"
+  },
+  {
+    "japanese": "近い",
+    "furigana": "ちかい",
+    "bangla": "নিকট",
+    "english": "Near"
+  },
+  {
+    "japanese": "遠い",
+    "furigana": "とおい",
+    "bangla": "দূর",
+    "english": "Far"
+  },
+  {
+    "japanese": "速い、早い",
+    "furigana": "はやい",
+    "bangla": "দ্রুত, তাড়াতাড়ি",
+    "english": "Fast/Early"
+  },
+  {
+    "japanese": "遅い",
+    "furigana": "おそい",
+    "bangla": "ধীর, দেরি/বিলম্ব",
+    "english": "Slow/Late"
+  },
+  {
+    "japanese": "多い",
+    "furigana": "おおい",
+    "bangla": "অনেক [~মানুষ], প্রচুর",
+    "english": "Many/Much"
+  },
+  {
+    "japanese": "少ない",
+    "furigana": "すくない",
+    "bangla": "কম [~মানুষ], অল্প",
+    "english": "Few/Little"
+  },
+  {
+    "japanese": "暖かい、温かい",
+    "furigana": "あたたかい",
+    "bangla": "গরম/উষ্ণ",
+    "english": "Warm"
+  },
+  {
+    "japanese": "涼しい",
+    "furigana": "すずしい",
+    "bangla": "শীতল",
+    "english": "Cool"
+  },
+  {
+    "japanese": "甘い",
+    "furigana": "あまい",
+    "bangla": "মিষ্টি",
+    "english": "Sweet"
+  },
+  {
+    "japanese": "辛い",
+    "furigana": "からい",
+    "bangla": "ঝাল, মশলাদার",
+    "english": "Spicy"
+  },
+  {
+    "japanese": "重い",
+    "furigana": "おもい",
+    "bangla": "ভারী",
+    "english": "Heavy"
+  },
+  {
+    "japanese": "軽い",
+    "furigana": "かるい",
+    "bangla": "হালকা",
+    "english": "Light"
+  },
+  {
+    "japanese": "いい",
+    "furigana": "いい",
+    "bangla": "শ্রেয়/ভাল [কফি হলে~]",
+    "english": "Good"
+  },
+  {
+    "japanese": "季節",
+    "furigana": "きせつ",
+    "bangla": "ঋতু/মৌসুম",
+    "english": "Season"
+  },
+  {
+    "japanese": "春",
+    "furigana": "はる",
+    "bangla": "বসন্তকাল",
+    "english": "Spring"
+  },
+  {
+    "japanese": "夏",
+    "furigana": "なつ",
+    "bangla": "গ্রীষ্মকাল",
+    "english": "Summer"
+  },
+  {
+    "japanese": "秋",
+    "furigana": "あき",
+    "bangla": "শরৎকাল",
+    "english": "Autumn"
+  },
+  {
+    "japanese": "冬",
+    "furigana": "ふゆ",
+    "bangla": "শীতকাল",
+    "english": "Winter"
+  },
+  {
+    "japanese": "天気",
+    "furigana": "てんき",
+    "bangla": "আবহাওয়া",
+    "english": "Weather"
+  },
+  {
+    "japanese": "雨",
+    "furigana": "あめ",
+    "bangla": "বৃষ্টি",
+    "english": "Rain"
+  },
+  {
+    "japanese": "雪",
+    "furigana": "ゆき",
+    "bangla": "তুষার",
+    "english": "Snow"
+  },
+  {
+    "japanese": "曇り",
+    "furigana": "くもり",
+    "bangla": "মেঘলা",
+    "english": "Cloudy"
+  },
+  {
+    "japanese": "ホテル",
+    "furigana": "ほてる",
+    "bangla": "হোটেল",
+    "english": "Hotel"
+  },
+  {
+    "japanese": "空港",
+    "furigana": "くうこう",
+    "bangla": "বিমানবন্দর",
+    "english": "Airport"
+  },
+  {
+    "japanese": "海",
+    "furigana": "うみ",
+    "bangla": "সাগর, মহাসমুদ্র",
+    "english": "Sea"
+  },
+  {
+    "japanese": "世界",
+    "furigana": "せかい",
+    "bangla": "পৃথিবী/বিশ্ব",
+    "english": "World"
+  },
+  {
+    "japanese": "パーティー",
+    "furigana": "ぱーてぃー",
+    "bangla": "পার্টি (~কে শিমাসু: পার্টি করা)",
+    "english": "Party"
+  }
+]

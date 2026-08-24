@@ -1,0 +1,176 @@
+[
+  {
+    "japanese": "お酒",
+    "furigana": "おさけ",
+    "bangla": "মদ (অ্যালকোহলযুক্ত পানীয়)",
+    "english": "Alcohol (alcoholic beverage)"
+  },
+  {
+    "japanese": "たばこ",
+    "furigana": "たばこ",
+    "bangla": "সিগারেট",
+    "english": "Cigarette"
+  },
+  {
+    "japanese": "手紙",
+    "furigana": "てがみ",
+    "bangla": "চিঠি",
+    "english": "Letter"
+  },
+  {
+    "japanese": "レポート",
+    "furigana": "レポート",
+    "bangla": "প্রতিবেদন",
+    "english": "Report"
+  },
+  {
+    "japanese": "写真",
+    "furigana": "しゃしん",
+    "bangla": "ছবি/ফটো",
+    "english": "Picture/Photo"
+  },
+  {
+    "japanese": "ビデオ",
+    "furigana": "ビデオ",
+    "bangla": "ভিডিও টেপ, ভিডিও ডেক",
+    "english": "Video tape, video deck"
+  },
+  {
+    "japanese": "店",
+    "furigana": "みせ",
+    "bangla": "দোকান",
+    "english": "Shop"
+  },
+  {
+    "japanese": "庭",
+    "furigana": "にわ",
+    "bangla": "বাগান",
+    "english": "Garden"
+  },
+  {
+    "japanese": "宿題",
+    "furigana": "しゅくだい",
+    "bangla": "বাড়ির কাজ (~を します: বাড়ির কাজ করা)",
+    "english": "Homework (~をする: To do homework)"
+  },
+  {
+    "japanese": "テニス",
+    "furigana": "テニス",
+    "bangla": "টেনিস (~を します: টেনিস খেলা)",
+    "english": "Tennis (~をする: To play tennis)"
+  },
+  {
+    "japanese": "サッカー",
+    "furigana": "サッカー",
+    "bangla": "ফুটবল (~を します: ফুটবল খেলা)",
+    "english": "Soccer (~をする: To play soccer)"
+  },
+  {
+    "japanese": "お花見",
+    "furigana": "おはなみ",
+    "bangla": "চেরীফুল দেখার উৎসব (~を します: চেরীফুল দেখা)",
+    "english": "Cherry blossom viewing festival (~をする: To view cherry blossoms)"
+  },
+  {
+    "japanese": "何",
+    "furigana": "なに",
+    "bangla": "কী",
+    "english": "What"
+  },
+  {
+    "japanese": "いっしょに",
+    "furigana": "いっしょに",
+    "bangla": "একসাথে",
+    "english": "Together"
+  },
+  {
+    "japanese": "ちょっと",
+    "furigana": "ちょっと",
+    "bangla": "একটু/সামান্য",
+    "english": "A little/A moment"
+  },
+  {
+    "japanese": "いつも",
+    "furigana": "いつも",
+    "bangla": "সবসময়, সাধারণত",
+    "english": "Always, usually"
+  },
+  {
+    "japanese": "時々",
+    "furigana": "ときどき",
+    "bangla": "মাঝেমাঝে/কখনো কখনো",
+    "english": "Sometimes/Occasionally"
+  },
+  {
+    "japanese": "それから",
+    "furigana": "それから",
+    "bangla": "তারপর, এরপর",
+    "english": "And then, after that"
+  },
+  {
+    "japanese": "ええ",
+    "furigana": "ええ",
+    "bangla": "হ্যাঁ",
+    "english": "Yes"
+  },
+  {
+    "japanese": "いいですね。",
+    "furigana": "いいですね。",
+    "bangla": "ভালোই তো।",
+    "english": "That's good."
+  },
+  {
+    "japanese": "わかりました。",
+    "furigana": "わかりました。",
+    "bangla": "আচ্ছা ঠিক আছে/বুঝতে পেরেছি।",
+    "english": "Alright/I understand."
+  },
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "何ですか。",
+    "furigana": "なんですか。",
+    "bangla": "কী? (শাব্দিক অর্থ: কী হয়েছে?)",
+    "english": "What is it? (Literal meaning: What happened?)"
+  },
+  {
+    "japanese": "じゃ、またあした。",
+    "furigana": "じゃ、またあした。",
+    "bangla": "তাহলে (কাল) দেখা হবে।",
+    "english": "Well then, see you (tomorrow)."
+  },
+  {
+    "japanese": "メキシコ",
+    "furigana": "メキシコ",
+    "bangla": "মেক্সিকো",
+    "english": "Mexico"
+  },
+  {
+    "japanese": "大阪デパート",
+    "furigana": "おおさかデパート",
+    "bangla": "কাল্পনিক ডিপার্টমেন্টাল স্টোর",
+    "english": "Fictional department store"
+  },
+  {
+    "japanese": "つるや",
+    "furigana": "つるや",
+    "bangla": "কাল্পনিক রেস্টুরেন্ট",
+    "english": "Fictional restaurant"
+  },
+  {
+    "japanese": "フランス屋",
+    "furigana": "フランスや",
+    "bangla": "কাল্পনিক সুপার মার্কেট",
+    "english": "Fictional supermarket"
+  },
+  {
+    "japanese": "毎日屋",
+    "furigana": "まいにちや",
+    "bangla": "কাল্পনিক সুপার মার্কেট",
+    "english": "Fictional supermarket"
+  }
+]

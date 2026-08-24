@@ -1,0 +1,164 @@
+[
+  {
+    "japanese": "これ",
+    "furigana": "これ",
+    "bangla": "এটা (বক্তার কাছের জিনিস)",
+    "english": "This (thing near the speaker)"
+  },
+  {
+    "japanese": "それ",
+    "furigana": "それ",
+    "bangla": "সেটা (শ্রোতার কাছের জিনিস)",
+    "english": "That (thing near the listener)"
+  },
+  {
+    "japanese": "あれ",
+    "furigana": "あれ",
+    "bangla": "ওটা (বক্তা ও শ্রোতা উভয় থেকে দূরের জিনিস)",
+    "english": "That (thing far from both speaker and listener)"
+  },
+  {
+    "japanese": "この～",
+    "furigana": "この～",
+    "bangla": "এই ～",
+    "english": "This ~ (e.g., this book)"
+  },
+  {
+    "japanese": "その～",
+    "furigana": "その～",
+    "bangla": "সেই ～",
+    "english": "That ~ (e.g., that book near listener)"
+  },
+  {
+    "japanese": "あの～",
+    "furigana": "あの～",
+    "bangla": "ওই ～",
+    "english": "That ~ (e.g., that book far from both)"
+  },
+  {
+    "japanese": "本",
+    "furigana": "ほん",
+    "bangla": "বই",
+    "english": "Book"
+  },
+  {
+    "japanese": "辞書",
+    "furigana": "じしょ",
+    "bangla": "অভিধান",
+    "english": "Dictionary"
+  },
+  {
+    "japanese": "雑誌",
+    "furigana": "ざっし",
+    "bangla": "ম্যাগাজিন",
+    "english": "Magazine"
+  },
+  {
+    "japanese": "新聞",
+    "furigana": "しんぶん",
+    "bangla": "সংবাদপত্র",
+    "english": "Newspaper"
+  },
+  {
+    "japanese": "ノート",
+    "furigana": "ノート",
+    "bangla": "খাতা/নোটবুক",
+    "english": "Notebook"
+  },
+  {
+    "japanese": "手帳",
+    "furigana": "てちょう",
+    "bangla": "পকেট ডায়েরি/ছোট ডায়েরি",
+    "english": "Pocket diary / Small diary"
+  },
+  {
+    "japanese": "名刺",
+    "furigana": "めいし",
+    "bangla": "বিজনেস কার্ড/নেম কার্ড",
+    "english": "Business card / Name card"
+  },
+  {
+    "japanese": "カード",
+    "furigana": "カード",
+    "bangla": "কার্ড",
+    "english": "Card"
+  },
+  {
+    "japanese": "鉛筆",
+    "furigana": "えんぴつ",
+    "bangla": "পেনসিল",
+    "english": "Pencil"
+  },
+  {
+    "japanese": "ボールペン",
+    "furigana": "ボールペン",
+    "bangla": "বলপেন",
+    "english": "Ballpoint pen"
+  },
+  {
+    "japanese": "シャープペンシル",
+    "furigana": "シャープペンシル",
+    "bangla": "শার্প পেনসিল/ম্যাকানিক্যাল পেনসিল",
+    "english": "Mechanical pencil"
+  },
+  {
+    "japanese": "かぎ",
+    "furigana": "かぎ",
+    "bangla": "চাবি",
+    "english": "Key"
+  },
+  {
+    "japanese": "時計",
+    "furigana": "とけい",
+    "bangla": "ঘড়ি",
+    "english": "Clock / Watch"
+  },
+  {
+    "japanese": "傘",
+    "furigana": "かさ",
+    "bangla": "ছাতা",
+    "english": "Umbrella"
+  },
+  {
+    "japanese": "かばん",
+    "furigana": "かばん",
+    "bangla": "ব্যাগ",
+    "english": "Bag"
+  },
+  {
+    "japanese": "CD",
+    "furigana": "シーディー",
+    "bangla": "সিডি/কম্প্যাক্ট ডিস্ক",
+    "english": "CD / Compact Disc"
+  },
+  {
+    "japanese": "テレビ",
+    "furigana": "テレビ",
+    "bangla": "টেলিভিশন",
+    "english": "Television"
+  },
+  {
+    "japanese": "ラジオ",
+    "furigana": "ラジオ",
+    "bangla": "রেডিও",
+    "english": "Radio"
+  },
+  {
+    "japanese": "カメラ",
+    "furigana": "カメラ",
+    "bangla": "ক্যামেরা",
+    "english": "Camera"
+  },
+  {
+    "japanese": "コンピューター",
+    "furigana": "コンピューター",
+    "bangla": "কম্পিউটার",
+    "english": "Computer"
+  },
+  {
+    "japanese": "車",
+    "furigana": "くるま",
+    "bangla": "গাড়ি",
+    "english": "Car"
+  }
+]

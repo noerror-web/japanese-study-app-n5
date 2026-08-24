@@ -1,0 +1,170 @@
+[
+  {
+    "japanese": "ここ",
+    "furigana": "ここ",
+    "bangla": "এখানে",
+    "english": "here"
+  },
+  {
+    "japanese": "そこ",
+    "furigana": "そこ",
+    "bangla": "সেখানে",
+    "english": "there (near listener)"
+  },
+  {
+    "japanese": "あそこ",
+    "furigana": "あそこ",
+    "bangla": "ওখানে",
+    "english": "over there (far from both)"
+  },
+  {
+    "japanese": "どこ",
+    "furigana": "どこ",
+    "bangla": "কোথায়/কোনখানে",
+    "english": "where"
+  },
+  {
+    "japanese": "こちら",
+    "furigana": "こちら",
+    "bangla": "এদিকে (ここ-এর মার্জিত রূপ)",
+    "english": "this way / here (polite)"
+  },
+  {
+    "japanese": "そちら",
+    "furigana": "そちら",
+    "bangla": "সেদিকে (そこ-এর মার্জিত রূপ)",
+    "english": "that way / there (polite, near listener)"
+  },
+  {
+    "japanese": "あちら",
+    "furigana": "あちら",
+    "bangla": "ওদিকে (あそこ-এর মার্জিত রূপ)",
+    "english": "that way / over there (polite, far from both)"
+  },
+  {
+    "japanese": "どちら",
+    "furigana": "どちら",
+    "bangla": "কোনদিকে (どこ-এর মার্জিত রূপ)",
+    "english": "which way / where (polite)"
+  },
+  {
+    "japanese": "教室",
+    "furigana": "きょうしつ",
+    "bangla": "শ্রেণীকক্ষ/ক্লাসরুম",
+    "english": "classroom"
+  },
+  {
+    "japanese": "食堂",
+    "furigana": "しょくどう",
+    "bangla": "খাবার ঘর/ডাইনিং হল/ক্যান্টিন",
+    "english": "dining room / dining hall / cafeteria"
+  },
+  {
+    "japanese": "事務所",
+    "furigana": "じむしょ",
+    "bangla": "অফিস",
+    "english": "office"
+  },
+  {
+    "japanese": "会議室",
+    "furigana": "かいぎしつ",
+    "bangla": "সভাকক্ষ/মিটিং রুম",
+    "english": "meeting room"
+  },
+  {
+    "japanese": "受付",
+    "furigana": "うけつけ",
+    "bangla": "রিসিপশন ডেস্ক/অভ্যর্থনা জানানোর স্থান",
+    "english": "reception desk / reception area"
+  },
+  {
+    "japanese": "ロビー",
+    "furigana": "ロビー",
+    "bangla": "লবি",
+    "english": "lobby"
+  },
+  {
+    "japanese": "部屋",
+    "furigana": "へや",
+    "bangla": "রুম/কক্ষ",
+    "english": "room"
+  },
+  {
+    "japanese": "トイレ",
+    "furigana": "おてあらい",
+    "bangla": "শৌচাগার/টয়লেট/ওয়াশরুম",
+    "english": "toilet / restroom"
+  },
+  {
+    "japanese": "階段",
+    "furigana": "かいだん",
+    "bangla": "সিঁড়ি",
+    "english": "stairs"
+  },
+  {
+    "japanese": "エレベーター",
+    "furigana": "エレベーター",
+    "bangla": "লিফ্ট",
+    "english": "elevator"
+  },
+  {
+    "japanese": "エスカレーター",
+    "furigana": "エスカレーター",
+    "bangla": "চলন্ত সিঁড়ি/এক্সকেলেটর",
+    "english": "escalator"
+  },
+  {
+    "japanese": "自動販売機",
+    "furigana": "じどうはんばいき",
+    "bangla": "স্বয়ংক্রিয় বিক্রয়যন্ত্র/ভেন্ডিং মেশিন",
+    "english": "automatic vending machine / vending machine"
+  },
+  {
+    "japanese": "電話",
+    "furigana": "でんわ",
+    "bangla": "টেলিফোন",
+    "english": "telephone"
+  },
+  {
+    "japanese": "国",
+    "furigana": "おくに",
+    "bangla": "[আপনারা] দেশ",
+    "english": "country (polite, referring to 'your country')"
+  },
+  {
+    "japanese": "会社",
+    "furigana": "かいしゃ",
+    "bangla": "কোম্পানি",
+    "english": "company"
+  },
+  {
+    "japanese": "うち",
+    "furigana": "うち",
+    "bangla": "বাড়ি/ঘর",
+    "english": "house / home"
+  },
+  {
+    "japanese": "靴",
+    "furigana": "くつ",
+    "bangla": "জুতা",
+    "english": "shoes"
+  },
+  {
+    "japanese": "ネクタイ",
+    "furigana": "ネクタイ",
+    "bangla": "নেকটাই",
+    "english": "necktie"
+  },
+  {
+    "japanese": "ワイン",
+    "furigana": "ワイン",
+    "bangla": "ওয়াইন",
+    "english": "wine"
+  },
+  {
+    "japanese": "売り場",
+    "furigana": "うりば",
+    "bangla": "বিক্রয়ের জায়গা/কাউন্টার (ডিপার্টমেন্টাল স্টোর ইত্যাদিতে)",
+    "english": "sales area / counter (e.g., in a department store)"
+  }
+]

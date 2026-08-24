@@ -1,0 +1,170 @@
+[
+  {
+    "japanese": "わかります",
+    "furigana": "わかります",
+    "bangla": "বোঝা/বুঝতে পারা",
+    "english": "to understand"
+  },
+  {
+    "japanese": "あります",
+    "furigana": "あります",
+    "bangla": "আছে",
+    "english": "to have/there is"
+  },
+  {
+    "japanese": "好き",
+    "furigana": "すき",
+    "bangla": "পছন্দ/পছন্দ করা",
+    "english": "like"
+  },
+  {
+    "japanese": "嫌い",
+    "furigana": "きらい",
+    "bangla": "অপছন্দ/অপছন্দ করা",
+    "english": "dislike"
+  },
+  {
+    "japanese": "上手",
+    "furigana": "じょうず",
+    "bangla": "দক্ষ/পারদর্শী",
+    "english": "skillful"
+  },
+  {
+    "japanese": "下手",
+    "furigana": "へた",
+    "bangla": "অদক্ষ",
+    "english": "unskillful"
+  },
+  {
+    "japanese": "飲み物",
+    "furigana": "のみもの",
+    "bangla": "পানীয়",
+    "english": "drink/beverage"
+  },
+  {
+    "japanese": "料理",
+    "furigana": "りょうり",
+    "bangla": "খাবার/রান্না",
+    "english": "cooking/cuisine"
+  },
+  {
+    "japanese": "スポーツ",
+    "furigana": "すぽーつ",
+    "bangla": "খেলাধুলা",
+    "english": "sports"
+  },
+  {
+    "japanese": "野球",
+    "furigana": "やきゅう",
+    "bangla": "বেসবল",
+    "english": "baseball"
+  },
+  {
+    "japanese": "ダンス",
+    "furigana": "だんす",
+    "bangla": "নাচ",
+    "english": "dance"
+  },
+  {
+    "japanese": "旅行",
+    "furigana": "りょこう",
+    "bangla": "ভ্রমণ",
+    "english": "travel"
+  },
+  {
+    "japanese": "音楽",
+    "furigana": "おんがく",
+    "bangla": "সঙ্গীত/গানবাজনা",
+    "english": "music"
+  },
+  {
+    "japanese": "歌",
+    "furigana": "うた",
+    "bangla": "গান",
+    "english": "song"
+  },
+  {
+    "japanese": "クラシック",
+    "furigana": "くらしっく",
+    "bangla": "ধ্রুপদী সঙ্গীত",
+    "english": "classical music"
+  },
+  {
+    "japanese": "ジャズ",
+    "furigana": "じゃず",
+    "bangla": "জাজ সঙ্গীত",
+    "english": "jazz"
+  },
+  {
+    "japanese": "コンサート",
+    "furigana": "こんさーと",
+    "bangla": "কনসার্ট/সঙ্গীতানুষ্ঠান",
+    "english": "concert"
+  },
+  {
+    "japanese": "カラオケ",
+    "furigana": "からおけ",
+    "bangla": "কারাওকে",
+    "english": "karaoke"
+  },
+  {
+    "japanese": "歌舞伎",
+    "furigana": "かぶき",
+    "bangla": "কাবুকি (জাপানি ঐতিহ্যবাহী গীতিনাট্য)",
+    "english": "Kabuki (traditional Japanese theater)"
+  },
+  {
+    "japanese": "絵",
+    "furigana": "え",
+    "bangla": "ছবি/ড্রয়িং",
+    "english": "picture/drawing"
+  },
+  {
+    "japanese": "字",
+    "furigana": "じ",
+    "bangla": "বর্ণ/অক্ষর",
+    "english": "character/letter"
+  },
+  {
+    "japanese": "漢字",
+    "furigana": "かんじ",
+    "bangla": "কাঞ্জি (জাপানি ভাষায় ব্যবহৃত চীনালিপি)",
+    "english": "Kanji (Chinese characters)"
+  },
+  {
+    "japanese": "ひらがな",
+    "furigana": "ひらがな",
+    "bangla": "হিরাগানা",
+    "english": "Hiragana"
+  },
+  {
+    "japanese": "かたかな",
+    "furigana": "かたかな",
+    "bangla": "কাতাকানা",
+    "english": "Katakana"
+  },
+  {
+    "japanese": "ローマ字",
+    "furigana": "ろーまじ",
+    "bangla": "রোমান লিপি",
+    "english": "Romaji"
+  },
+  {
+    "japanese": "細かいお金",
+    "furigana": "こまかいおかね",
+    "bangla": "খুচরা/ভাংতি টাকা",
+    "english": "small change"
+  },
+  {
+    "japanese": "チケット",
+    "furigana": "ちけっと",
+    "bangla": "টিকেট",
+    "english": "ticket"
+  },
+  {
+    "japanese": "時間",
+    "furigana": "じかん",
+    "bangla": "সময়",
+    "english": "time"
+  }
+]

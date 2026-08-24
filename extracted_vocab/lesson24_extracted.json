@@ -1,0 +1,116 @@
+[
+  {
+    "japanese": "くれます",
+    "furigana": "くれます",
+    "bangla": "দেওয়া (কেউ আমাকে দিয়েছে এমন ক্ষেত্রে)",
+    "english": "to give (to me)"
+  },
+  {
+    "japanese": "直します",
+    "furigana": "なおします",
+    "bangla": "সংशोधন করা/মেরামত করা",
+    "english": "to correct/to repair"
+  },
+  {
+    "japanese": "連れて行きます",
+    "furigana": "つれていきます",
+    "bangla": "সাথে করে নিয়ে যাওয়া (কাউকে)",
+    "english": "to take (someone)"
+  },
+  {
+    "japanese": "連れて来ます",
+    "furigana": "つれてきます",
+    "bangla": "সাথে করে নিয়ে আসা (কাউকে)",
+    "english": "to bring (someone)"
+  },
+  {
+    "japanese": "送ります",
+    "furigana": "おくります",
+    "bangla": "পৌঁছে দেওয়া/এগিয়ে দেওয়া",
+    "english": "to escort/to see off"
+  },
+  {
+    "japanese": "人を〜",
+    "furigana": "ひとを〜",
+    "bangla": "কাউকে ~",
+    "english": "someone"
+  },
+  {
+    "japanese": "紹介します",
+    "furigana": "しょうかいします",
+    "bangla": "পরিচয় করিয়ে দেওয়া",
+    "english": "to introduce"
+  },
+  {
+    "japanese": "案内します",
+    "furigana": "あんないします",
+    "bangla": "কোন স্থান ঘুরিয়ে দেখানো",
+    "english": "to guide/to show around"
+  },
+  {
+    "japanese": "説明します",
+    "furigana": "せつめいします",
+    "bangla": "ব্যাখ্যা করা",
+    "english": "to explain"
+  },
+  {
+    "japanese": "おじいさん／おじいちゃん",
+    "furigana": "おじいさん／おじいちゃん",
+    "bangla": "দাদা, নানা, বয়স্ক পুরুষ",
+    "english": "grandfather/elderly man"
+  },
+  {
+    "japanese": "おばあさん／おばあちゃん",
+    "furigana": "おばあさん／おばあちゃん",
+    "bangla": "দাদি, নানি, বয়স্ক নারী",
+    "english": "grandmother/elderly woman"
+  },
+  {
+    "japanese": "準備",
+    "furigana": "じゅんび",
+    "bangla": "প্রস্তুতি (~[কে] শিমাসু: প্রস্তুতি নেওয়া)",
+    "english": "preparation"
+  },
+  {
+    "japanese": "引っ越し",
+    "furigana": "ひっこし",
+    "bangla": "বাসা বদল (~[কে] শিমাসু: বাসা বদল করা)",
+    "english": "moving (to another house)"
+  },
+  {
+    "japanese": "お菓子",
+    "furigana": "おかし",
+    "bangla": "মিষ্টিজাতীয় খাবার/স্ন্যাকস",
+    "english": "sweets/snacks"
+  },
+  {
+    "japanese": "ホームステイ",
+    "furigana": "ホームステイ",
+    "bangla": "হোমস্টে করা/কারো বাসায় থাকা",
+    "english": "homestay"
+  },
+  {
+    "japanese": "全部",
+    "furigana": "ぜんぶ",
+    "bangla": "সব/সবকিছু",
+    "english": "everything/all"
+  },
+  {
+    "japanese": "自分で",
+    "furigana": "じぶんで",
+    "bangla": "নিজে নিজে",
+    "english": "by oneself"
+  },
+  {
+    "japanese": "ほかに",
+    "furigana": "ほかに",
+    "bangla": "এছাড়া/এর বাইরে",
+    "english": "besides/in addition"
+  },
+  {
+    "japanese": "母の日",
+    "furigana": "ははのひ",
+    "bangla": "মা দিবস",
+    "english": "Mother's Day"
+  }
+]

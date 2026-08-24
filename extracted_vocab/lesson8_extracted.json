@@ -1,0 +1,200 @@
+[
+  {
+    "japanese": "ハンサム",
+    "furigana": "ハンサム",
+    "bangla": "সুদর্শন/হ্যান্ডসাম",
+    "english": "handsome"
+  },
+  {
+    "japanese": "きれい",
+    "furigana": "きれい",
+    "bangla": "সুন্দরী/সুন্দর, পরিষ্কার",
+    "english": "beautiful/pretty, clean"
+  },
+  {
+    "japanese": "静か",
+    "furigana": "しずか",
+    "bangla": "নিরিবিলি/শান্ত",
+    "english": "quiet/peaceful"
+  },
+  {
+    "japanese": "にぎやか",
+    "furigana": "にぎやか",
+    "bangla": "প্রাণবন্ত/জমজমাট/কোলাহলপূর্ণ",
+    "english": "lively/bustling/noisy"
+  },
+  {
+    "japanese": "有名",
+    "furigana": "ゆうめい",
+    "bangla": "বিখ্যাত",
+    "english": "famous"
+  },
+  {
+    "japanese": "親切",
+    "furigana": "しんせつ",
+    "bangla": "দয়ালু, সহানুভূতিশীল (নিজের পরিবারের কারো সম্পর্কে ব্যবহৃত হয় না)",
+    "english": "kind, sympathetic (not used for one's own family)"
+  },
+  {
+    "japanese": "元気",
+    "furigana": "げんき",
+    "bangla": "সুস্থ, স্বাস্থ্যবান, প্রফুল্ল",
+    "english": "healthy, cheerful, energetic"
+  },
+  {
+    "japanese": "暇",
+    "furigana": "ひま",
+    "bangla": "অবসর (সময়)",
+    "english": "free (time)"
+  },
+  {
+    "japanese": "便利",
+    "furigana": "べんり",
+    "bangla": "সুবিধাজনক",
+    "english": "convenient"
+  },
+  {
+    "japanese": "すてき",
+    "furigana": "すてき",
+    "bangla": "চমৎকার/সুন্দর",
+    "english": "lovely/nice/beautiful"
+  },
+  {
+    "japanese": "大きい",
+    "furigana": "おおきい",
+    "bangla": "বড়",
+    "english": "big/large"
+  },
+  {
+    "japanese": "小さい",
+    "furigana": "ちいさい",
+    "bangla": "ছোট",
+    "english": "small/little"
+  },
+  {
+    "japanese": "新しい",
+    "furigana": "あたらしい",
+    "bangla": "নতুন",
+    "english": "new"
+  },
+  {
+    "japanese": "古い",
+    "furigana": "ふるい",
+    "bangla": "পুরাতন/প্রাচীন (মানুষের বয়সের ক্ষেত্রে ব্যবহৃত হয় না)",
+    "english": "old/ancient (not used for human age)"
+  },
+  {
+    "japanese": "良い",
+    "furigana": "いい (よい)",
+    "bangla": "ভাল",
+    "english": "good"
+  },
+  {
+    "japanese": "悪い",
+    "furigana": "わるい",
+    "bangla": "খারাপ",
+    "english": "bad"
+  },
+  {
+    "japanese": "暑い, 熱い",
+    "furigana": "あつい",
+    "bangla": "গরম",
+    "english": "hot"
+  },
+  {
+    "japanese": "寒い",
+    "furigana": "さむい",
+    "bangla": "ঠান্ডা, শীত (তাপমাত্রা সম্পর্কে বলতে)",
+    "english": "cold (referring to temperature/weather)"
+  },
+  {
+    "japanese": "冷たい",
+    "furigana": "つめたい",
+    "bangla": "ঠান্ডা (স্পর্শযোগ্য কিছু সম্পর্কে বলতে)",
+    "english": "cold (referring to something tangible)"
+  },
+  {
+    "japanese": "難しい",
+    "furigana": "むずかしい",
+    "bangla": "কঠিন",
+    "english": "difficult"
+  },
+  {
+    "japanese": "易しい",
+    "furigana": "やさしい",
+    "bangla": "সহজ",
+    "english": "easy"
+  },
+  {
+    "japanese": "高い",
+    "furigana": "たかい",
+    "bangla": "দামী, উঁচু",
+    "english": "expensive, tall/high"
+  },
+  {
+    "japanese": "安い",
+    "furigana": "やすい",
+    "bangla": "সস্তা",
+    "english": "cheap/inexpensive"
+  },
+  {
+    "japanese": "低い",
+    "furigana": "ひくい",
+    "bangla": "নিচু",
+    "english": "low"
+  },
+  {
+    "japanese": "面白い",
+    "furigana": "おもしろい",
+    "bangla": "মজার/আকর্ষণীয়/উপভোগ্য",
+    "english": "interesting/amusing/enjoyable"
+  },
+  {
+    "japanese": "おいしい",
+    "furigana": "おいしい",
+    "bangla": "মজাদার/সুস্বাদু",
+    "english": "delicious/tasty"
+  },
+  {
+    "japanese": "忙しい",
+    "furigana": "いそがしい",
+    "bangla": "ব্যস্ত",
+    "english": "busy"
+  },
+  {
+    "japanese": "楽しい",
+    "furigana": "たのしい",
+    "bangla": "আনন্দদায়ক/মজার",
+    "english": "fun/enjoyable"
+  },
+  {
+    "japanese": "白い",
+    "furigana": "しろい",
+    "bangla": "সাদা",
+    "english": "white"
+  },
+  {
+    "japanese": "黒い",
+    "furigana": "くろい",
+    "bangla": "কালো",
+    "english": "black"
+  },
+  {
+    "japanese": "赤い",
+    "furigana": "あかい",
+    "bangla": "লাল",
+    "english": "red"
+  },
+  {
+    "japanese": "青い",
+    "furigana": "あおい",
+    "bangla": "নীল",
+    "english": "blue"
+  },
+  {
+    "japanese": "桜",
+    "furigana": "さくら",
+    "bangla": "চেরিফুল/চেরিগাহ",
+    "english": "cherry blossom/cherry tree"
+  }
+]

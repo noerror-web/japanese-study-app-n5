@@ -1,0 +1,74 @@
+[
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "お探しですか。",
+    "furigana": "おさがしですか",
+    "bangla": "কিছু কি খুঁজছেন?",
+    "english": "Are you looking for something?"
+  },
+  {
+    "japanese": "では",
+    "furigana": "では",
+    "bangla": "তাহলে",
+    "english": "Well then / Then"
+  },
+  {
+    "japanese": "こちら",
+    "furigana": "こちら",
+    "bangla": "এটা (これ-এর মার্জিত রূপ)",
+    "english": "This (polite form of 'kore')"
+  },
+  {
+    "japanese": "家賃",
+    "furigana": "やちん",
+    "bangla": "বাড়ি ভাড়া",
+    "english": "House rent"
+  },
+  {
+    "japanese": "ダイニングキッチン",
+    "furigana": "ダイニングキッチン",
+    "bangla": "ডাইনিং স্পেসসহ রান্নাঘর",
+    "english": "Dining kitchen"
+  },
+  {
+    "japanese": "和室",
+    "furigana": "わしつ",
+    "bangla": "জাপানি রীতির কক্ষ/রুম",
+    "english": "Japanese-style room"
+  },
+  {
+    "japanese": "押し入れ",
+    "furigana": "おしいれ",
+    "bangla": "জাপানি রীতির আলমারি",
+    "english": "Japanese-style closet"
+  },
+  {
+    "japanese": "布団",
+    "furigana": "ふとん",
+    "bangla": "জাপানি রীতির লেপ-তোশক",
+    "english": "Japanese mattress/bedding (futon)"
+  },
+  {
+    "japanese": "パリ",
+    "furigana": "パリ",
+    "bangla": "প্যারিস",
+    "english": "Paris"
+  },
+  {
+    "japanese": "万里の長城",
+    "furigana": "ばんり の ちょうじょう",
+    "bangla": "চীনের প্রাচীর (গ্রেট ওয়াল)",
+    "english": "The Great Wall of China"
+  },
+  {
+    "japanese": "みんなの アンケート",
+    "furigana": "みんなの アンケート",
+    "bangla": "কাল্পনিক জরিপের শিরোনাম",
+    "english": "Everyone's survey (title)"
+  }
+]

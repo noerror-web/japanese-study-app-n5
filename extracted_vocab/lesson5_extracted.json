@@ -1,0 +1,200 @@
+[
+  {
+    "japanese": "行きます",
+    "furigana": "いきます",
+    "bangla": "যাওয়া",
+    "english": "To go"
+  },
+  {
+    "japanese": "来ます",
+    "furigana": "きます",
+    "bangla": "আসা",
+    "english": "To come"
+  },
+  {
+    "japanese": "帰ります",
+    "furigana": "かえります",
+    "bangla": "বাড়ি ফেরা",
+    "english": "To return home"
+  },
+  {
+    "japanese": "学校",
+    "furigana": "がっこう",
+    "bangla": "বিদ্যালয়",
+    "english": "School"
+  },
+  {
+    "japanese": "スーパー",
+    "furigana": "スーパー",
+    "bangla": "সুপার মার্কেট",
+    "english": "Supermarket"
+  },
+  {
+    "japanese": "駅",
+    "furigana": "えき",
+    "bangla": "রেলস্টেশন",
+    "english": "Train station"
+  },
+  {
+    "japanese": "飛行機",
+    "furigana": "ひこうき",
+    "bangla": "উড়োজাহাজ/প্লেন",
+    "english": "Airplane/Plane"
+  },
+  {
+    "japanese": "船",
+    "furigana": "ふね",
+    "bangla": "জাহাজ",
+    "english": "Ship/Boat"
+  },
+  {
+    "japanese": "電車",
+    "furigana": "でんしゃ",
+    "bangla": "ইলেক্ট্রিক ট্রেন",
+    "english": "Electric train"
+  },
+  {
+    "japanese": "地下鉄",
+    "furigana": "ちかてつ",
+    "bangla": "পাতালরেল/সাবওয়ে",
+    "english": "Subway/Underground"
+  },
+  {
+    "japanese": "新幹線",
+    "furigana": "しんかんせん",
+    "bangla": "শিনকানসেন (বুলেট ট্রেন)",
+    "english": "Shinkansen (Bullet train)"
+  },
+  {
+    "japanese": "バス",
+    "furigana": "バス",
+    "bangla": "বাস",
+    "english": "Bus"
+  },
+  {
+    "japanese": "タクシー",
+    "furigana": "タクシー",
+    "bangla": "ট্যাক্সি",
+    "english": "Taxi"
+  },
+  {
+    "japanese": "自転車",
+    "furigana": "じてんしゃ",
+    "bangla": "সাইকেল",
+    "english": "Bicycle"
+  },
+  {
+    "japanese": "歩いて",
+    "furigana": "あるいて",
+    "bangla": "পায়ে হেঁটে",
+    "english": "By walking / On foot"
+  },
+  {
+    "japanese": "人",
+    "furigana": "ひと",
+    "bangla": "মানুষ/ব্যক্তি",
+    "english": "Person/Individual"
+  },
+  {
+    "japanese": "友達",
+    "furigana": "ともだち",
+    "bangla": "বন্ধু",
+    "english": "Friend"
+  },
+  {
+    "japanese": "彼",
+    "furigana": "かれ*",
+    "bangla": "সে/বয়ফ্রেন্ড/প্রেমিক",
+    "english": "He/Boyfriend/Lover"
+  },
+  {
+    "japanese": "彼女",
+    "furigana": "かのじょ",
+    "bangla": "সে/গার্লফ্রেন্ড/প্রেমিকা",
+    "english": "She/Girlfriend/Lover"
+  },
+  {
+    "japanese": "家族",
+    "furigana": "かぞく",
+    "bangla": "পরিবার",
+    "english": "Family"
+  },
+  {
+    "japanese": "一人で",
+    "furigana": "ひとりで",
+    "bangla": "একা একা",
+    "english": "Alone/By oneself"
+  },
+  {
+    "japanese": "先週",
+    "furigana": "せんしゅう",
+    "bangla": "গতসপ্তাহ",
+    "english": "Last week"
+  },
+  {
+    "japanese": "今週",
+    "furigana": "こんしゅう",
+    "bangla": "এইসপ্তাহ",
+    "english": "This week"
+  },
+  {
+    "japanese": "来週",
+    "furigana": "らいしゅう",
+    "bangla": "আগামীসপ্তাহ",
+    "english": "Next week"
+  },
+  {
+    "japanese": "先月",
+    "furigana": "せんげつ",
+    "bangla": "গত মাস",
+    "english": "Last month"
+  },
+  {
+    "japanese": "今月",
+    "furigana": "こんげつ*",
+    "bangla": "এই মাস",
+    "english": "This month"
+  },
+  {
+    "japanese": "来月",
+    "furigana": "らいげつ",
+    "bangla": "আগামীমাস",
+    "english": "Next month"
+  },
+  {
+    "japanese": "去年",
+    "furigana": "きょねん",
+    "bangla": "গতবছর",
+    "english": "Last year"
+  },
+  {
+    "japanese": "今年",
+    "furigana": "ことし*",
+    "bangla": "এইবছর",
+    "english": "This year"
+  },
+  {
+    "japanese": "来年",
+    "furigana": "らいねん",
+    "bangla": "আগামীবছর",
+    "english": "Next year"
+  },
+  {
+    "japanese": "-年",
+    "furigana": "-ねん*",
+    "bangla": "-বছর",
+    "english": "-year (suffix for years)"
+  },
+  {
+    "japanese": "何年",
+    "furigana": "なんねん*",
+    "bangla": "কোন বছর/কয় বছর",
+    "english": "Which year/How many years"
+  },
+  {
+    "japanese": "-月",
+    "furigana": "-がつ",
+    "bangla": "-মাস",
+    "english": "-month (suffix for months)"
+  }
+]

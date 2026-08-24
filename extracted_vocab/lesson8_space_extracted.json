@@ -1,0 +1,152 @@
+[
+  {
+    "japanese": "山",
+    "furigana": "やま",
+    "bangla": "পাহাড়/পর্বত",
+    "english": "Mountain"
+  },
+  {
+    "japanese": "町",
+    "furigana": "まち",
+    "bangla": "শহর",
+    "english": "Town/City"
+  },
+  {
+    "japanese": "食べ物",
+    "furigana": "たべもの",
+    "bangla": "খাবার",
+    "english": "Food"
+  },
+  {
+    "japanese": "所",
+    "furigana": "ところ",
+    "bangla": "স্থান",
+    "english": "Place"
+  },
+  {
+    "japanese": "寮",
+    "furigana": "りょう",
+    "bangla": "ছাত্রাবাস/হোস্টেল",
+    "english": "Dormitory"
+  },
+  {
+    "japanese": "レストラン",
+    "furigana": "れすとらん",
+    "bangla": "রেস্টুরেন্ট",
+    "english": "Restaurant"
+  },
+  {
+    "japanese": "生活",
+    "furigana": "せいかつ",
+    "bangla": "জীবনযাপন",
+    "english": "Life/Living"
+  },
+  {
+    "japanese": "仕事",
+    "furigana": "しごと",
+    "bangla": "চাকরি",
+    "english": "Job/Work"
+  },
+  {
+    "japanese": "どう",
+    "furigana": "どう",
+    "bangla": "কেমন",
+    "english": "How"
+  },
+  {
+    "japanese": "どんな〜",
+    "furigana": "どんな",
+    "bangla": "কী রকম~/কী ধরনের~",
+    "english": "What kind of~"
+  },
+  {
+    "japanese": "とても",
+    "furigana": "とても",
+    "bangla": "খুব/বেশ",
+    "english": "Very"
+  },
+  {
+    "japanese": "あまり",
+    "furigana": "あまり",
+    "bangla": "তেমন (না-বোধক বাক্যে ব্যবহৃত হয়)",
+    "english": "Not so much"
+  },
+  {
+    "japanese": "そして",
+    "furigana": "そして",
+    "bangla": "এবং/এছাড়া (বাক্য সংযোজনে ব্যবহৃত হয়)",
+    "english": "And/Then"
+  },
+  {
+    "japanese": "〜が、〜",
+    "furigana": "が",
+    "bangla": "~, কিন্তু~",
+    "english": "~, but~"
+  },
+  {
+    "japanese": "お元気ですか。",
+    "furigana": "おげんきですか",
+    "bangla": "ভাল আছেন?/কেমন আছেন?",
+    "english": "How are you?"
+  },
+  {
+    "japanese": "そうですね。",
+    "furigana": "そうですね",
+    "bangla": "হুম.../তাই তো... (প্রশ্ন শুনে তার উত্তর চিন্তা করার সময়)",
+    "english": "Let me see.../Well..."
+  },
+  {
+    "japanese": "もう一杯いかがですか。",
+    "furigana": "もういっぱい いかがですか",
+    "bangla": "আরেক কাপ চলবে কি?",
+    "english": "Would you like another cup?"
+  },
+  {
+    "japanese": "いいえ、けっこうです。",
+    "furigana": "いいえ、けっこうです",
+    "bangla": "না ধন্যবাদ, যথেষ্ট হয়েছে।",
+    "english": "No, thank you (I'm fine)."
+  },
+  {
+    "japanese": "そろそろ失礼します。",
+    "furigana": "そろそろ しつれいします",
+    "bangla": "তাহলে আজ উঠি।",
+    "english": "I should be going now."
+  },
+  {
+    "japanese": "またいらっしてください。",
+    "furigana": "また いらっしてください",
+    "bangla": "আবার আসবেন।",
+    "english": "Please come again."
+  },
+  {
+    "japanese": "シャンハイ",
+    "furigana": "しゃんはい",
+    "bangla": "সাংহাই",
+    "english": "Shanghai"
+  },
+  {
+    "japanese": "金閣寺",
+    "furigana": "きんかくじ",
+    "bangla": "কিনকাকুজি মন্দির",
+    "english": "Kinkaku-ji Temple"
+  },
+  {
+    "japanese": "奈良公園",
+    "furigana": "ならこうえん",
+    "bangla": "নারা পার্ক",
+    "english": "Nara Park"
+  },
+  {
+    "japanese": "富士山",
+    "furigana": "ふじさん",
+    "bangla": "ফুজি পর্বত",
+    "english": "Mount Fuji"
+  },
+  {
+    "japanese": "七人の侍",
+    "furigana": "しちにんのさむらい",
+    "bangla": "সিচিনিন নো সামুরাই (চলচ্চিত্র)",
+    "english": "Seven Samurai"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "japanese": "会話",
+    "furigana": "かいわ",
+    "bangla": "কথোপকথন",
+    "english": "Conversation"
+  },
+  {
+    "japanese": "特に",
+    "furigana": "とくに",
+    "bangla": "বিশেষভাবে",
+    "english": "Especially/Particularly"
+  },
+  {
+    "japanese": "へえ",
+    "furigana": "へえ",
+    "bangla": "তাই নাকি? (কোনো বিষয়ে আগ্রহ দেখাতে বা অবাক হলে বলে)",
+    "english": "Oh/Really? (used to express interest or surprise)"
+  },
+  {
+    "japanese": "それは おもしろいですね。",
+    "furigana": "それは おもしろいですね。",
+    "bangla": "ওটা তো বেশ মজার/উপভোগ্য তাই না?",
+    "english": "That is interesting, isn't it?"
+  },
+  {
+    "japanese": "なかなか",
+    "furigana": "なかなか",
+    "bangla": "সহজে...নয় (নেতিবাচক বাক্যের সাথে ব্যবহৃত)",
+    "english": "Not easily (used with negative sentences)"
+  },
+  {
+    "japanese": "ほんとうですか。",
+    "furigana": "ほんとうですか。",
+    "bangla": "সত্যি নাকি?",
+    "english": "Is that true?"
+  },
+  {
+    "japanese": "ぜひ",
+    "furigana": "ぜひ",
+    "bangla": "যে ভাবেই হোক/অবশ্যই",
+    "english": "By all means/Definitely"
+  },
+  {
+    "japanese": "故郷",
+    "furigana": "ふるさと",
+    "bangla": "ফুরুসাতো (একটি গান শিরোনাম ‘নিজ গ্রাম’)",
+    "english": "Furusato (Hometown/Native place - also a song title)"
+  },
+  {
+    "japanese": "ビートルズ",
+    "furigana": "ビートルズ",
+    "bangla": "দ্যা বিটল্‌স (বিখ্যাত ব্রিটিশ পপ গ্রুপ)",
+    "english": "The Beatles (Famous British pop group)"
+  },
+  {
+    "japanese": "秋葉原",
+    "furigana": "あきはばら",
+    "bangla": "আকিহাবারা (টোকিওর একটি এলাকার নাম)",
+    "english": "Akihabara (A district in Tokyo)"
+  }
+]
