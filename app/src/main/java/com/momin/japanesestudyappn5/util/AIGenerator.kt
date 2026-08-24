@@ -38,12 +38,13 @@ object AIGenerator {
         while (attempt < maxRetries) {
             var conn: HttpURLConnection? = null
             try {
-                val url = URL("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$resolvedApiKey")
+                val modelName = if (attempt % 2 == 0) "gemini-1.5-flash" else "gemini-2.0-flash"
+                val url = URL("https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$resolvedApiKey")
                 conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "POST"
                 conn.setRequestProperty("Content-Type", "application/json; charset=utf-8")
-                conn.connectTimeout = 10000
-                conn.readTimeout = 10000
+                conn.connectTimeout = 12000
+                conn.readTimeout = 12000
                 conn.doOutput = true
                 conn.doInput = true
 
@@ -58,35 +59,44 @@ object AIGenerator {
                         })
                     })
                     put("generationConfig", JSONObject().apply {
-                        put("responseMimeType", "application/json")
+                        put("temperature", 0.7)
                     })
                 }
 
-                OutputStreamWriter(conn.outputStream, "UTF-8").use { writer ->
-                    writer.write(requestBody.toString())
-                    writer.flush()
-                }
+                val os = conn.outputStream
+                val writer = OutputStreamWriter(os, "UTF-8")
+                writer.write(requestBody.toString())
+                writer.flush()
+                writer.close()
+                os.close()
 
                 val responseCode = conn.responseCode
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    val responseText = conn.inputStream.bufferedReader().use { it.readText() }
-                    Log.d("AIGenerator", "Response: $responseText")
+                Log.d("AIGenerator", "Response Code: $responseCode")
 
-                    val json = JSONObject(responseText)
-                    val candidates = json.getJSONArray("candidates")
-                    if (candidates.length() > 0) {
-                        val candidate = candidates.getJSONObject(0)
-                        val content = candidate.getJSONObject("content")
-                        val parts = content.getJSONArray("parts")
-                        if (parts.length() > 0) {
-                            val part = parts.getJSONObject(0)
-                            return@withContext part.getString("text")
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    val stream = conn.inputStream
+                    val response = stream.bufferedReader().use { it.readText() }
+                    val jsonResponse = JSONObject(response)
+                    val candidates = jsonResponse.optJSONArray("candidates")
+                    if (candidates != null && candidates.length() > 0) {
+                        val content = candidates.getJSONObject(0).optJSONObject("content")
+                        val parts = content?.optJSONArray("parts")
+                        if (parts != null && parts.length() > 0) {
+                            val text = parts.getJSONObject(0).optString("text", "")
+                            if (text.isNotEmpty()) return@withContext text
                         }
                     }
-                    throw Exception("No text response candidate found in Gemini response.")
+                    throw Exception("Invalid response format from Gemini API")
                 } else {
-                    val errorText = conn.errorStream?.bufferedReader()?.use { it.readText() } ?: ""
+                    val stream = conn.errorStream ?: conn.inputStream
+                    val errorText = stream?.bufferedReader()?.use { it.readText() } ?: ""
                     Log.e("AIGenerator", "Error code: $responseCode, body: $errorText")
+                    
+                    if (responseCode == 429) {
+                        Log.w("AIGenerator", "Rate limited (429). Waiting before retry...")
+                        kotlinx.coroutines.delay(2000L * (attempt + 1))
+                    }
+                    
                     val parsedMessage = if (errorText.isNotEmpty()) {
                         try {
                             JSONObject(errorText).getJSONArray("errors").getJSONObject(0).getString("message")
@@ -100,7 +110,7 @@ object AIGenerator {
                     } else {
                         "Unknown API error"
                     }
-                    throw Exception("HTTP $responseCode: $parsedMessage")
+                    throw Exception(parsedMessage)
                 }
             } catch (e: Exception) {
                 Log.e("AIGenerator", "Attempt ${attempt + 1} failed: ${e.message}")
