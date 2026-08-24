@@ -159,6 +159,24 @@ object FirebaseSyncManager {
         return prefs.getString("validated_license_key", "") ?: ""
     }
 
+    fun refreshSystemAiKey(context: Context) {
+        if (!isFirebaseInitialized()) return
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val db = FirebaseFirestore.getInstance()
+        db.collection("system_config").document("ai_settings")
+            .get()
+            .addOnSuccessListener { doc ->
+                val onlineKey = doc?.getString("default_gemini_api_key")?.trim() ?: ""
+                if (onlineKey.isNotEmpty()) {
+                    prefs.edit().putString("gemini_api_key", onlineKey).apply()
+                    Log.e(TAG, "refreshSystemAiKey: Live Gemini API Key updated from Firestore.")
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e(TAG, "refreshSystemAiKey: Failed to fetch live AI key from Firestore", e)
+            }
+    }
+
     fun validateLicenseKey(
         context: Context,
         key: String,

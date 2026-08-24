@@ -38,9 +38,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val prefs = getSharedPreferences("japanese_study_prefs", MODE_PRIVATE)
-        if (prefs.getString("gemini_api_key", "").isNullOrEmpty()) {
-            prefs.edit().putString("gemini_api_key", "AIzaSyBilpnfadrS9rJ9Xxgpo4QzCPJLybpgIHU").apply()
-        }
+        // Refresh live Gemini API key from online Cloud Firestore
+        FirebaseSyncManager.refreshSystemAiKey(applicationContext)
 
         // Increment open counter
         prefs.edit().putInt("total_opens", prefs.getInt("total_opens", 0) + 1).apply()
