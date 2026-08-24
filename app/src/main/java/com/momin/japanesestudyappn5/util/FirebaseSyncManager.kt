@@ -159,8 +159,6 @@ object FirebaseSyncManager {
         return prefs.getString("validated_license_key", "") ?: ""
     }
 
-    private val MASTER_ADMIN_KEYS = setOf("VODRO5315")
-
     fun validateLicenseKey(
         context: Context,
         key: String,
@@ -175,16 +173,9 @@ object FirebaseSyncManager {
             return
         }
 
-        val isMasterAdminKey = cleanKey in MASTER_ADMIN_KEYS
-
         if (!isFirebaseInitialized()) {
-            if (isMasterAdminKey) {
-                saveAdminSuccess(context, cleanKey)
-                onSuccess(true)
-                return
-            }
             Log.e(TAG, "validateLicenseKey: Firebase not initialized!")
-            onFailure("Firebase not initialized. Check connection.")
+            onFailure("Firebase not initialized. Check internet connection.")
             return
         }
 
@@ -192,6 +183,8 @@ object FirebaseSyncManager {
         signInAnonymouslyIfNeeded {
             Log.e(TAG, "validateLicenseKey: Querying Firestore for document: $cleanKey")
             val db = FirebaseFirestore.getInstance()
+            
+            // First check "licenses" collection online
             db.collection("licenses").document(cleanKey)
                 .get()
                 .addOnSuccessListener { document ->
@@ -208,8 +201,8 @@ object FirebaseSyncManager {
                         val rawIsAdmin = document.get("isAdmin") ?: document.get("is_admin") ?: document.get("role")
                         val isAdmin = when (rawIsAdmin) {
                             is Boolean -> rawIsAdmin
-                            is String -> rawIsAdmin.lowercase() == "true" || rawIsAdmin.lowercase() == "admin"
-                            else -> isMasterAdminKey
+                            is String -> rawIsAdmin.lowercase() == "true" || rawIsAdmin.lowercase() == "admin" || rawIsAdmin.lowercase() == "owner"
+                            else -> false
                         }
                         val localDeviceId = getOrCreateDeviceId(context)
                         val maxDevices = document.getLong("maxDevices") ?: 1L
@@ -260,6 +253,8 @@ object FirebaseSyncManager {
                             .putBoolean("offline_mode", false)
                         if (geminiApiKey.isNotEmpty()) {
                             editor.putString("gemini_api_key", geminiApiKey)
+                        } else {
+                            editor.remove("gemini_api_key")
                         }
                         editor.apply()
 
@@ -277,25 +272,35 @@ object FirebaseSyncManager {
                         setupSharedPreferenceListener(context)
                         onSuccess(isAdmin)
                     } else {
-                        if (isMasterAdminKey) {
-                            saveAdminSuccess(context, cleanKey)
-                            onSuccess(true)
-                        } else {
-                            Log.e(TAG, "validateLicenseKey: Document does not exist in collection licenses")
-                            _syncStatus.value = "Validation Failed"
-                            onFailure("Invalid License Key.")
-                        }
+                        // Check secondary "admin_keys" collection online if key wasn't in "licenses"
+                        db.collection("admin_keys").document(cleanKey)
+                            .get()
+                            .addOnSuccessListener { adminDoc ->
+                                if (adminDoc != null && adminDoc.exists()) {
+                                    val status = adminDoc.getString("status") ?: "active"
+                                    if (status == "active") {
+                                        saveAdminSuccess(context, cleanKey)
+                                        onSuccess(true)
+                                    } else {
+                                        _syncStatus.value = "Validation Failed"
+                                        onFailure("Admin key suspended.")
+                                    }
+                                } else {
+                                    Log.e(TAG, "validateLicenseKey: Document does not exist in licenses or admin_keys")
+                                    _syncStatus.value = "Validation Failed"
+                                    onFailure("Invalid License Key.")
+                                }
+                            }
+                            .addOnFailureListener {
+                                _syncStatus.value = "Validation Failed"
+                                onFailure("Invalid License Key.")
+                            }
                     }
                 }
                 .addOnFailureListener { e ->
                     Log.e(TAG, "validateLicenseKey: Firestore get task failed", e)
-                    if (isMasterAdminKey) {
-                        saveAdminSuccess(context, cleanKey)
-                        onSuccess(true)
-                    } else {
-                        _syncStatus.value = "Validation Failed"
-                        onFailure(e.message ?: "Failed to validate license key.")
-                    }
+                    _syncStatus.value = "Validation Failed"
+                    onFailure(e.message ?: "Failed to validate license key.")
                 }
         }
     }
