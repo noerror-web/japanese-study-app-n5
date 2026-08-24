@@ -253,6 +253,62 @@ fun LoginScreen(
                 }
             }
 
+            // Developer Contact Card for License Key
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.08f)),
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    Text(
+                        text = "💬 Need a License Key? Contact Developer",
+                        color = Color.White,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        // WhatsApp Button
+                        OutlinedButton(
+                            onClick = {
+                                try {
+                                    val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://wa.me/+8801811637906"))
+                                    context.startActivity(intent)
+                                } catch (e: Exception) {}
+                            },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF25D366)),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF25D366).copy(alpha = 0.5f)),
+                            shape = RoundedCornerShape(10.dp),
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Text("💬 WhatsApp", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                        }
+
+                        // Telegram Button
+                        OutlinedButton(
+                            onClick = {
+                                try {
+                                    val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://t.me/noerror"))
+                                    context.startActivity(intent)
+                                } catch (e: Exception) {}
+                            },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF0088CC)),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF0088CC).copy(alpha = 0.5f)),
+                            shape = RoundedCornerShape(10.dp),
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Text("✈️ Telegram", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                        }
+                    }
+                }
+            }
+
             if (errorMessage.isNotEmpty()) {
                 Text(
                     text = errorMessage,
