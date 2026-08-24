@@ -56,6 +56,8 @@ fun OwnerDashboardScreen(
     var showGenerateDialog by remember { mutableStateOf(false) }
     var inputUserName by remember { mutableStateOf("") }
     var inputMaxDevices by remember { mutableStateOf("1") }
+    var inputIncludeAiKey by remember { mutableStateOf(false) }
+    var inputCustomAiKey by remember { mutableStateOf("") }
 
     // Fetch keys in real time
     DisposableEffect(Unit) {
@@ -110,20 +112,25 @@ fun OwnerDashboardScreen(
         }
     }
 
-    fun generateNewKey(userName: String, maxDevices: Long) {
+    fun generateNewKey(userName: String, maxDevices: Long, includeAiKey: Boolean, customAiKey: String) {
         val db = FirebaseFirestore.getInstance()
         val randomUuid = UUID.randomUUID().toString().replace("-", "").take(8).uppercase()
         val newKey = "N5-KEY-$randomUuid"
 
-        val payload = mapOf(
+        val payload = mutableMapOf<String, Any>(
             "status" to "active",
             "deviceId" to "",
             "deviceIds" to emptyList<String>(),
             "maxDevices" to maxDevices,
             "createdAt" to System.currentTimeMillis(),
             "activatedAt" to 0L,
-            "userName" to userName.trim()
+            "userName" to userName.trim(),
+            "hasDefaultAiAccess" to includeAiKey
         )
+
+        if (includeAiKey && customAiKey.trim().isNotEmpty()) {
+            payload["gemini_api_key"] = customAiKey.trim()
+        }
 
         db.collection("licenses").document(newKey)
             .set(payload)
@@ -326,6 +333,8 @@ fun OwnerDashboardScreen(
                 showGenerateDialog = false
                 inputUserName = ""
                 inputMaxDevices = "1"
+                inputIncludeAiKey = false
+                inputCustomAiKey = ""
             },
             title = { Text("Generate New License Key", fontWeight = FontWeight.Bold) },
             text = {
@@ -338,7 +347,7 @@ fun OwnerDashboardScreen(
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
                     Text("Enter device usage limit (How many times it can be used):", fontSize = 14.sp)
                     OutlinedTextField(
                         value = inputMaxDevices,
@@ -351,6 +360,35 @@ fun OwnerDashboardScreen(
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
+
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { inputIncludeAiKey = !inputIncludeAiKey }
+                    ) {
+                        Checkbox(
+                            checked = inputIncludeAiKey,
+                            onCheckedChange = { inputIncludeAiKey = it }
+                        )
+                        Text(
+                            text = "Grant AI Key Access to this user",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
+
+                    if (inputIncludeAiKey) {
+                        Text("Enter Gemini API Key to attach (or leave blank to use stored Cloud default):", fontSize = 12.sp, color = MaterialTheme.colorScheme.primary)
+                        OutlinedTextField(
+                            value = inputCustomAiKey,
+                            onValueChange = { inputCustomAiKey = it },
+                            placeholder = { Text("AIzaSy...") },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
                 }
             },
             confirmButton = {
@@ -360,10 +398,12 @@ fun OwnerDashboardScreen(
                         val maxDevStr = inputMaxDevices.trim()
                         val maxDev = maxDevStr.toLongOrNull() ?: 1L
                         if (userName.isNotEmpty()) {
-                            generateNewKey(userName, maxDev)
+                            generateNewKey(userName, maxDev, inputIncludeAiKey, inputCustomAiKey)
                             showGenerateDialog = false
                             inputUserName = ""
                             inputMaxDevices = "1"
+                            inputIncludeAiKey = false
+                            inputCustomAiKey = ""
                         } else {
                             Toast.makeText(context, "Please enter a name", Toast.LENGTH_SHORT).show()
                         }
@@ -378,6 +418,8 @@ fun OwnerDashboardScreen(
                         showGenerateDialog = false
                         inputUserName = ""
                         inputMaxDevices = "1"
+                        inputIncludeAiKey = false
+                        inputCustomAiKey = ""
                     }
                 ) {
                     Text("Cancel")
