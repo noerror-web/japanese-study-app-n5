@@ -4,6 +4,20 @@ plugins {
   alias(libs.plugins.kotlin.serialization)
 }
 
+// Dynamic Auto-Versioning helper based on git commit count
+val gitCommitCount: Int by lazy {
+    try {
+        val process = ProcessBuilder("git", "rev-list", "--count", "HEAD").start()
+        val countStr = process.inputStream.bufferedReader().readText().trim()
+        if (countStr.isNotEmpty()) countStr.toInt() else 10
+    } catch (e: Exception) {
+        10
+    }
+}
+
+val autoVersionCode = gitCommitCount
+val autoVersionName = "2.0.$gitCommitCount"
+
 android {
     namespace = "com.momin.japanesestudyappn5"
     compileSdk = 36
@@ -11,8 +25,8 @@ android {
         applicationId = "com.momin.japanesestudyappn5"
         minSdk = 24
         targetSdk = 36
-        versionCode = 2
-        versionName = "2.0"
+        versionCode = autoVersionCode
+        versionName = autoVersionName
     }
 
     buildTypes {

@@ -701,7 +701,7 @@ fun SettingsSheet(
                                 ) {
                                     AssistChip(
                                         onClick = {
-                                            downloadBaseUrl = "https://raw.githubusercontent.com/momin/japanese-n5-assets/main/"
+                                            downloadBaseUrl = "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/"
                                             isBaseUrlSaved = false
                                         },
                                         label = { Text("🌐 Cloud CDN", fontSize = 11.sp) },
@@ -985,6 +985,42 @@ fun SettingsSheet(
                                 }
                             }
                         }
+                    }
+                }
+
+                // ── CARD 6: App Version Info ─────────────────────────────
+                item {
+                    val pkgInfo = remember {
+                        try {
+                            context.packageManager.getPackageInfo(context.packageName, 0)
+                        } catch (e: Exception) { null }
+                    }
+                    val versionName = pkgInfo?.versionName ?: "2.0.x"
+                    val versionCode = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                        pkgInfo?.longVersionCode?.toString() ?: "10"
+                    } else {
+                        @Suppress("DEPRECATION")
+                        pkgInfo?.versionCode?.toString() ?: "10"
+                    }
+
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 12.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = "Japanese Study App N5  v$versionName (Build $versionCode)",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Text(
+                            text = "Auto-Versioned & Open Source on GitHub",
+                            fontSize = 11.sp,
+                            color = MaterialTheme.colorScheme.outline
+                        )
                     }
                 }
             }
