@@ -14,12 +14,12 @@ import java.net.URL
 object OnlineAssetsManager {
     private const val PREFS_NAME = "japanese_study_prefs"
     private const val KEY_BASE_URL = "download_base_url"
-    const val DEFAULT_BASE_URL = "http://10.0.2.2:8000/"
+    const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/"
 
     private val CLOUD_FALLBACK_URLS = listOf(
-        "http://192.168.10.14:8000/",
-        "https://raw.githubusercontent.com/momin/japanese-n5-assets/main/",
-        "https://cdn.jsdelivr.net/gh/momin/japanese-n5-assets@main/"
+        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/",
+        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/main/",
+        "http://192.168.10.14:8000/"
     )
 
     var isBulkDownloading by mutableStateOf(false)
