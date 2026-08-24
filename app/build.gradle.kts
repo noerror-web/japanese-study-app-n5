@@ -4,19 +4,16 @@ plugins {
   alias(libs.plugins.kotlin.serialization)
 }
 
-// Dynamic Auto-Versioning helper based on git commit count
-val gitCommitCount: Int by lazy {
-    try {
-        val process = ProcessBuilder("git", "rev-list", "--count", "HEAD").start()
-        val countStr = process.inputStream.bufferedReader().readText().trim()
-        if (countStr.isNotEmpty()) countStr.toInt() else 10
-    } catch (e: Exception) {
-        10
-    }
-}
+// Dynamic Auto-Versioning helper using Gradle Providers for Configuration Cache compatibility
+val gitCommitCountProvider = providers.exec {
+    commandLine("git", "rev-list", "--count", "HEAD")
+    isIgnoreExitValue = true
+}.standardOutput.asText.map { out ->
+    out.trim().toIntOrNull() ?: 10
+}.orElse(10)
 
-val autoVersionCode = gitCommitCount
-val autoVersionName = "2.0.$gitCommitCount"
+val autoVersionCode = gitCommitCountProvider.get()
+val autoVersionName = "2.0.${gitCommitCountProvider.get()}"
 
 android {
     namespace = "com.momin.japanesestudyappn5"
