@@ -5,17 +5,18 @@ plugins {
 }
 
 // Dynamic Auto-Versioning helper using Gradle Providers with fail-safe fallback
-val autoVersionCode: Int = try {
+val gitCommitCount: Int = try {
     providers.exec {
         commandLine("git", "rev-list", "--count", "HEAD")
         isIgnoreExitValue = true
     }.standardOutput.asText.map { out ->
-        out.trim().toIntOrNull() ?: 12
-    }.getOrElse(12)
+        out.trim().toIntOrNull() ?: 1
+    }.getOrElse(1)
 } catch (t: Throwable) {
-    12
+    1
 }
 
+val autoVersionCode: Int = 20 + gitCommitCount
 val autoVersionName: String = "2.0.$autoVersionCode"
 
 android {
