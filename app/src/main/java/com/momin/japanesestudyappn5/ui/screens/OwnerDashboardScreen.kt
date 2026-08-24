@@ -167,6 +167,42 @@ fun OwnerDashboardScreen(
             }
     }
 
+    fun cleanUnnecessaryKeys() {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("licenses").get().addOnSuccessListener { snapshot ->
+            if (snapshot != null) {
+                var deletedCount = 0
+                val batch = db.batch()
+                for (doc in snapshot.documents) {
+                    val keyId = doc.id
+                    val rawIsAdmin = doc.get("isAdmin") ?: doc.get("is_admin") ?: doc.get("role")
+                    val isAdmin = when (rawIsAdmin) {
+                        is Boolean -> rawIsAdmin
+                        is String -> rawIsAdmin.lowercase() == "true" || rawIsAdmin.lowercase() == "admin" || rawIsAdmin.lowercase() == "owner"
+                        else -> keyId.equals("VODRO5315", ignoreCase = true)
+                    }
+                    val deviceIds = (doc.get("deviceIds") as? List<*>) ?: emptyList<Any>()
+                    val hasDevices = deviceIds.isNotEmpty() || (doc.getString("deviceId") ?: "").isNotEmpty()
+
+                    // Keep admin keys or keys currently bound to active user devices
+                    if (!isAdmin && !hasDevices) {
+                        batch.delete(doc.reference)
+                        deletedCount++
+                    }
+                }
+                if (deletedCount > 0) {
+                    batch.commit().addOnSuccessListener {
+                        Toast.makeText(context, "Cleaned $deletedCount unused test keys!", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(context, "No unnecessary test keys found.", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }.addOnFailureListener { e ->
+            Toast.makeText(context, "Error cleaning keys: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun resetLicenseDevices(licenseKey: String) {
         val db = FirebaseFirestore.getInstance()
         val updates = mapOf(
@@ -263,17 +299,35 @@ fun OwnerDashboardScreen(
                     }
                 }
 
-                // Generate button
-                Button(
-                    onClick = { showGenerateDialog = true },
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
-                    shape = RoundedCornerShape(10.dp),
+                // Generate & Cleanup Buttons Row
+                Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp)
-                        .height(48.dp)
+                        .padding(horizontal = 16.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text("➕ Generate New License Key", fontWeight = FontWeight.Bold, color = Color.White)
+                    Button(
+                        onClick = { showGenerateDialog = true },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier
+                            .weight(1.3f)
+                            .height(48.dp)
+                    ) {
+                        Text("➕ Generate Key", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 13.sp)
+                    }
+
+                    OutlinedButton(
+                        onClick = { cleanUnnecessaryKeys() },
+                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFFFB74D)),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFFFB74D).copy(alpha = 0.6f)),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier
+                            .weight(1f)
+                            .height(48.dp)
+                    ) {
+                        Text("🧹 Clean Unused", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    }
                 }
 
                 // Search field
