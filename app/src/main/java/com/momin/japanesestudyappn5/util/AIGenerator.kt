@@ -38,11 +38,7 @@ object AIGenerator {
         while (attempt < maxRetries) {
             var conn: HttpURLConnection? = null
             try {
-                val modelName = when (attempt) {
-                    0 -> "gemini-2.5-flash"
-                    1 -> "gemini-1.5-pro"
-                    else -> "gemini-2.5-pro"
-                }
+                val modelName = if (attempt == 0) "gemini-2.5-flash" else "gemini-2.5-pro"
                 val url = URL("https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$resolvedApiKey")
                 conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "POST"
@@ -97,8 +93,8 @@ object AIGenerator {
                     Log.e("AIGenerator", "Error code ($modelName): $responseCode, body: $errorText")
                     
                     if (responseCode == 429) {
-                        Log.w("AIGenerator", "Rate limited (429). Waiting 4 seconds before retry...")
-                        kotlinx.coroutines.delay(4000L)
+                        Log.w("AIGenerator", "Rate limited (429). Waiting 5 seconds before retry...")
+                        kotlinx.coroutines.delay(5000L)
                     }
                     
                     val parsedMessage = if (errorText.isNotEmpty()) {
@@ -113,6 +109,9 @@ object AIGenerator {
                         }
                     } else {
                         "Unknown API error"
+                    }
+                    if (responseCode == 429) {
+                        throw Exception("Gemini API quota limit reached. Please try again in a few moments or enter your personal API key in Settings.")
                     }
                     throw Exception(parsedMessage)
                 }
