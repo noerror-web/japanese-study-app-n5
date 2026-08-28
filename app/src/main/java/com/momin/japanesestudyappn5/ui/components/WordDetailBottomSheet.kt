@@ -463,7 +463,12 @@ fun KanjiDetailBottomSheet(
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
-                            Text(sentence.japanese, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            val furiganaStr = if (sentence.furigana.isNotBlank()) sentence.furigana else sentence.japanese
+                            FuriganaText(
+                                rawText = furiganaStr,
+                                mainFontSize = 16.sp,
+                                furiganaFontSize = 10.sp
+                            )
                             Spacer(Modifier.height(4.dp))
                             val trans = if (appLanguage == "bn" && !sentence.bangla.isNullOrBlank()) sentence.bangla else sentence.english
                             Text(trans, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)

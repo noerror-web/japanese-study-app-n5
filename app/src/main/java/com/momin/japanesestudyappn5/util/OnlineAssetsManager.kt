@@ -17,7 +17,7 @@ object OnlineAssetsManager {
     const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/"
 
     private val CLOUD_FALLBACK_URLS = listOf(
-        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/a965ef5/",
+        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/f5f22ca/",
         "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/",
         "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/main/"
     )

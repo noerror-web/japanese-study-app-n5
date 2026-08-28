@@ -1,17 +1,18 @@
 package com.momin.japanesestudyappn5.ui.components
 
+import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.momin.japanesestudyappn5.data.model.FuriganaParser
 import com.momin.japanesestudyappn5.data.model.FuriganaSegment
@@ -25,8 +26,15 @@ fun FuriganaText(
     furiganaFontSize: TextUnit = 11.sp,
     mainColor: Color = MaterialTheme.colorScheme.onSurface,
     furiganaColor: Color = MaterialTheme.colorScheme.primary,
-    fontWeight: FontWeight = FontWeight.Bold
+    fontWeight: FontWeight = FontWeight.Bold,
+    kanjiDisabledOverride: Boolean? = null
 ) {
+    val context = LocalContext.current
+    val isKanjiDisabled = remember(kanjiDisabledOverride) {
+        kanjiDisabledOverride ?: context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
+            .getBoolean("disable_kanji", false)
+    }
+
     val segments = FuriganaParser.parse(rawText)
 
     FlowRow(
@@ -41,7 +49,8 @@ fun FuriganaText(
                 furiganaFontSize = furiganaFontSize,
                 mainColor = mainColor,
                 furiganaColor = furiganaColor,
-                fontWeight = fontWeight
+                fontWeight = fontWeight,
+                kanjiDisabled = isKanjiDisabled
             )
         }
     }
@@ -54,32 +63,44 @@ fun FuriganaSegmentView(
     furiganaFontSize: TextUnit = 11.sp,
     mainColor: Color = MaterialTheme.colorScheme.onSurface,
     furiganaColor: Color = MaterialTheme.colorScheme.primary,
-    fontWeight: FontWeight = FontWeight.Bold
+    fontWeight: FontWeight = FontWeight.Bold,
+    kanjiDisabled: Boolean = false
 ) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        if (!segment.furigana.isNullOrBlank()) {
-            Text(
-                text = segment.furigana,
-                fontSize = furiganaFontSize,
-                lineHeight = furiganaFontSize,
-                color = furiganaColor,
-                fontWeight = FontWeight.Medium,
-                textAlign = TextAlign.Center
-            )
-        } else {
-            // Invisible placeholder for height alignment
-            Spacer(modifier = Modifier.height(with(androidx.compose.ui.platform.LocalDensity.current) { furiganaFontSize.toDp() }))
-        }
+    if (kanjiDisabled) {
+        val kanaText = if (!segment.furigana.isNullOrBlank()) segment.furigana else segment.text
         Text(
-            text = segment.text,
+            text = kanaText,
             fontSize = mainFontSize,
             lineHeight = mainFontSize,
             color = mainColor,
             fontWeight = fontWeight,
             textAlign = TextAlign.Center
         )
+    } else {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom
+        ) {
+            if (!segment.furigana.isNullOrBlank()) {
+                Text(
+                    text = segment.furigana,
+                    fontSize = furiganaFontSize,
+                    lineHeight = furiganaFontSize,
+                    color = furiganaColor,
+                    fontWeight = FontWeight.Medium,
+                    textAlign = TextAlign.Center
+                )
+            } else {
+                Spacer(modifier = Modifier.height(with(androidx.compose.ui.platform.LocalDensity.current) { furiganaFontSize.toDp() }))
+            }
+            Text(
+                text = segment.text,
+                fontSize = mainFontSize,
+                lineHeight = mainFontSize,
+                color = mainColor,
+                fontWeight = fontWeight,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
