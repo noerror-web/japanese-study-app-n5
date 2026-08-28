@@ -124,6 +124,10 @@ fun MainScreen(
                     }
                 },
                 actions = {
+                    IconButton(onClick = { onItemClick(Dictionary) }) {
+                        Icon(Icons.Default.Book, contentDescription = "Dictionary",
+                            tint = MaterialTheme.colorScheme.onPrimaryContainer)
+                    }
                     IconButton(onClick = { onItemClick(UniversalSearch) }) {
                         Icon(Icons.Default.Search, contentDescription = "Search",
                             tint = MaterialTheme.colorScheme.onPrimaryContainer)
@@ -662,6 +666,10 @@ fun MainDashboardContent(
                         Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
                             ToolShortcutCard("🌐", "AI Translator", "Instant EN/BN ↔ JP", "Kana only", Color(0xFFE8F0FE), { onItemClick(Translation) }, isDark, Modifier.weight(1f))
                             ToolShortcutCard("📝", "Exam Practice", "Mock Tests MCQs", "${stats.totalExamsCount} Exam Sets", Color(0xFFEAF5FF), { onItemClick(ExamPractice) }, isDark, Modifier.weight(1f))
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
+                            ToolShortcutCard("📕", "Dictionary", "JMdict, Kanji & Tatoeba", "Full Dictionary", Color(0xFFFCE4EC), { onItemClick(Dictionary) }, isDark, Modifier.weight(1f))
+                            Spacer(Modifier.weight(1f))
                         }
                     }
                 }

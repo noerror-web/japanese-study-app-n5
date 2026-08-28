@@ -60,6 +60,9 @@ fun SettingsSheet(
     val isOwnerAdmin = remember { prefs.getBoolean("is_admin_mode", false) }
     val coroutineScope = rememberCoroutineScope()
     var isAllDownloaded by remember { mutableStateOf(com.momin.japanesestudyappn5.util.OnlineAssetsManager.isAllDownloaded(context)) }
+    var isDictDownloaded by remember { mutableStateOf(com.momin.japanesestudyappn5.util.OnlineAssetsManager.isDictionaryDownloaded(context)) }
+    var isDictDownloading by remember { mutableStateOf(false) }
+    var dictDownloadProgress by remember { mutableFloatStateOf(0f) }
 
 
 
@@ -643,6 +646,111 @@ fun SettingsSheet(
                                 modifier = Modifier.fillMaxWidth()
                             ) {
                                 Text("📋 View Download Logs & Diagnostics", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                            }
+                        }
+                    }
+                }
+
+                // ── CARD 4.5: Complete JLPT N1-N5 Vocabulary & Dictionary Downloader ──────────────
+                item {
+                    OutlinedCard(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(16.dp),
+                        colors = CardDefaults.outlinedCardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.15f)
+                        ),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            CardHeader(
+                                icon = Icons.Default.Book,
+                                title = "Full JLPT N1–N5 Vocabulary & Dictionary",
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                listOf("JLPT N5", "JLPT N4", "JLPT N3", "JLPT N2", "JLPT N1").forEach { level ->
+                                    Surface(
+                                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.7f),
+                                        shape = RoundedCornerShape(6.dp)
+                                    ) {
+                                        Text(
+                                            text = level,
+                                            fontSize = 10.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 3.dp)
+                                        )
+                                    }
+                                }
+                            }
+
+                            Text(
+                                "Download complete offline JLPT N1, N2, N3, N4, and N5 vocabulary database, JMdict definitions, KANJIDIC2 kanji entries, and Tatoeba example sentences directly without increasing initial app size.",
+                                fontSize = 12.sp,
+                                color = MaterialTheme.colorScheme.outline
+                            )
+
+                            if (isDictDownloading) {
+                                LinearProgressIndicator(
+                                    progress = { dictDownloadProgress },
+                                    modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(4.dp))
+                                )
+                                Text(
+                                    "Downloading N1–N5 Vocabulary Database... ${(dictDownloadProgress * 100).toInt()}%",
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                            } else {
+                                if (isDictDownloaded) {
+                                    Surface(
+                                        color = Color(0xFFE8F5E9),
+                                        shape = RoundedCornerShape(8.dp),
+                                        modifier = Modifier.fillMaxWidth()
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.padding(10.dp),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.Center
+                                        ) {
+                                            Text("✓ Full N1–N5 Vocabulary & Dictionary Active!", color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                        }
+                                    }
+                                }
+
+                                Button(
+                                    onClick = {
+                                        coroutineScope.launch {
+                                            isDictDownloading = true
+                                            dictDownloadProgress = 0f
+                                            val result = com.momin.japanesestudyappn5.util.OnlineAssetsManager.downloadDictionary(context) { p ->
+                                                dictDownloadProgress = p
+                                            }
+                                            if (result.isSuccess) {
+                                                android.widget.Toast.makeText(context, "Full N1–N5 Vocabulary downloaded successfully! ✓", android.widget.Toast.LENGTH_SHORT).show()
+                                            } else {
+                                                val err = result.exceptionOrNull()?.message ?: "Download failed"
+                                                android.widget.Toast.makeText(context, "Download error: $err", android.widget.Toast.LENGTH_LONG).show()
+                                            }
+                                            isDictDownloading = false
+                                            isDictDownloaded = com.momin.japanesestudyappn5.util.OnlineAssetsManager.isDictionaryDownloaded(context)
+                                        }
+                                    },
+                                    shape = RoundedCornerShape(10.dp),
+                                    modifier = Modifier.fillMaxWidth().height(48.dp)
+                                ) {
+                                    Text(
+                                        text = if (isDictDownloaded) "Redownload Full N1–N5 Vocabulary" else "Download Full N1–N5 Vocabulary Database",
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
                             }
                         }
                     }

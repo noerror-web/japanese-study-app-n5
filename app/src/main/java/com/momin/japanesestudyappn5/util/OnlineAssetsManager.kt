@@ -17,9 +17,9 @@ object OnlineAssetsManager {
     const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/"
 
     private val CLOUD_FALLBACK_URLS = listOf(
+        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/6c6d869/",
         "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/master/",
-        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/main/",
-        "http://192.168.10.14:8000/"
+        "https://raw.githubusercontent.com/noerror-web/japanese-n5-assets/main/"
     )
 
     var isBulkDownloading by mutableStateOf(false)
@@ -122,6 +122,19 @@ object OnlineAssetsManager {
         }
     }
 
+    const val DICTIONARY_ASSET_PATH = "full_dictionary_data.json"
+
+    fun isDictionaryDownloaded(context: Context): Boolean {
+        return isDownloaded(context, DICTIONARY_ASSET_PATH)
+    }
+
+    suspend fun downloadDictionary(
+        context: Context,
+        onProgress: (Float) -> Unit
+    ): Result<File> = withContext(Dispatchers.IO) {
+        downloadAsset(context, DICTIONARY_ASSET_PATH, onProgress)
+    }
+
     suspend fun downloadAllAssets(context: Context) = withContext(Dispatchers.IO) {
         if (isBulkDownloading) return@withContext
         isBulkDownloading = true
@@ -136,8 +149,9 @@ object OnlineAssetsManager {
             "textbook_lesson_all.pdf",
             "leall_bn_t.pdf"
         )
+        val dictList = listOf(DICTIONARY_ASSET_PATH)
         val cdList = (1..87).map { "cd_audio/cd_$it.mp3" }
-        val allFiles = pdfList + cdList
+        val allFiles = pdfList + dictList + cdList
         bulkDownloadTotalFiles = allFiles.size
 
         for ((index, relPath) in allFiles.withIndex()) {

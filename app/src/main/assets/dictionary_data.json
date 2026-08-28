@@ -1,0 +1,388 @@
+{
+  "words": [
+    {
+      "id": "jm_1001",
+      "kanji": "食べる",
+      "reading": "たべる",
+      "furigana": "食[た]べる",
+      "romaji": "taberu",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "খাওয়া / খাদ্য গ্রহণ করা",
+      "senses": [
+        {
+          "partsOfSpeech": ["Ichidan verb", "Transitive verb"],
+          "meanings": ["to eat", "to consume"],
+          "glossesBn": ["খাওয়া", "ভোজন করা"],
+          "info": "Primary verb for eating food."
+        },
+        {
+          "partsOfSpeech": ["Ichidan verb"],
+          "meanings": ["to live on", "to earn a living"],
+          "glossesBn": ["জীবিকা নির্বাহ করা"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1002",
+      "kanji": "飲む",
+      "reading": "のむ",
+      "furigana": "飲[の]む",
+      "romaji": "nomu",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "পান করা",
+      "senses": [
+        {
+          "partsOfSpeech": ["Godan verb (mu)", "Transitive verb"],
+          "meanings": ["to drink", "to gulp", "to swallow"],
+          "glossesBn": ["পান করা", "গিলে ফেলা"]
+        },
+        {
+          "partsOfSpeech": ["Godan verb (mu)"],
+          "meanings": ["to take (medicine)"],
+          "glossesBn": ["ঔষধ খাওয়া"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1003",
+      "kanji": "本",
+      "reading": "ほん",
+      "furigana": "本[ほん]",
+      "romaji": "hon",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "বই / গ্রন্থ",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["book", "volume", "script"],
+          "glossesBn": ["বই", "গ্রন্থ"]
+        },
+        {
+          "partsOfSpeech": ["Counter"],
+          "meanings": ["counter for long cylindrical objects (bottles, pens, trees)"],
+          "glossesBn": ["লম্বা বস্তু গণনার একক"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1004",
+      "kanji": "水",
+      "reading": "みず",
+      "furigana": "水[みず]",
+      "romaji": "mizu",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "পানি / জল",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["water (cold/fresh)"],
+          "glossesBn": ["পানি", "জল"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1005",
+      "kanji": "学校",
+      "reading": "がっこう",
+      "furigana": "学[がっ]校[こう]",
+      "romaji": "gakkou",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "বিদ্যালয় / স্কুল",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["school"],
+          "glossesBn": ["বিদ্যালয়", "স্কুল"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1006",
+      "kanji": "私",
+      "reading": "わたし",
+      "furigana": "私[わたし]",
+      "romaji": "watashi",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "আমি",
+      "senses": [
+        {
+          "partsOfSpeech": ["Pronoun"],
+          "meanings": ["I", "me", "myself"],
+          "glossesBn": ["আমি", "আমাকে"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1007",
+      "kanji": "学生",
+      "reading": "がくせい",
+      "furigana": "学[がく]生[せい]",
+      "romaji": "gakusei",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "ছাত্র / ছাত্রী",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["student"],
+          "glossesBn": ["ছাত্র", "ছাত্রী", "শিক্ষার্থী"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1008",
+      "kanji": "先生",
+      "reading": "せんせい",
+      "furigana": "先[せん]生[せい]",
+      "romaji": "sensei",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "শিক্ষক / মহাশয়",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["teacher", "instructor", "master", "doctor"],
+          "glossesBn": ["শিক্ষক", "ওস্তাদ", "ডাক্তার"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1009",
+      "kanji": "日本語",
+      "reading": "にほんご",
+      "furigana": "日[に]本[ほん]語[ご]",
+      "romaji": "nihongo",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "জাপানি ভাষা",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["Japanese language"],
+          "glossesBn": ["জাপানি ভাষা"]
+        }
+      ]
+    },
+    {
+      "id": "jm_1010",
+      "kanji": "友達",
+      "reading": "ともだち",
+      "furigana": "友[とも]達[だち]",
+      "romaji": "tomodachi",
+      "isCommon": true,
+      "priority": ["ichi1", "news1", "N5"],
+      "jlptLevel": "N5",
+      "bangla": "বন্ধু / বান্ধবী",
+      "senses": [
+        {
+          "partsOfSpeech": ["Noun"],
+          "meanings": ["friend", "companion"],
+          "glossesBn": ["বন্ধু", "সঙ্গী"]
+        }
+      ]
+    }
+  ],
+  "kanji": [
+    {
+      "kanji": "食",
+      "onyomi": ["ショク", "ジキ"],
+      "kunyomi": ["た.べる", "く.う", "く.らう"],
+      "nanori": ["はむ"],
+      "meanings": ["eat", "food"],
+      "meaningsBn": ["খাওয়া", "খাদ্য"],
+      "jlptLevel": "N5",
+      "grade": 2,
+      "strokeCount": 9,
+      "radical": "食 (eat)",
+      "freq": 340,
+      "examples": [
+        {"word": "食べる", "reading": "たべる", "meaning": "to eat"},
+        {"word": "食事", "reading": "しょくじ", "meaning": "meal"},
+        {"word": "食堂", "reading": "しょくどう", "meaning": "cafeteria"}
+      ]
+    },
+    {
+      "kanji": "飲",
+      "onyomi": ["イン"],
+      "kunyomi": ["の.む"],
+      "nanori": [],
+      "meanings": ["drink", "smoke"],
+      "meaningsBn": ["পান করা"],
+      "jlptLevel": "N5",
+      "grade": 3,
+      "strokeCount": 12,
+      "radical": "食 (eat)",
+      "freq": 930,
+      "examples": [
+        {"word": "飲む", "reading": "のむ", "meaning": "to drink"},
+        {"word": "飲み物", "reading": "のみもの", "meaning": "beverage/drink"},
+        {"word": "飲食店", "reading": "いんしょくてん", "meaning": "restaurant"}
+      ]
+    },
+    {
+      "kanji": "本",
+      "onyomi": ["ホン"],
+      "kunyomi": ["もと"],
+      "nanori": ["もと"],
+      "meanings": ["book", "present", "main", "origin", "real"],
+      "meaningsBn": ["বই", "মূল", "উৎপত্তি"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 5,
+      "radical": "木 (tree)",
+      "freq": 10,
+      "examples": [
+        {"word": "日本語", "reading": "にほんご", "meaning": "Japanese language"},
+        {"word": "本", "reading": "ほん", "meaning": "book"},
+        {"word": "山本", "reading": "やまもと", "meaning": "Yamamoto (surname)"}
+      ]
+    },
+    {
+      "kanji": "水",
+      "onyomi": ["スイ"],
+      "kunyomi": ["みず"],
+      "nanori": ["ず"],
+      "meanings": ["water"],
+      "meaningsBn": ["পানি", "জল"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 4,
+      "radical": "水 (water)",
+      "freq": 224,
+      "examples": [
+        {"word": "水", "reading": "みず", "meaning": "water"},
+        {"word": "水曜日", "reading": "すいようび", "meaning": "Wednesday"},
+        {"word": "海水", "reading": "かいすい", "meaning": "seawater"}
+      ]
+    },
+    {
+      "kanji": "学",
+      "onyomi": ["ガク"],
+      "kunyomi": ["まな.ぶ"],
+      "nanori": ["さと", "たか", "のり"],
+      "meanings": ["study", "learning", "science"],
+      "meaningsBn": ["অধ্যয়ন", "শিক্ষা"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 8,
+      "radical": "子 (child)",
+      "freq": 63,
+      "examples": [
+        {"word": "学校", "reading": "がっこう", "meaning": "school"},
+        {"word": "学生", "reading": "がくせい", "meaning": "student"},
+        {"word": "大学", "reading": "だいがく", "meaning": "university"}
+      ]
+    },
+    {
+      "kanji": "校",
+      "onyomi": ["コウ"],
+      "kunyomi": [],
+      "nanori": ["めん"],
+      "meanings": ["exam", "school", "printing", "proof"],
+      "meaningsBn": ["স্কুল", "বিদ্যালয়"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 10,
+      "radical": "木 (tree)",
+      "freq": 286,
+      "examples": [
+        {"word": "学校", "reading": "がっこう", "meaning": "school"},
+        {"word": "校長", "reading": "こうちょう", "meaning": "principal"},
+        {"word": "高校", "reading": "こうこう", "meaning": "high school"}
+      ]
+    },
+    {
+      "kanji": "日",
+      "onyomi": ["ニチ", "ジツ"],
+      "kunyomi": ["ひ", "-び", "-か"],
+      "nanori": ["あき", "い", "く", "くさ", "こう", "す", "たち", "とう", "とお", "ふ"],
+      "meanings": ["day", "sun", "Japan", "counter for days"],
+      "meaningsBn": ["দিন", "সূর্য", "জাপান"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 4,
+      "radical": "日 (sun)",
+      "freq": 1,
+      "examples": [
+        {"word": "日本", "reading": "にほん", "meaning": "Japan"},
+        {"word": "今日", "reading": "きょう", "meaning": "today"},
+        {"word": "日曜日", "reading": "にちようび", "meaning": "Sunday"}
+      ]
+    },
+    {
+      "kanji": "生",
+      "onyomi": ["セイ", "ショウ"],
+      "kunyomi": ["い.きる", "い.ける", "う.まれ", "は.える", "なま"],
+      "nanori": ["い", "いく", "いけ", "うぶ", "ふ", "み"],
+      "meanings": ["life", "genuine", "birth"],
+      "meaningsBn": ["জীবন", "জন্ম"],
+      "jlptLevel": "N5",
+      "grade": 1,
+      "strokeCount": 5,
+      "radical": "生 (life)",
+      "freq": 29,
+      "examples": [
+        {"word": "学生", "reading": "がくせい", "meaning": "student"},
+        {"word": "先生", "reading": "せんせい", "meaning": "teacher"},
+        {"word": "生きる", "reading": "いきる", "meaning": "to live"}
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "tat_1001",
+      "japanese": "りんごを食べます。",
+      "furigana": "りんごを 食[た]べます。",
+      "english": "I eat an apple.",
+      "bangla": "আমি একটি আপেল খাই।",
+      "attribution": "Tatoeba.org (CC-BY 2.0 FR)"
+    },
+    {
+      "id": "tat_1002",
+      "japanese": "私は毎日水を飲みます。",
+      "furigana": "私[わたし]は 毎[まい]日[にち] 水[みず]を 飲[の]みます。",
+      "english": "I drink water every day.",
+      "bangla": "আমি প্রতিদিন পানি পান করি।",
+      "attribution": "Tatoeba.org (CC-BY 2.0 FR)"
+    },
+    {
+      "id": "tat_1003",
+      "japanese": "図書館で本を読みました。",
+      "furigana": "図[と]書[しょ]館[かん]で 本[ほん]を 読[よ]みました。",
+      "english": "I read a book at the library.",
+      "bangla": "আমি লাইব্রেরিতে একটি বই পড়েছি।",
+      "attribution": "Tatoeba.org (CC-BY 2.0 FR)"
+    },
+    {
+      "id": "tat_1004",
+      "japanese": "電車で学校へ行きます。",
+      "furigana": "電[でん]車[しゃ]で 学[がっ]校[こう]へ 行[い]きます。",
+      "english": "I go to school by train.",
+      "bangla": "আমি ট্রেনে করে স্কুলে যাই।",
+      "attribution": "Tatoeba.org (CC-BY 2.0 FR)"
+    },
+    {
+      "id": "tat_1005",
+      "japanese": "友達と一緒に日本語を勉強します。",
+      "furigana": "友[とも]達[だち]と 一[いっ]緒[しょ]に 日[に]本[ほん]語[ご]を 勉[べん]強[きょう]します。",
+      "english": "I study Japanese together with my friend.",
+      "bangla": "আমি আমার বন্ধুর সাথে জাপানি ভাষা পড়ি।",
+      "attribution": "Tatoeba.org (CC-BY 2.0 FR)"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,11 +23,19 @@ import com.momin.japanesestudyappn5.data.DataRepository
 import com.momin.japanesestudyappn5.data.model.VocabItem
 import com.momin.japanesestudyappn5.data.model.GrammarLesson
 import com.momin.japanesestudyappn5.data.model.KanjiItem
+import com.momin.japanesestudyappn5.data.model.JMdictEntry
+import com.momin.japanesestudyappn5.data.model.KanjiDicEntry
+import com.momin.japanesestudyappn5.data.repository.DefaultDictionaryRepository
+import com.momin.japanesestudyappn5.ui.components.WordDetailBottomSheet
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 private sealed class SearchResult {
     data class Vocab(val item: VocabItem) : SearchResult()
+    data class DictWord(val word: JMdictEntry) : SearchResult()
     data class Grammar(val lesson: GrammarLesson) : SearchResult()
     data class Kanji(val item: KanjiItem) : SearchResult()
+    data class DictKanji(val kanji: KanjiDicEntry) : SearchResult()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -37,25 +46,61 @@ fun UniversalSearchScreen(
     appLanguage: String = "en",
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
     var query by remember { mutableStateOf("") }
     var allVocab by remember { mutableStateOf<List<VocabItem>>(emptyList()) }
     var allGrammar by remember { mutableStateOf<List<GrammarLesson>>(emptyList()) }
     var allKanji by remember { mutableStateOf<List<KanjiItem>>(emptyList()) }
+    var dictWordResults by remember { mutableStateOf<List<JMdictEntry>>(emptyList()) }
+    var dictKanjiResults by remember { mutableStateOf<List<KanjiDicEntry>>(emptyList()) }
     var isLoading by remember { mutableStateOf(true) }
+    
+    var selectedDictWord by remember { mutableStateOf<JMdictEntry?>(null) }
+    var selectedDictKanji by remember { mutableStateOf<KanjiDicEntry?>(null) }
+
+    val dictRepository = remember { DefaultDictionaryRepository(context, context.assets, repository) }
     val focusRequester = remember { FocusRequester() }
 
     LaunchedEffect(appLanguage) {
-        allVocab = repository.getVocabulary()
-        allGrammar = repository.getGrammarLessons(appLanguage)
-        allKanji = repository.getKanjis()
-        isLoading = false
-        focusRequester.requestFocus()
+        withContext(Dispatchers.IO) {
+            val vocab = repository.getVocabulary()
+            val grammar = repository.getGrammarLessons(appLanguage)
+            val kanji = repository.getKanjis()
+
+            withContext(Dispatchers.Main) {
+                allVocab = vocab
+                allGrammar = grammar
+                allKanji = kanji
+                isLoading = false
+                focusRequester.requestFocus()
+            }
+        }
     }
 
-    val results: List<SearchResult> = remember(query, allVocab, allGrammar, allKanji) {
-        if (query.length < 2) emptyList()
+    LaunchedEffect(query) {
+        val q = query.trim()
+        if (q.length >= 2) {
+            withContext(Dispatchers.IO) {
+                val words = dictRepository.searchWords(q).take(25)
+                val kanji = dictRepository.searchKanji(q).take(10)
+                withContext(Dispatchers.Main) {
+                    dictWordResults = words
+                    dictKanjiResults = kanji
+                }
+            }
+        } else {
+            dictWordResults = emptyList()
+            dictKanjiResults = emptyList()
+        }
+    }
+
+    val results: List<SearchResult> = remember(query, allVocab, allGrammar, allKanji, dictWordResults, dictKanjiResults) {
+        if (query.trim().length < 2) emptyList()
         else {
             val q = query.trim()
+
+            val dWords = dictWordResults.map { SearchResult.DictWord(it) }
+
             val vocabResults = allVocab
                 .filter {
                     it.japanese.contains(q, ignoreCase = true) ||
@@ -64,7 +109,7 @@ fun UniversalSearchScreen(
                     it.english.contains(q, ignoreCase = true) ||
                     it.bangla.contains(q, ignoreCase = true)
                 }
-                .take(20)
+                .take(15)
                 .map { SearchResult.Vocab(it) }
 
             val grammarResults = allGrammar
@@ -72,23 +117,19 @@ fun UniversalSearchScreen(
                 .take(5)
                 .map { SearchResult.Grammar(it) }
 
+            val dKanji = dictKanjiResults.map { SearchResult.DictKanji(it) }
+
             val kanjiResults = allKanji
                 .filter {
                     it.kanji.contains(q) ||
                     it.meanings.contains(q, ignoreCase = true) ||
                     it.on.contains(q, ignoreCase = true) ||
-                    it.kun.contains(q, ignoreCase = true) ||
-                    it.onExampleJapanese.contains(q, ignoreCase = true) ||
-                    it.onExampleEnglish.contains(q, ignoreCase = true) ||
-                    it.onExampleBangla.contains(q, ignoreCase = true) ||
-                    it.kunExampleJapanese.contains(q, ignoreCase = true) ||
-                    it.kunExampleEnglish.contains(q, ignoreCase = true) ||
-                    it.kunExampleBangla.contains(q, ignoreCase = true)
+                    it.kun.contains(q, ignoreCase = true)
                 }
-                .take(10)
+                .take(5)
                 .map { SearchResult.Kanji(it) }
 
-            vocabResults + grammarResults + kanjiResults
+            dWords + vocabResults + grammarResults + dKanji + kanjiResults
         }
     }
 
@@ -99,7 +140,7 @@ fun UniversalSearchScreen(
                     OutlinedTextField(
                         value = query,
                         onValueChange = { query = it },
-                        placeholder = { Text("Search vocab, grammar, kanji…") },
+                        placeholder = { Text("Search 23,000+ words, kanji, grammar…") },
                         singleLine = true,
                         leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                         modifier = Modifier.fillMaxWidth().focusRequester(focusRequester),
@@ -124,11 +165,11 @@ fun UniversalSearchScreen(
             isLoading -> Box(Modifier.fillMaxSize().padding(innerPadding), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
-            query.length < 2 -> Box(Modifier.fillMaxSize().padding(innerPadding), contentAlignment = Alignment.Center) {
+            query.trim().length < 2 -> Box(Modifier.fillMaxSize().padding(innerPadding), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("🔍", fontSize = 48.sp)
                     Spacer(Modifier.height(12.dp))
-                    Text("Type at least 2 characters to search", color = MaterialTheme.colorScheme.outline)
+                    Text("Type at least 2 characters to search full dictionary", color = MaterialTheme.colorScheme.outline)
                 }
             }
             results.isEmpty() -> Box(Modifier.fillMaxSize().padding(innerPadding), contentAlignment = Alignment.Center) {
@@ -151,11 +192,107 @@ fun UniversalSearchScreen(
                 }
                 items(results) { result ->
                     when (result) {
+                        is SearchResult.DictWord -> DictWordCard(result.word) { selectedDictWord = result.word }
                         is SearchResult.Vocab -> VocabSearchCard(result.item, appLanguage)
                         is SearchResult.Grammar -> GrammarSearchCard(result.lesson)
+                        is SearchResult.DictKanji -> DictKanjiCard(result.kanji) { selectedDictKanji = result.kanji }
                         is SearchResult.Kanji -> KanjiSearchCard(result.item)
                     }
                 }
+            }
+        }
+    }
+
+    selectedDictWord?.let { word ->
+        WordDetailBottomSheet(
+            entry = word,
+            dictionaryRepository = dictRepository,
+            onDismiss = { selectedDictWord = null },
+            appLanguage = appLanguage
+        )
+    }
+
+    selectedDictKanji?.let { kanji ->
+        val dummyEntry = JMdictEntry(
+            id = "kanji_${kanji.kanji}",
+            kanji = kanji.kanji,
+            reading = kanji.onyomi.firstOrNull() ?: kanji.kunyomi.firstOrNull() ?: kanji.kanji,
+            furigana = kanji.kanji,
+            romaji = kanji.kanji,
+            isCommon = true,
+            priority = listOf(kanji.jlptLevel ?: "N5"),
+            jlptLevel = kanji.jlptLevel ?: "N5",
+            bangla = kanji.meaningsBn.joinToString(", "),
+            senses = emptyList()
+        )
+        WordDetailBottomSheet(
+            entry = dummyEntry,
+            dictionaryRepository = dictRepository,
+            onDismiss = { selectedDictKanji = null },
+            appLanguage = appLanguage
+        )
+    }
+}
+
+@Composable
+private fun DictWordCard(word: JMdictEntry, onClick: () -> Unit) {
+    val context = LocalContext.current
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)),
+        modifier = Modifier.fillMaxWidth().clickable { onClick() }
+    ) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text("📖", fontSize = 20.sp, modifier = Modifier.padding(end = 10.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(word.kanji.ifBlank { word.reading }, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    if (word.reading != word.kanji && word.reading.isNotEmpty()) {
+                        Text(" (${word.reading})", fontSize = 12.sp, color = MaterialTheme.colorScheme.outline)
+                    }
+                }
+                val primaryMeaning = word.senses.firstOrNull()?.meanings?.joinToString(", ") ?: word.bangla
+                Text(primaryMeaning, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            IconButton(
+                onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, word.kanji.ifBlank { word.reading }) },
+                modifier = Modifier.size(36.dp)
+            ) {
+                Text("🔊", fontSize = 18.sp)
+            }
+            Spacer(Modifier.width(6.dp))
+            Surface(color = MaterialTheme.colorScheme.primary, shape = RoundedCornerShape(6.dp)) {
+                Text("Dict ${word.jlptLevel ?: ""}", fontSize = 10.sp, color = Color.White, fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
+            }
+        }
+    }
+}
+
+@Composable
+private fun DictKanjiCard(kanji: KanjiDicEntry, onClick: () -> Unit) {
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0F5)),
+        modifier = Modifier.fillMaxWidth().clickable { onClick() }
+    ) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(kanji.kanji, fontSize = 28.sp, fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(end = 12.dp).width(40.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(kanji.meanings.joinToString(", "), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Text("On: ${kanji.onyomi.joinToString("・")}  Kun: ${kanji.kunyomi.joinToString("・")}", fontSize = 11.sp,
+                    color = MaterialTheme.colorScheme.outline)
+            }
+            Surface(color = Color(0xFFBD1F2D), shape = RoundedCornerShape(6.dp)) {
+                Text("Kanji", fontSize = 10.sp, color = Color.White,
+                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
             }
         }
     }
@@ -163,7 +300,7 @@ fun UniversalSearchScreen(
 
 @Composable
 private fun VocabSearchCard(item: VocabItem, appLanguage: String = "en") {
-    val context = androidx.compose.ui.platform.LocalContext.current
+    val context = LocalContext.current
     Card(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFFE8F0FE)),

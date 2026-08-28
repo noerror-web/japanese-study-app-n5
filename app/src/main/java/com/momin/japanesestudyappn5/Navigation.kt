@@ -304,6 +304,13 @@ fun MainNavigation(
                         onTraceClick = { char -> backStack.add(KanaTrace(char)) }
                     )
                 }
+                entry<Dictionary> {
+                    DictionaryScreen(
+                        onBack = { backStack.removeLastOrNull() },
+                        dictionaryRepository = remember { com.momin.japanesestudyappn5.data.repository.DefaultDictionaryRepository(context, context.assets, repository) },
+                        appLanguage = appLanguage ?: "en"
+                    )
+                }
             }
         )
 

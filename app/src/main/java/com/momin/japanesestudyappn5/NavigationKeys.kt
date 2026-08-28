@@ -34,5 +34,7 @@ import kotlinx.serialization.Serializable
 @Serializable data object CdSection : NavKey
 @Serializable data object OwnerDashboard : NavKey
 @Serializable data object Translation : NavKey
+@Serializable data object Dictionary : NavKey
+
 
 

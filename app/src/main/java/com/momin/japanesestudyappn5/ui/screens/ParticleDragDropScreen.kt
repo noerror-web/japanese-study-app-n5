@@ -52,7 +52,7 @@ fun ParticleDragDropScreen(
                 translation = "I am a student.",
                 bangla = "আমি একজন ছাত্র।",
                 explanation = "は is the topic marker particle. It indicates that 'わたし' (I) is the main topic of the sentence.",
-                options = listOf("は", "が", "を", "に")
+                options = listOf("が", "は", "を", "に")
             ),
             ParticleQuestion(
                 sentenceBefore = "これ は わたし",
@@ -61,7 +61,7 @@ fun ParticleDragDropScreen(
                 translation = "This is my book.",
                 bangla = "এটি আমার বই।",
                 explanation = "の indicates possession or association. Here it links わたし (I) to 本 (book) to mean 'my book'.",
-                options = listOf("の", "と", "は", "が")
+                options = listOf("と", "の", "は", "が")
             ),
             ParticleQuestion(
                 sentenceBefore = "電車",
@@ -70,7 +70,7 @@ fun ParticleDragDropScreen(
                 translation = "I go to school by train.",
                 bangla = "আমি ট্রেনে করে স্কুলে যাই।",
                 explanation = "で indicates the method or means of action. Here it shows the train (電車) is the mode of transport.",
-                options = listOf("で", "に", "を", "へ")
+                options = listOf("に", "を", "で", "へ")
             ),
             ParticleQuestion(
                 sentenceBefore = "水",
@@ -79,7 +79,7 @@ fun ParticleDragDropScreen(
                 translation = "I drink water.",
                 bangla = "আমি পানি পান করি।",
                 explanation = "を is the direct object marker. It links the action 飲みます (drink) to its object 水 (water).",
-                options = listOf("を", "が", "は", "に")
+                options = listOf("が", "は", "に", "を")
             ),
             ParticleQuestion(
                 sentenceBefore = "机 の 上",
@@ -87,8 +87,8 @@ fun ParticleDragDropScreen(
                 correctParticle = "に",
                 translation = "There is a book on the desk.",
                 bangla = "টেবিলের উপর একটি বই আছে।",
-                explanation = "に is used to indicate the location of existence (where something is located) with verbs like あります.",
-                options = listOf("に", "で", "が", "は")
+                explanation = "に is used to indicate the location of existence (where something is located) with verbs like あります。",
+                options = listOf("で", "に", "が", "は")
             ),
             ParticleQuestion(
                 sentenceBefore = "友達",
@@ -97,7 +97,7 @@ fun ParticleDragDropScreen(
                 translation = "I go to Japan together with my friend.",
                 bangla = "আমি আমার বন্ধুর সাথে জাপানে যাব।",
                 explanation = "と is the companion particle, meaning 'with' or 'together with' when followed by 一緒に (together).",
-                options = listOf("と", "に", "で", "を")
+                options = listOf("に", "で", "と", "を")
             ),
             ParticleQuestion(
                 sentenceBefore = "教室 に 学生",
@@ -106,7 +106,7 @@ fun ParticleDragDropScreen(
                 translation = "There are students in the classroom.",
                 bangla = "শ্রেণীকক্ষে ছাত্ররা আছে।",
                 explanation = "が marks the subject of existence with active living subjects (います).",
-                options = listOf("が", "は", "を", "に")
+                options = listOf("は", "が", "を", "に")
             ),
             ParticleQuestion(
                 sentenceBefore = "昨日 どこ",
@@ -115,7 +115,7 @@ fun ParticleDragDropScreen(
                 translation = "I didn't go anywhere yesterday.",
                 bangla = "আমি গতকাল কোথাও যাইনি।",
                 explanation = "も combined with question words (like どこ) and a negative verb indicates complete negation ('nowhere').",
-                options = listOf("も", "へ", "に", "が")
+                options = listOf("へ", "も", "に", "が")
             ),
             ParticleQuestion(
                 sentenceBefore = "図書館",
@@ -124,7 +124,7 @@ fun ParticleDragDropScreen(
                 translation = "I read a book at the library.",
                 bangla = "আমি লাইব্রেরিতে বই পড়েছি।",
                 explanation = "で marks the location where an action takes place, as opposed to に which marks state of existence.",
-                options = listOf("で", "に", "へ", "の")
+                options = listOf("に", "へ", "で", "の")
             ),
             ParticleQuestion(
                 sentenceBefore = "来週 友達",
@@ -133,7 +133,7 @@ fun ParticleDragDropScreen(
                 translation = "I will meet a friend next week.",
                 bangla = "আমি আগামী সপ্তাহে বন্ধুর সাথে দেখা করব।",
                 explanation = "に marks the target or person you meet when using the verb 会います (meet).",
-                options = listOf("に", "を", "と", "が")
+                options = listOf("を", "に", "と", "が")
             )
         )
     }
@@ -154,7 +154,9 @@ fun ParticleDragDropScreen(
     val appLanguage = prefs.getString("app_language", "en") ?: "en"
 
     fun startNewGame() {
-        gameQuestions = allQuestions.shuffled().take(5)
+        gameQuestions = allQuestions.shuffled().take(5).map { q ->
+            q.copy(options = q.options.shuffled())
+        }
         currentIndex = 0
         score = 0
         selectedAnswer = null
@@ -165,7 +167,9 @@ fun ParticleDragDropScreen(
     }
 
     fun startAiGame(questions: List<ParticleQuestion>) {
-        gameQuestions = questions
+        gameQuestions = questions.map { q ->
+            q.copy(options = q.options.shuffled())
+        }
         currentIndex = 0
         score = 0
         selectedAnswer = null

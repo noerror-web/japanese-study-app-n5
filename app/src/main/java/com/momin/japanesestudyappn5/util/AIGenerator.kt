@@ -209,12 +209,15 @@ object AIGenerator {
                 val qJson = questionsJson.getJSONObject(i)
                 val question = qJson.getString("question")
                 val optionsJson = qJson.getJSONArray("options")
-                val options = List(optionsJson.length()) { idx ->
+                val rawOptions = List(optionsJson.length()) { idx ->
                     val opt = optionsJson.getString(idx)
                     if (kanjiDisabled) KanjiConverter.toKana(opt) else opt
                 }
-                val correctIndex = qJson.getInt("correctIndex")
-                questionsList.add(ReadingQuestion(question, options, correctIndex))
+                val rawCorrectIndex = qJson.getInt("correctIndex")
+                val correctOption = rawOptions.getOrNull(rawCorrectIndex) ?: rawOptions.firstOrNull() ?: ""
+                val shuffledOptions = rawOptions.shuffled()
+                val newCorrectIndex = shuffledOptions.indexOf(correctOption).coerceAtLeast(0)
+                questionsList.add(ReadingQuestion(question, shuffledOptions, newCorrectIndex))
             }
             val title = if (kanjiDisabled) KanjiConverter.toKana(rawTitle, rawFurigana) else rawTitle
             val content = if (kanjiDisabled) rawFurigana.ifBlank { KanjiConverter.toKana(rawContent) } else rawContent
@@ -332,7 +335,11 @@ object AIGenerator {
                     ))
                 }
 
-                result.add(QuizQuestion(targetItem, optionsList, correctIndex, mode))
+                val correctItem = optionsList.getOrNull(correctIndex) ?: targetItem
+                val shuffledOptions = optionsList.shuffled()
+                val newCorrectIndex = shuffledOptions.indexOf(correctItem).coerceAtLeast(0)
+
+                result.add(QuizQuestion(targetItem, shuffledOptions, newCorrectIndex, mode))
             }
             result
         } catch (e: Exception) {
@@ -370,13 +377,16 @@ object AIGenerator {
                 val furigana = json.getString("furigana")
                 val english = json.getString("english")
                 val optionsJson = json.getJSONArray("options")
-                val options = List(optionsJson.length()) { idx ->
+                val rawOptions = List(optionsJson.length()) { idx ->
                     val opt = optionsJson.getString(idx)
                     if (kanjiDisabled) KanjiConverter.toKana(opt) else opt
                 }
-                val correctIndex = json.getInt("correctIndex")
+                val rawCorrectIndex = json.getInt("correctIndex")
+                val correctOption = rawOptions.getOrNull(rawCorrectIndex) ?: rawOptions.firstOrNull() ?: ""
+                val shuffledOptions = rawOptions.shuffled()
+                val newCorrectIndex = shuffledOptions.indexOf(correctOption).coerceAtLeast(0)
                 val sentence = if (kanjiDisabled) furigana.ifBlank { KanjiConverter.toKana(rawSentence) } else rawSentence
-                list.add(FillBlankQuestion(sentence, furigana, english, options, correctIndex))
+                list.add(FillBlankQuestion(sentence, furigana, english, shuffledOptions, newCorrectIndex))
             }
             list
         } catch (e: Exception) {
@@ -626,7 +636,7 @@ object AIGenerator {
                 val options = List(optionsJson.length()) { idx ->
                     val opt = optionsJson.getString(idx).trim()
                     if (kanjiDisabled) KanjiConverter.toKana(opt) else opt
-                }
+                }.shuffled()
                 val sentenceBefore = if (kanjiDisabled) KanjiConverter.toKana(rawBefore) else rawBefore
                 val sentenceAfter = if (kanjiDisabled) KanjiConverter.toKana(rawAfter) else rawAfter
                 list.add(ParticleQuestion(sentenceBefore, sentenceAfter, correctParticle, translation, bangla, explanation, options))
