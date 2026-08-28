@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.momin.japanesestudyappn5.data.model.FuriganaParser
 import com.momin.japanesestudyappn5.data.model.FuriganaSegment
+import com.momin.japanesestudyappn5.util.KanjiConverter
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -30,9 +31,11 @@ fun FuriganaText(
     kanjiDisabledOverride: Boolean? = null
 ) {
     val context = LocalContext.current
-    val isKanjiDisabled = remember(kanjiDisabledOverride) {
-        kanjiDisabledOverride ?: context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
-            .getBoolean("disable_kanji", false)
+    val isKanjiDisabled = remember(kanjiDisabledOverride, rawText) {
+        kanjiDisabledOverride ?: run {
+            val prefs = context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
+            prefs.getBoolean("kanji_disabled", false) || prefs.getBoolean("disable_kanji", false)
+        }
     }
 
     val segments = FuriganaParser.parse(rawText)
@@ -67,7 +70,11 @@ fun FuriganaSegmentView(
     kanjiDisabled: Boolean = false
 ) {
     if (kanjiDisabled) {
-        val kanaText = if (!segment.furigana.isNullOrBlank()) segment.furigana else segment.text
+        val kanaText = if (!segment.furigana.isNullOrBlank()) {
+            segment.furigana
+        } else {
+            KanjiConverter.toKana(segment.text)
+        }
         Text(
             text = kanaText,
             fontSize = mainFontSize,

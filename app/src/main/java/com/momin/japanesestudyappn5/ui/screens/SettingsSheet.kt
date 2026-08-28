@@ -382,7 +382,10 @@ fun SettingsSheet(
                             onCheckedChange = {
                                 onKanjiDisabledToggle(it)
                                 context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
-                                    .edit().putBoolean("kanji_disabled", it).apply()
+                                    .edit()
+                                    .putBoolean("kanji_disabled", it)
+                                    .putBoolean("disable_kanji", it)
+                                    .apply()
                             }
                         )
 
