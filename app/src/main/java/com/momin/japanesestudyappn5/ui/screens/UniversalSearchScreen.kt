@@ -222,7 +222,7 @@ fun UniversalSearchScreen(
             isCommon = true,
             priority = listOf(kanji.jlptLevel ?: "N5"),
             jlptLevel = kanji.jlptLevel ?: "N5",
-            bangla = kanji.meaningsBn.joinToString(", "),
+            bangla = kanji.meaningsBn?.joinToString(", ") ?: "",
             senses = emptyList()
         )
         WordDetailBottomSheet(
@@ -254,7 +254,7 @@ private fun DictWordCard(word: JMdictEntry, onClick: () -> Unit) {
                         Text(" (${word.reading})", fontSize = 12.sp, color = MaterialTheme.colorScheme.outline)
                     }
                 }
-                val primaryMeaning = word.senses.firstOrNull()?.meanings?.joinToString(", ") ?: word.bangla
+                val primaryMeaning = word.senses.firstOrNull()?.meanings?.joinToString(", ") ?: word.bangla ?: ""
                 Text(primaryMeaning, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             IconButton(
