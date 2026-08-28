@@ -302,44 +302,177 @@ fun WordDetailBottomSheet(
     }
 
     // Kanji Detail Modal Dialog
-    if (selectedKanjiDetail != null) {
-        val k = selectedKanjiDetail!!
-        AlertDialog(
-            onDismissRequest = { selectedKanjiDetail = null },
-            title = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(k.kanji, fontSize = 36.sp, fontWeight = FontWeight.Bold, color = Color(0xFFBD1F2D))
-                    Spacer(Modifier.width(12.dp))
-                    Column {
-                        Text("KANJIDIC2 Details", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                        Text("${k.strokeCount} strokes • Grade ${k.grade ?: "-"} • ${k.jlptLevel ?: "N5"}", fontSize = 12.sp, color = Color.Gray)
+    selectedKanjiDetail?.let { kanji ->
+        KanjiDetailBottomSheet(
+            kanjiEntry = kanji,
+            dictionaryRepository = dictionaryRepository,
+            onDismiss = { selectedKanjiDetail = null },
+            appLanguage = appLanguage
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun KanjiDetailBottomSheet(
+    kanjiEntry: KanjiDicEntry,
+    dictionaryRepository: DictionaryRepository,
+    onDismiss: () -> Unit,
+    appLanguage: String = "en"
+) {
+    val context = LocalContext.current
+    var compoundWords by remember { mutableStateOf<List<JMdictEntry>>(emptyList()) }
+    var tatoebaSentences by remember { mutableStateOf<List<TatoebaSentence>>(emptyList()) }
+
+    LaunchedEffect(kanjiEntry) {
+        compoundWords = dictionaryRepository.searchWords(kanjiEntry.kanji).take(10)
+        tatoebaSentences = dictionaryRepository.searchSentences(kanjiEntry.kanji).take(5)
+    }
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
+        containerColor = MaterialTheme.colorScheme.surface
+    ) {
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp, vertical = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            // Header
+            item {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Surface(
+                            color = Color(0xFFBD1F2D).copy(alpha = 0.12f),
+                            shape = RoundedCornerShape(16.dp)
+                        ) {
+                            Text(
+                                text = kanjiEntry.kanji,
+                                fontSize = 42.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFBD1F2D),
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                            )
+                        }
+                        Spacer(Modifier.width(16.dp))
+                        Column {
+                            Text("KANJIDIC2 Entry", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                            Text(
+                                "${kanjiEntry.strokeCount} strokes • Grade ${kanjiEntry.grade ?: "-"} • ${kanjiEntry.jlptLevel ?: "N5"}",
+                                fontSize = 13.sp,
+                                color = MaterialTheme.colorScheme.outline
+                            )
+                        }
+                    }
+                    IconButton(
+                        onClick = { AudioPlayer.playTts(context, kanjiEntry.kanji) },
+                        modifier = Modifier
+                            .size(44.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.primaryContainer)
+                    ) {
+                        Text("🔊", fontSize = 22.sp)
                     }
                 }
-            },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Meanings: ${k.meanings.joinToString(", ")}", fontWeight = FontWeight.Medium, fontSize = 14.sp)
-                    if (k.onyomi.isNotEmpty()) {
-                        Text("On'yomi (音): ${k.onyomi.joinToString(", ")}", fontSize = 13.sp, color = MaterialTheme.colorScheme.primary)
+            }
+
+            // Meanings Card
+            item {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+                ) {
+                    Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text("📖 Meanings", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+                        val displayMeaning = if (appLanguage == "bn" && !kanjiEntry.meaningsBn.isNullOrEmpty()) {
+                            kanjiEntry.meaningsBn.joinToString(", ")
+                        } else {
+                            kanjiEntry.meanings.joinToString(", ")
+                        }
+                        Text(displayMeaning, fontSize = 15.sp, fontWeight = FontWeight.Medium)
                     }
-                    if (k.kunyomi.isNotEmpty()) {
-                        Text("Kun'yomi (訓): ${k.kunyomi.joinToString(", ")}", fontSize = 13.sp, color = Color(0xFF2E7D32))
-                    }
-                    if (k.examples.isNotEmpty()) {
-                        Spacer(Modifier.height(4.dp))
-                        Text("Common Words:", fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                        k.examples.forEach { ex ->
-                            Text("• ${ex.word} (${ex.reading}) - ${ex.meaning}", fontSize = 12.sp)
+                }
+            }
+
+            // Readings Card (On'yomi & Kun'yomi)
+            item {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF8E1))
+                ) {
+                    Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text("🔊 Readings", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFFE65100))
+                        if (kanjiEntry.onyomi.isNotEmpty()) {
+                            Row {
+                                Text("On'yomi (音): ", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF1565C0))
+                                Text(kanjiEntry.onyomi.joinToString("、"), fontSize = 13.sp)
+                            }
+                        }
+                        if (kanjiEntry.kunyomi.isNotEmpty()) {
+                            Row {
+                                Text("Kun'yomi (訓): ", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF2E7D32))
+                                Text(kanjiEntry.kunyomi.joinToString("、"), fontSize = 13.sp)
+                            }
                         }
                     }
                 }
-            },
-            confirmButton = {
-                Button(onClick = { selectedKanjiDetail = null }) {
-                    Text("Close")
+            }
+
+            // Compound Words
+            if (compoundWords.isNotEmpty()) {
+                item {
+                    Text("📚 Words containing ${kanjiEntry.kanji}", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.primary)
                 }
-            },
-            shape = RoundedCornerShape(20.dp)
-        )
+                items(compoundWords) { word ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f))
+                    ) {
+                        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(word.kanji.ifBlank { word.reading }, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                                val m = word.senses.firstOrNull()?.meanings?.joinToString(", ") ?: word.bangla ?: ""
+                                Text(m, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                            IconButton(onClick = { AudioPlayer.playTts(context, word.kanji.ifBlank { word.reading }) }) {
+                                Text("🔊", fontSize = 16.sp)
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Tatoeba Sentences
+            if (tatoebaSentences.isNotEmpty()) {
+                item {
+                    Text("💬 Example Sentences", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.primary)
+                }
+                items(tatoebaSentences) { sentence ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
+                    ) {
+                        Column(modifier = Modifier.padding(12.dp)) {
+                            Text(sentence.japanese, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Spacer(Modifier.height(4.dp))
+                            val trans = if (appLanguage == "bn" && !sentence.bangla.isNullOrBlank()) sentence.bangla else sentence.english
+                            Text(trans, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    }
+                }
+            }
+
+            item { Spacer(Modifier.height(32.dp)) }
+        }
     }
 }

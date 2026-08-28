@@ -27,6 +27,7 @@ import com.momin.japanesestudyappn5.data.model.JMdictEntry
 import com.momin.japanesestudyappn5.data.model.KanjiDicEntry
 import com.momin.japanesestudyappn5.data.repository.DefaultDictionaryRepository
 import com.momin.japanesestudyappn5.ui.components.WordDetailBottomSheet
+import com.momin.japanesestudyappn5.ui.components.KanjiDetailBottomSheet
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -196,7 +197,22 @@ fun UniversalSearchScreen(
                         is SearchResult.Vocab -> VocabSearchCard(result.item, appLanguage)
                         is SearchResult.Grammar -> GrammarSearchCard(result.lesson)
                         is SearchResult.DictKanji -> DictKanjiCard(result.kanji) { selectedDictKanji = result.kanji }
-                        is SearchResult.Kanji -> KanjiSearchCard(result.item)
+                        is SearchResult.Kanji -> KanjiSearchCard(result.item) {
+                            val kEntry = KanjiDicEntry(
+                                kanji = result.item.kanji,
+                                onyomi = result.item.on.split("、", ",").map { s -> s.trim() }.filter { s -> s.isNotEmpty() },
+                                kunyomi = result.item.kun.split("、", ",").map { s -> s.trim() }.filter { s -> s.isNotEmpty() },
+                                nanori = emptyList(),
+                                meanings = listOf(result.item.meanings),
+                                meaningsBn = if (result.item.meaningsBangla.isNotEmpty()) listOf(result.item.meaningsBangla) else emptyList(),
+                                jlptLevel = "N5",
+                                grade = 1,
+                                strokeCount = result.item.strokeCount,
+                                radical = result.item.kanji,
+                                examples = emptyList()
+                            )
+                            selectedDictKanji = kEntry
+                        }
                     }
                 }
             }
@@ -213,20 +229,8 @@ fun UniversalSearchScreen(
     }
 
     selectedDictKanji?.let { kanji ->
-        val dummyEntry = JMdictEntry(
-            id = "kanji_${kanji.kanji}",
-            kanji = kanji.kanji,
-            reading = kanji.onyomi.firstOrNull() ?: kanji.kunyomi.firstOrNull() ?: kanji.kanji,
-            furigana = kanji.kanji,
-            romaji = kanji.kanji,
-            isCommon = true,
-            priority = listOf(kanji.jlptLevel ?: "N5"),
-            jlptLevel = kanji.jlptLevel ?: "N5",
-            bangla = kanji.meaningsBn?.joinToString(", ") ?: "",
-            senses = emptyList()
-        )
-        WordDetailBottomSheet(
-            entry = dummyEntry,
+        KanjiDetailBottomSheet(
+            kanjiEntry = kanji,
             dictionaryRepository = dictRepository,
             onDismiss = { selectedDictKanji = null },
             appLanguage = appLanguage
@@ -363,11 +367,11 @@ private fun GrammarSearchCard(lesson: GrammarLesson) {
 }
 
 @Composable
-private fun KanjiSearchCard(item: KanjiItem) {
+private fun KanjiSearchCard(item: KanjiItem, onClick: () -> Unit) {
     Card(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0F5)),
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth().clickable { onClick() }
     ) {
         Row(
             modifier = Modifier.padding(12.dp),

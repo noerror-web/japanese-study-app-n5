@@ -289,45 +289,13 @@ fun DictionaryScreen(
         )
     }
 
-    // Kanji Detail Modal Dialog
-    if (selectedKanjiDialog != null) {
-        val k = selectedKanjiDialog!!
-        AlertDialog(
-            onDismissRequest = { selectedKanjiDialog = null },
-            title = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(k.kanji, fontSize = 40.sp, fontWeight = FontWeight.Bold, color = Color(0xFFBD1F2D))
-                    Spacer(Modifier.width(12.dp))
-                    Column {
-                        Text("KANJIDIC2 Entry", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                        Text("${k.strokeCount} strokes • Grade ${k.grade ?: "-"} • ${k.jlptLevel ?: "N5"}", fontSize = 12.sp, color = Color.Gray)
-                    }
-                }
-            },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Meanings: ${k.meanings.joinToString(", ")}", fontWeight = FontWeight.Medium, fontSize = 14.sp)
-                    if (k.onyomi.isNotEmpty()) {
-                        Text("On'yomi (音): ${k.onyomi.joinToString(", ")}", fontSize = 13.sp, color = MaterialTheme.colorScheme.primary)
-                    }
-                    if (k.kunyomi.isNotEmpty()) {
-                        Text("Kun'yomi (訓): ${k.kunyomi.joinToString(", ")}", fontSize = 13.sp, color = Color(0xFF2E7D32))
-                    }
-                    if (k.examples.isNotEmpty()) {
-                        Spacer(Modifier.height(4.dp))
-                        Text("Examples:", fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                        k.examples.forEach { ex ->
-                            Text("• ${ex.word} (${ex.reading}) - ${ex.meaning}", fontSize = 12.sp)
-                        }
-                    }
-                }
-            },
-            confirmButton = {
-                Button(onClick = { selectedKanjiDialog = null }) {
-                    Text("Close")
-                }
-            },
-            shape = RoundedCornerShape(20.dp)
+    // Kanji Detail Modal Sheet
+    selectedKanjiDialog?.let { kanji ->
+        com.momin.japanesestudyappn5.ui.components.KanjiDetailBottomSheet(
+            kanjiEntry = kanji,
+            dictionaryRepository = dictionaryRepository,
+            onDismiss = { selectedKanjiDialog = null },
+            appLanguage = appLanguage
         )
     }
 }
