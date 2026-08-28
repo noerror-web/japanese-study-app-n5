@@ -31,11 +31,9 @@ fun FuriganaText(
     kanjiDisabledOverride: Boolean? = null
 ) {
     val context = LocalContext.current
-    val isKanjiDisabled = remember(kanjiDisabledOverride, rawText) {
-        kanjiDisabledOverride ?: run {
-            val prefs = context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
-            prefs.getBoolean("kanji_disabled", false) || prefs.getBoolean("disable_kanji", false)
-        }
+    val isKanjiDisabled = kanjiDisabledOverride ?: run {
+        val prefs = context.getSharedPreferences("japanese_study_prefs", Context.MODE_PRIVATE)
+        prefs.getBoolean("kanji_disabled", false) || prefs.getBoolean("disable_kanji", false)
     }
 
     val segments = FuriganaParser.parse(rawText)

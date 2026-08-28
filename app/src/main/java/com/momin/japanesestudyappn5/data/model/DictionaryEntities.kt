@@ -71,7 +71,7 @@ object FuriganaParser {
     fun parse(raw: String): List<FuriganaSegment> {
         if (raw.isBlank()) return emptyList()
         val segments = mutableListOf<FuriganaSegment>()
-        val regex = Regex("([^\\s\\[\\]]+)\\[([^\\]]+)\\]|([^\\s\\[\\]]+)")
+        val regex = Regex("([^\\s\\[\\]]+?)\\[([^\\]]+)\\]|([^\\[\\]]+)")
         val matches = regex.findAll(raw)
 
         for (match in matches) {
