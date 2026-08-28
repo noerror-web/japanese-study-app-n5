@@ -293,7 +293,7 @@ private fun DictWordCard(word: JMdictEntry, onClick: () -> Unit) {
                 Text(primaryMeaning, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             IconButton(
-                onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, word.kanji.ifBlank { word.reading }) },
+                onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, word.reading.ifBlank { word.kanji }) },
                 modifier = Modifier.size(36.dp)
             ) {
                 Text("🔊", fontSize = 18.sp)

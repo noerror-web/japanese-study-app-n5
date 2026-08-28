@@ -2,14 +2,14 @@ package com.momin.japanesestudyappn5.util
 
 import android.content.Context
 import android.media.MediaPlayer
+import android.os.Bundle
+import android.os.PowerManager
 import android.speech.tts.TextToSpeech
+import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import android.os.Bundle
-import android.os.PowerManager
-import android.speech.tts.UtteranceProgressListener
 import kotlinx.coroutines.suspendCancellableCoroutine
 import java.io.IOException
 import java.util.Locale
@@ -24,6 +24,22 @@ object AudioPlayer {
     var isJapaneseSupported by mutableStateOf(true)
         internal set
     var showTtsAlert by mutableStateOf(false)
+
+    /**
+     * Sanitizes Japanese text for TTS engines by extracting furigana from bracket notation
+     * (e.g., "私[わたし]" -> "わたし") and converting remaining Kanji into pure Kana.
+     */
+    fun cleanTextForJapaneseTts(raw: String): String {
+        if (raw.isBlank()) return ""
+        // 1. Extract furigana reading from bracket notation like 私[わたし]
+        val cleanBracket = raw.replace(Regex("([^\\s\\[\\]]+?)\\[([^\\]]+)\\]")) { matchResult ->
+            matchResult.groupValues[2]
+        }
+        // 2. Remove isolated brackets or symbols
+        val cleanSymbols = cleanBracket.replace("[", "").replace("]", "")
+        // 3. Convert any remaining Kanji to Kana using KanjiConverter
+        return KanjiConverter.toKana(cleanSymbols)
+    }
 
     fun ensureTts(context: Context) {
         if (tts == null) {
@@ -140,7 +156,8 @@ object AudioPlayer {
                 }
             }
             tts?.setSpeechRate(speed)
-            tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts_utterance_$langCode")
+            val textToSpeak = if (langCode == "ja") cleanTextForJapaneseTts(text) else text
+            tts?.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, null, "tts_utterance_$langCode")
         } else if (!isJapaneseSupported) {
             showTtsAlert = true
         }
@@ -177,6 +194,7 @@ object AudioPlayer {
             }
             tts?.setSpeechRate(speed)
 
+            val textToSpeak = if (langCode == "ja") cleanTextForJapaneseTts(text) else text
             val utteranceId = "utt_${System.currentTimeMillis()}_${(1000..9999).random()}"
 
             tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
@@ -203,7 +221,7 @@ object AudioPlayer {
                 putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, utteranceId)
             }
 
-            val speakRes = tts?.speak(text, TextToSpeech.QUEUE_FLUSH, params, utteranceId)
+            val speakRes = tts?.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, params, utteranceId)
             if (speakRes != TextToSpeech.SUCCESS && continuation.isActive) {
                 continuation.resume(Unit)
             }

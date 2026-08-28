@@ -350,7 +350,7 @@ private fun DictWordCard(
             }
 
             IconButton(
-                onClick = { AudioPlayer.playTts(context, if (entry.kanji.isNotBlank()) entry.kanji else entry.reading) },
+                onClick = { AudioPlayer.playTts(context, entry.reading.ifBlank { entry.kanji }) },
                 modifier = Modifier.size(36.dp)
             ) {
                 Text("🔊", fontSize = 18.sp)

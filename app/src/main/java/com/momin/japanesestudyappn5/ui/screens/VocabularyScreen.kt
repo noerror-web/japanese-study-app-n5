@@ -386,7 +386,8 @@ fun VocabularyScreen(
                                 expandedCardId = if (isExpanded) null else item.audioId
                             },
                             onPlayAudio = {
-                                AudioPlayer.playTts(context, item.japanese)
+                                val textToPlay = item.furigana.ifBlank { item.japanese }
+                                AudioPlayer.playTts(context, textToPlay)
                             },
                             onBookmarkToggle = {
                                 viewModel.toggleBookmark(item.audioId)
