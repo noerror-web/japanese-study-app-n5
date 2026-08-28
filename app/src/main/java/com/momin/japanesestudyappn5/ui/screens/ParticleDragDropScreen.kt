@@ -474,17 +474,19 @@ fun ParticleDragDropScreen(
                                     .padding(24.dp),
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
+                                FlowRow(
+                                    verticalArrangement = Arrangement.Center,
                                     horizontalArrangement = Arrangement.Center,
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
-                                    Text(
-                                        text = q.sentenceBefore,
-                                        fontSize = 26.sp,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                    Spacer(Modifier.width(8.dp))
+                                    if (q.sentenceBefore.isNotBlank()) {
+                                        Text(
+                                            text = q.sentenceBefore,
+                                            fontSize = 24.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                        Spacer(Modifier.width(6.dp))
+                                    }
 
                                     // Blank space slot
                                     val blankBg = when {
@@ -497,17 +499,24 @@ fun ParticleDragDropScreen(
                                         isAnswerCorrect == true -> Color(0xFF43A047)
                                         else -> Color(0xFFEF5350)
                                     }
+                                    val slotText = when {
+                                        selectedAnswer == null -> "?"
+                                        isAnswerCorrect == true -> selectedAnswer!!
+                                        else -> q.correctParticle
+                                    }
                                     Box(
                                         modifier = Modifier
-                                            .size(width = 60.dp, height = 48.dp)
+                                            .padding(vertical = 4.dp)
+                                            .height(44.dp)
+                                            .padding(horizontal = 10.dp)
                                             .clip(RoundedCornerShape(12.dp))
                                             .background(blankBg)
                                             .border(BorderStroke(2.dp, blankBorderColor), RoundedCornerShape(12.dp)),
                                         contentAlignment = Alignment.Center
                                     ) {
                                         Text(
-                                            text = selectedAnswer ?: "?",
-                                            fontSize = 22.sp,
+                                            text = slotText,
+                                            fontSize = 20.sp,
                                             fontWeight = FontWeight.ExtraBold,
                                             color = when {
                                                 selectedAnswer == null -> MaterialTheme.colorScheme.onPrimaryContainer
@@ -517,12 +526,14 @@ fun ParticleDragDropScreen(
                                         )
                                     }
 
-                                    Spacer(Modifier.width(8.dp))
-                                    Text(
-                                        text = q.sentenceAfter,
-                                        fontSize = 26.sp,
-                                        fontWeight = FontWeight.Bold
-                                    )
+                                    if (q.sentenceAfter.isNotBlank()) {
+                                        Spacer(Modifier.width(6.dp))
+                                        Text(
+                                            text = q.sentenceAfter,
+                                            fontSize = 24.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    }
                                 }
 
                                 Spacer(Modifier.height(20.dp))
@@ -553,15 +564,19 @@ fun ParticleDragDropScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             q.options.forEach { option ->
-                                val optionSelected = selectedAnswer == option
+                                val isUserChoice = selectedAnswer == option
+                                val isCorrectOption = option == q.correctParticle
+
                                 val optionBg = when {
-                                    !optionSelected -> MaterialTheme.colorScheme.surface
-                                    isAnswerCorrect == true -> Color(0xFF43A047)
-                                    else -> Color(0xFFEF5350)
+                                    selectedAnswer == null -> MaterialTheme.colorScheme.surface
+                                    isCorrectOption -> Color(0xFF43A047)
+                                    isUserChoice -> Color(0xFFEF5350)
+                                    else -> MaterialTheme.colorScheme.surface.copy(alpha = 0.4f)
                                 }
                                 val optionTextColor = when {
-                                    !optionSelected -> MaterialTheme.colorScheme.primary
-                                    else -> Color.White
+                                    selectedAnswer == null -> MaterialTheme.colorScheme.primary
+                                    isCorrectOption || isUserChoice -> Color.White
+                                    else -> MaterialTheme.colorScheme.outline
                                 }
 
                                 Box(
@@ -573,9 +588,8 @@ fun ParticleDragDropScreen(
                                         .border(
                                             BorderStroke(
                                                 2.dp,
-                                                if (optionSelected) Color.Transparent else MaterialTheme.colorScheme.primary.copy(
-                                                    alpha = 0.3f
-                                                )
+                                                if (selectedAnswer != null && (isCorrectOption || isUserChoice)) Color.Transparent
+                                                else MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
                                             ), CircleShape
                                         )
                                         .clickable(enabled = selectedAnswer == null) {
@@ -588,12 +602,8 @@ fun ParticleDragDropScreen(
                                             } else {
                                                 haptic.performHapticFeedback(HapticFeedbackType.Reject)
                                             }
-                                            AudioPlayer.speakJapanese(
-                                                q.sentenceBefore.replace(" ", "") + option + q.sentenceAfter.replace(
-                                                    " ",
-                                                    ""
-                                                )
-                                            )
+                                            val correctFullSentence = q.sentenceBefore.replace(" ", "") + q.correctParticle + q.sentenceAfter.replace(" ", "")
+                                            AudioPlayer.speakJapanese(correctFullSentence)
                                         },
                                     contentAlignment = Alignment.Center
                                 ) {
