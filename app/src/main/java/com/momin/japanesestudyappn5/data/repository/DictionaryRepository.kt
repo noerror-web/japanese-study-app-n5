@@ -129,7 +129,12 @@ class DefaultDictionaryRepository(
             }
         }
 
-        jmResults.sortedByDescending { it.isCommon }
+        jmResults.sortWith(
+            compareBy<JMdictEntry> { getJlptRank(it.jlptLevel) }
+                .thenBy { if (it.kanji.equals(q, ignoreCase = true) || it.reading.equals(q, ignoreCase = true)) 0 else 1 }
+                .thenByDescending { it.isCommon }
+        )
+        jmResults
     }
 
     override suspend fun searchKanji(query: String): List<KanjiDicEntry> = withContext(Dispatchers.IO) {
@@ -171,7 +176,23 @@ class DefaultDictionaryRepository(
             }
         }
 
+        kanjiResults.sortWith(
+            compareBy<KanjiDicEntry> { getJlptRank(it.jlptLevel) }
+                .thenBy { if (it.kanji == q) 0 else 1 }
+        )
         kanjiResults
+    }
+
+    private fun getJlptRank(jlptLevel: String?): Int {
+        val level = jlptLevel?.uppercase()?.trim() ?: ""
+        return when {
+            level.contains("N5") -> 1
+            level.contains("N4") -> 2
+            level.contains("N3") -> 3
+            level.contains("N2") -> 4
+            level.contains("N1") -> 5
+            else -> 6
+        }
     }
 
     override suspend fun searchSentences(query: String): List<TatoebaSentence> = withContext(Dispatchers.IO) {

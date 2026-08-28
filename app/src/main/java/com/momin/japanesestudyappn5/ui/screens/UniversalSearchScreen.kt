@@ -96,11 +96,25 @@ fun UniversalSearchScreen(
     }
 
     val results: List<SearchResult> = remember(query, allVocab, allGrammar, allKanji, dictWordResults, dictKanjiResults) {
+        fun getJlptRank(level: String?): Int {
+            val l = level?.uppercase()?.trim() ?: ""
+            return when {
+                l.contains("N5") -> 1
+                l.contains("N4") -> 2
+                l.contains("N3") -> 3
+                l.contains("N2") -> 4
+                l.contains("N1") -> 5
+                else -> 6
+            }
+        }
+
         if (query.trim().length < 2) emptyList()
         else {
             val q = query.trim()
 
-            val dWords = dictWordResults.map { SearchResult.DictWord(it) }
+            val dWords = dictWordResults
+                .sortedWith(compareBy<JMdictEntry> { getJlptRank(it.jlptLevel) }.thenByDescending { it.isCommon })
+                .map { SearchResult.DictWord(it) }
 
             val vocabResults = allVocab
                 .filter {
@@ -118,7 +132,9 @@ fun UniversalSearchScreen(
                 .take(5)
                 .map { SearchResult.Grammar(it) }
 
-            val dKanji = dictKanjiResults.map { SearchResult.DictKanji(it) }
+            val dKanji = dictKanjiResults
+                .sortedWith(compareBy<KanjiDicEntry> { getJlptRank(it.jlptLevel) })
+                .map { SearchResult.DictKanji(it) }
 
             val kanjiResults = allKanji
                 .filter {
@@ -130,7 +146,22 @@ fun UniversalSearchScreen(
                 .take(5)
                 .map { SearchResult.Kanji(it) }
 
-            dWords + vocabResults + grammarResults + dKanji + kanjiResults
+            val allList = mutableListOf<SearchResult>()
+            allList.addAll(dWords)
+            allList.addAll(vocabResults)
+            allList.addAll(dKanji)
+            allList.addAll(kanjiResults)
+            allList.addAll(grammarResults)
+
+            allList.sortedWith(compareBy { item ->
+                when (item) {
+                    is SearchResult.DictWord -> getJlptRank(item.word.jlptLevel)
+                    is SearchResult.Vocab -> 1 // App core N5 vocabulary
+                    is SearchResult.DictKanji -> getJlptRank(item.kanji.jlptLevel)
+                    is SearchResult.Kanji -> 1 // App core N5 kanji
+                    is SearchResult.Grammar -> 1 // N5 Grammar
+                }
+            })
         }
     }
 
@@ -204,10 +235,10 @@ fun UniversalSearchScreen(
                                 kunyomi = result.item.kun.split("、", ",").map { s -> s.trim() }.filter { s -> s.isNotEmpty() },
                                 nanori = emptyList(),
                                 meanings = listOf(result.item.meanings),
-                                meaningsBn = if (result.item.meaningsBangla.isNotEmpty()) listOf(result.item.meaningsBangla) else emptyList(),
+                                meaningsBn = emptyList(),
                                 jlptLevel = "N5",
-                                grade = 1,
-                                strokeCount = result.item.strokeCount,
+                                grade = result.item.grade,
+                                strokeCount = result.item.strokes,
                                 radical = result.item.kanji,
                                 examples = emptyList()
                             )

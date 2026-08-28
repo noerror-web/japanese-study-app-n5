@@ -74,6 +74,18 @@ fun DictionaryScreen(
         }
     }
 
+    fun getJlptRank(jlptLevel: String?): Int {
+        val level = jlptLevel?.uppercase()?.trim() ?: ""
+        return when {
+            level.contains("N5") -> 1
+            level.contains("N4") -> 2
+            level.contains("N3") -> 3
+            level.contains("N2") -> 4
+            level.contains("N1") -> 5
+            else -> 6
+        }
+    }
+
     val combinedResults: List<DictSearchResult> = remember(selectedFilterIndex, wordsResults, kanjiResults, sentenceResults) {
         when (selectedFilterIndex) {
             1 -> wordsResults.map { DictSearchResult.Word(it) }
@@ -81,10 +93,16 @@ fun DictionaryScreen(
             3 -> sentenceResults.map { DictSearchResult.Sentence(it) }
             else -> {
                 val list = mutableListOf<DictSearchResult>()
-                list.addAll(kanjiResults.map { DictSearchResult.Kanji(it) })
                 list.addAll(wordsResults.map { DictSearchResult.Word(it) })
+                list.addAll(kanjiResults.map { DictSearchResult.Kanji(it) })
                 list.addAll(sentenceResults.map { DictSearchResult.Sentence(it) })
-                list
+                list.sortedWith(compareBy<DictSearchResult> { item ->
+                    when (item) {
+                        is DictSearchResult.Word -> getJlptRank(item.entry.jlptLevel)
+                        is DictSearchResult.Kanji -> getJlptRank(item.entry.jlptLevel)
+                        is DictSearchResult.Sentence -> 7
+                    }
+                })
             }
         }
     }
