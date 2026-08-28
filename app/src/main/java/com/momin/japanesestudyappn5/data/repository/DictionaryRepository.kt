@@ -89,6 +89,7 @@ class DefaultDictionaryRepository(
         val jmResults = (jmdictList ?: emptyList()).filter { entry ->
             entry.kanji.contains(q, ignoreCase = true) ||
             entry.reading.contains(q, ignoreCase = true) ||
+            entry.furigana.contains(q, ignoreCase = true) ||
             entry.romaji.contains(q, ignoreCase = true) ||
             entry.senses.any { sense -> sense.meanings.any { m -> m.contains(q, ignoreCase = true) } } ||
             (entry.bangla != null && entry.bangla.contains(q, ignoreCase = true))
