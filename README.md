@@ -48,7 +48,7 @@ A state-of-the-art, feature-packed Android application designed for **JLPT N5–
 
 Get the pre-built Release APK directly from GitHub:
 
-📦 **[Download JapaneseStudyApp-v2.0-release.apk](https://raw.githubusercontent.com/noerror-web/japanese-study-app-n5/master/release/JapaneseStudyApp-v2.0-release.apk)**
+📦 **[Download JapaneseStudyApp-v2.0-release.apk](https://github.com/noerror-web/japanese-study-app-n5/releases/download/v2.0/JapaneseStudyApp-v2.0-release.apk)**
 
 1. Download `JapaneseStudyApp-v2.0-release.apk` onto your Android device.
 2. Enable *"Install from Unknown Sources"* if prompted.
