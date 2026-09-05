@@ -40,8 +40,8 @@ object AIGenerator {
             try {
                 val modelName = when (attempt) {
                     0 -> "gemini-3.6-flash"
-                    1 -> "gemini-2.5-flash"
-                    else -> "gemini-2.5-pro"
+                    1 -> "gemini-3.6-flash"
+                    else -> "gemini-3.1-pro-preview"
                 }
                 val url = URL("https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$resolvedApiKey")
                 conn = url.openConnection() as HttpURLConnection
