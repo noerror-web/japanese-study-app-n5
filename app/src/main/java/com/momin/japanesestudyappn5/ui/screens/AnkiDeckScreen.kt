@@ -534,7 +534,42 @@ fun AnkiDeckScreen(
                                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                                     if (rotation <= 90f) {
                                         // Front side (Page 1)
-                                        if (!showMeaningFirst) {
+                                        if (item.audioId.startsWith("kanji_")) {
+                                            // ⛩️ Kanji Flashcard Front: ONLY Kanji character
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                verticalArrangement = Arrangement.Center,
+                                                modifier = Modifier.padding(24.dp)
+                                            ) {
+                                                Surface(
+                                                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f),
+                                                    shape = RoundedCornerShape(8.dp),
+                                                    modifier = Modifier.padding(bottom = 24.dp)
+                                                ) {
+                                                    Text(
+                                                        "⛩️ Kanji Flashcard",
+                                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                                                        fontSize = 12.sp,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = MaterialTheme.colorScheme.primary
+                                                    )
+                                                }
+                                                Text(
+                                                    text = item.japanese,
+                                                    fontSize = 110.sp,
+                                                    fontWeight = FontWeight.ExtraBold,
+                                                    color = MaterialTheme.colorScheme.onSurface,
+                                                    textAlign = TextAlign.Center
+                                                )
+                                                Spacer(Modifier.height(28.dp))
+                                                Text(
+                                                    text = "Tap card to reveal readings & details",
+                                                    fontSize = 12.sp,
+                                                    color = MaterialTheme.colorScheme.outline,
+                                                    fontWeight = FontWeight.Medium
+                                                )
+                                            }
+                                        } else if (!showMeaningFirst) {
                                             // Standard Mode: Japanese on Front Page
                                             Column(
                                                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -678,7 +713,88 @@ fun AnkiDeckScreen(
                                         }
                                     } else {
                                         // Back side (Page 2)
-                                        if (!showMeaningFirst) {
+                                        if (item.audioId.startsWith("kanji_")) {
+                                            // ⛩️ Kanji Flashcard Back: All Details (Readings, Meanings, Examples, Audio)
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                verticalArrangement = Arrangement.Center,
+                                                modifier = Modifier
+                                                    .padding(20.dp)
+                                                    .graphicsLayer { rotationY = 180f }
+                                            ) {
+                                                Text(
+                                                    text = item.japanese,
+                                                    fontSize = 40.sp,
+                                                    fontWeight = FontWeight.ExtraBold,
+                                                    color = MaterialTheme.colorScheme.primary
+                                                )
+                                                Spacer(Modifier.height(6.dp))
+                                                Surface(
+                                                    color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f),
+                                                    shape = RoundedCornerShape(12.dp)
+                                                ) {
+                                                    Text(
+                                                        text = item.furigana,
+                                                        fontSize = 17.sp,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = MaterialTheme.colorScheme.secondary,
+                                                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)
+                                                    )
+                                                }
+                                                Spacer(Modifier.height(12.dp))
+                                                if (item.bangla.isNotBlank()) {
+                                                    Text(
+                                                        text = item.bangla,
+                                                        fontSize = 18.sp,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = Color(0xFF1E88E5),
+                                                        textAlign = TextAlign.Center
+                                                    )
+                                                    Spacer(Modifier.height(6.dp))
+                                                }
+                                                if (item.english.isNotBlank()) {
+                                                    Text(
+                                                        text = item.english,
+                                                        fontSize = 13.sp,
+                                                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.85f),
+                                                        textAlign = TextAlign.Center,
+                                                        modifier = Modifier.padding(horizontal = 8.dp)
+                                                    )
+                                                }
+                                                Spacer(Modifier.height(16.dp))
+                                                Row(
+                                                    horizontalArrangement = Arrangement.Center,
+                                                    verticalAlignment = Alignment.CenterVertically
+                                                ) {
+                                                    IconButton(
+                                                        onClick = {
+                                                            AudioPlayer.playTts(context, item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } })
+                                                        },
+                                                        modifier = Modifier
+                                                            .size(48.dp)
+                                                            .clip(RoundedCornerShape(12.dp))
+                                                            .background(MaterialTheme.colorScheme.primaryContainer)
+                                                    ) {
+                                                        Icon(
+                                                            imageVector = Icons.Default.PlayArrow,
+                                                            contentDescription = "Play Audio",
+                                                            tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                                                            modifier = Modifier.size(24.dp)
+                                                        )
+                                                    }
+                                                    Spacer(Modifier.width(16.dp))
+                                                    IconButton(
+                                                        onClick = { shadowingVocabItem = item },
+                                                        modifier = Modifier
+                                                            .size(48.dp)
+                                                            .clip(RoundedCornerShape(12.dp))
+                                                            .background(MaterialTheme.colorScheme.secondaryContainer)
+                                                    ) {
+                                                        Text("🎙️", fontSize = 20.sp)
+                                                    }
+                                                }
+                                            }
+                                        } else if (!showMeaningFirst) {
                                             // Standard Mode: Meaning on Back Page
                                             Column(
                                                 horizontalAlignment = Alignment.CenterHorizontally,
