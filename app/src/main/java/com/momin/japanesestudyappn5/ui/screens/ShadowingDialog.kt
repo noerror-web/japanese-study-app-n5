@@ -237,9 +237,9 @@ fun ShadowingDialog(
                     }
                 }
 
-                PitchAccentContour(
+                com.momin.japanesestudyappn5.ui.components.PitchAccentView(
+                    japanese = word,
                     furigana = furigana.ifBlank { word },
-                    word = word,
                     modifier = Modifier.padding(horizontal = 8.dp)
                 )
 
@@ -437,6 +437,30 @@ fun ShadowingDialog(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     textAlign = TextAlign.Center
                                 )
+                                Spacer(Modifier.height(8.dp))
+                                val targetMorae = com.momin.japanesestudyappn5.util.PitchAccentHelper.extractMorae(furigana.ifBlank { word })
+                                if (targetMorae.isNotEmpty()) {
+                                    Row(
+                                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        targetMorae.forEach { mora ->
+                                            val isMatched = transcribedText.contains(mora) || transcribedText.contains(word) || userSpeechMatch >= 85
+                                            Surface(
+                                                shape = RoundedCornerShape(6.dp),
+                                                color = if (isMatched) Color(0xFFC8E6C9) else Color(0xFFFFCDD2)
+                                            ) {
+                                                Text(
+                                                    text = mora,
+                                                    fontSize = 11.sp,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = if (isMatched) Color(0xFF1B5E20) else Color(0xFFB71C1C),
+                                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                                )
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

@@ -352,6 +352,65 @@ fun AIChatScreen(onBack: () -> Unit) {
                 .padding(innerPadding)
                 .background(MaterialTheme.colorScheme.background)
         ) {
+            var selectedKeigoLevel by remember { mutableStateOf("Teineigo (Polite)") }
+            val keigoLevels = listOf("Casual (タメ口)", "Teineigo (Polite)", "Sonkeigo (Honorific)", "Kenjougo (Humble)")
+
+            // --- Keigo / Politeness Filter Bar ---
+            Surface(
+                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp, vertical = 6.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    androidx.compose.foundation.lazy.LazyRow(
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        items(keigoLevels.size) { idx ->
+                            val level = keigoLevels[idx]
+                            FilterChip(
+                                selected = selectedKeigoLevel == level,
+                                onClick = { selectedKeigoLevel = level },
+                                label = { Text(level, fontSize = 10.sp, fontWeight = FontWeight.Bold) },
+                                modifier = Modifier.height(26.dp)
+                            )
+                        }
+                    }
+
+                    Spacer(Modifier.width(8.dp))
+
+                    // AI Weakness Quiz Button
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = Color(0xFFE8F5E9),
+                        modifier = Modifier.clickable {
+                            if (!isGenerating && apiKey.isNotBlank()) {
+                                isGenerating = true
+                                scope.launch {
+                                    val weakKeys = prefs.all.keys.filter { it.startsWith("weak_") }.take(5)
+                                    val prompt = "Generate a 3-question N5 practice quiz on weak Japanese words ($weakKeys). Provide question, 4 choices, and answer index."
+                                    val reply = AIGenerator.generateChatResponse(apiKey, emptyList(), prompt, "You are a Japanese quiz generator.", false)
+                                    messages = messages + ChatMessage("ai", reply ?: "Could not generate practice quiz.")
+                                    isGenerating = false
+                                }
+                            }
+                        }
+                    ) {
+                        Text(
+                            text = "🎯 Weakness Quiz",
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = Color(0xFF2E7D32),
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        )
+                    }
+                }
+            }
             val scenario = selectedScenario!!
             val allGoalsMet = completedGoals.size == scenario.goals.size
 

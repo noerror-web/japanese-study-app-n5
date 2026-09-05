@@ -128,7 +128,8 @@ fun VocabularyScreen(
                 val item = filteredList[listeningIndex]
 
                 // Step 1: Speak Japanese word and WAIT until speech completes 100%
-                AudioPlayer.speakTextAndWait(context, item.japanese, "ja")
+                val jpAudioText = item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } }
+                AudioPlayer.speakTextAndWait(context, jpAudioText, "ja")
 
                 // Step 2: Exact 2 seconds pause for user to think of the meaning
                 delay(2000L)
@@ -386,7 +387,7 @@ fun VocabularyScreen(
                                 expandedCardId = if (isExpanded) null else item.audioId
                             },
                             onPlayAudio = {
-                                val textToPlay = item.furigana.ifBlank { item.japanese }
+                                val textToPlay = item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } }
                                 AudioPlayer.playTts(context, textToPlay)
                             },
                             onBookmarkToggle = {
@@ -837,6 +838,12 @@ fun VocabRow(
                 }
             }
 
+            Spacer(modifier = Modifier.height(8.dp))
+            com.momin.japanesestudyappn5.ui.components.PitchAccentView(
+                japanese = item.japanese,
+                furigana = item.furigana,
+                compact = true
+            )
             Spacer(modifier = Modifier.height(10.dp))
 
             // --- Row 3: Practice Buttons ---

@@ -263,20 +263,24 @@ fun KanaTraceScreen(
                     }
                 }
 
-                // Stroke count badge
+                // Stroke count & accuracy evaluation badge
+                val expectedStrokes = svgPaths.size
                 if (strokes.isNotEmpty()) {
+                    val isMatch = expectedStrokes == 0 || strokes.size == expectedStrokes
                     Surface(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
                             .padding(12.dp),
-                        shape = RoundedCornerShape(8.dp),
-                        color = MaterialTheme.colorScheme.primaryContainer
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (isMatch) Color(0xFFE8F5E9) else Color(0xFFFFF3E0),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, if (isMatch) Color(0xFF43A047) else Color(0xFFFF9800))
                     ) {
                         Text(
-                            "✏️ ${strokes.size}",
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.Bold
+                            text = if (isMatch) "⭐⭐⭐ Perfect! (${strokes.size} strokes)" else "✏️ ${strokes.size} / ${if (expectedStrokes > 0) expectedStrokes else "?"} strokes",
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = if (isMatch) Color(0xFF1B5E20) else Color(0xFFE65100)
                         )
                     }
                 }

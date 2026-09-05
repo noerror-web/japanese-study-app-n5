@@ -42,6 +42,7 @@ fun AnkiDeckScreen(
     var fullList by remember { mutableStateOf<List<VocabItem>>(emptyList()) }
     var selectedDeckType by remember { mutableStateOf("bookmarks") }
     var selectedLesson by remember { mutableIntStateOf(1) }
+    var selectedKanjiRange by remember { mutableStateOf("1-10") }
     var shadowingVocabItem by remember { mutableStateOf<VocabItem?>(null) }
     val haptic = LocalHapticFeedback.current
 
@@ -85,6 +86,14 @@ fun AnkiDeckScreen(
     fun startDeck() {
         val bookmarks = prefs.getStringSet("bookmarked_vocab", emptySet()) ?: emptySet()
         val cards = when (selectedDeckType) {
+            "srs_due" -> {
+                val now = System.currentTimeMillis()
+                val dueList = fullList.filter { item ->
+                    val srs = com.momin.japanesestudyappn5.util.SrsEngine.loadSrsData(prefs, item.audioId)
+                    srs.nextDueDateMillis <= now || srs.repetitions == 0
+                }
+                if (dueList.isEmpty()) fullList.shuffled().take(10) else dueList
+            }
             "weak" -> {
                 // Top 15 words marked Again most often
                 fullList
@@ -94,15 +103,31 @@ fun AnkiDeckScreen(
                     .take(15)
                     .map { (item, _) -> item }
             }
-            "lesson" -> fullList.filter { it.lesson == selectedLesson }
+            "lesson" -> fullList.filter { it.lesson == selectedLesson && !it.audioId.startsWith("kanji_") }
+            "kanji" -> {
+                val kanjiList = fullList.filter { it.audioId.startsWith("kanji_") }
+                if (selectedKanjiRange == "all") {
+                    kanjiList.sortedBy { it.lessonOrder ?: 0 }
+                } else {
+                    val parts = selectedKanjiRange.split("-").mapNotNull { it.toIntOrNull() }
+                    if (parts.size == 2) {
+                        val start = parts[0]
+                        val end = parts[1]
+                        kanjiList.filter { item ->
+                            val order = item.lessonOrder ?: 0
+                            order in start..end
+                        }.sortedBy { it.lessonOrder ?: 0 }
+                    } else kanjiList.sortedBy { it.lessonOrder ?: 0 }
+                }
+            }
             else -> fullList.filter { bookmarks.contains(it.audioId) }
         }
-        val shuffled = cards.shuffled()
-        studyQueue = ArrayDeque(shuffled)
+        val finalCards = if (selectedDeckType == "kanji") cards else cards.shuffled()
+        studyQueue = ArrayDeque(finalCards)
         correctCount = 0
         againCount = 0
-        totalSeen = shuffled.size
-        totalStarted = shuffled.size
+        totalSeen = finalCards.size
+        totalStarted = finalCards.size
         isFlipped = false
         isStudying = true
     }
@@ -112,7 +137,7 @@ fun AnkiDeckScreen(
 
     LaunchedEffect(isFlipped) {
         if (isFlipped && currentCard != null) {
-            AudioPlayer.playTts(context, currentCard.japanese)
+            AudioPlayer.playTts(context, currentCard.audioText.ifBlank { currentCard.furigana.ifBlank { currentCard.japanese } })
         }
     }
 
@@ -182,18 +207,23 @@ fun AnkiDeckScreen(
                             SegmentedButton(
                                 selected = selectedDeckType == "bookmarks",
                                 onClick = { selectedDeckType = "bookmarks" },
-                                shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3)
-                            ) { Text("⭐ Bookmarks", fontWeight = FontWeight.Medium) }
+                                shape = SegmentedButtonDefaults.itemShape(index = 0, count = 4)
+                            ) { Text("⭐ Bookmarks", fontWeight = FontWeight.Medium, fontSize = 11.sp) }
                             SegmentedButton(
                                 selected = selectedDeckType == "weak",
                                 onClick = { selectedDeckType = "weak" },
-                                shape = SegmentedButtonDefaults.itemShape(index = 1, count = 3)
-                            ) { Text("💪 Weak", fontWeight = FontWeight.Medium) }
+                                shape = SegmentedButtonDefaults.itemShape(index = 1, count = 4)
+                            ) { Text("💪 Weak", fontWeight = FontWeight.Medium, fontSize = 11.sp) }
                             SegmentedButton(
                                 selected = selectedDeckType == "lesson",
                                 onClick = { selectedDeckType = "lesson" },
-                                shape = SegmentedButtonDefaults.itemShape(index = 2, count = 3)
-                            ) { Text("📚 Lesson", fontWeight = FontWeight.Medium) }
+                                shape = SegmentedButtonDefaults.itemShape(index = 2, count = 4)
+                            ) { Text("📚 Lesson", fontWeight = FontWeight.Medium, fontSize = 11.sp) }
+                            SegmentedButton(
+                                selected = selectedDeckType == "kanji",
+                                onClick = { selectedDeckType = "kanji" },
+                                shape = SegmentedButtonDefaults.itemShape(index = 3, count = 4)
+                            ) { Text("⛩️ Kanji", fontWeight = FontWeight.Medium, fontSize = 11.sp) }
                         }
 
                         Spacer(modifier = Modifier.height(16.dp))
@@ -234,6 +264,26 @@ fun AnkiDeckScreen(
                         }
 
                         Spacer(modifier = Modifier.height(16.dp))
+
+                        if (selectedDeckType == "kanji") {
+                            Text("Select Kanji Group Range:", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold)
+                            Spacer(modifier = Modifier.height(8.dp))
+                            var showKanjiDropdown by remember { mutableStateOf(false) }
+                            val ranges = listOf("1-10", "11-20", "21-30", "31-40", "41-50", "51-60", "61-70", "71-80", "81-90", "91-100", "101-110", "all")
+                            Box {
+                                OutlinedButton(onClick = { showKanjiDropdown = true }) {
+                                    Text(if (selectedKanjiRange == "all") "All Kanji (1-110)" else "Kanji $selectedKanjiRange", fontWeight = FontWeight.Bold)
+                                }
+                                DropdownMenu(expanded = showKanjiDropdown, onDismissRequest = { showKanjiDropdown = false }) {
+                                    ranges.forEach { range ->
+                                        DropdownMenuItem(
+                                            text = { Text(if (range == "all") "All Kanji (1-110)" else "Kanji $range") },
+                                            onClick = { selectedKanjiRange = range; showKanjiDropdown = false }
+                                        )
+                                    }
+                                }
+                            }
+                        }
 
                         if (selectedDeckType == "lesson") {
                             Text("Select Lesson:", style = MaterialTheme.typography.bodyMedium)
@@ -494,14 +544,21 @@ fun AnkiDeckScreen(
                                                         color = MaterialTheme.colorScheme.outline,
                                                         fontWeight = FontWeight.SemiBold)
                                                 }
-                                                Spacer(Modifier.height(32.dp))
+                                                Spacer(Modifier.height(12.dp))
+                                                com.momin.japanesestudyappn5.ui.components.PitchAccentView(
+                                                    japanese = item.japanese,
+                                                    furigana = item.furigana,
+                                                    compact = true,
+                                                    modifier = Modifier.padding(horizontal = 12.dp)
+                                                )
+                                                Spacer(Modifier.height(16.dp))
                                                 Row(
                                                     horizontalArrangement = Arrangement.Center,
                                                     verticalAlignment = Alignment.CenterVertically
                                                 ) {
                                                     IconButton(
                                                         onClick = {
-                                                            AudioPlayer.playTts(context, item.japanese)
+                                                            AudioPlayer.playTts(context, item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } })
                                                         },
                                                         modifier = Modifier.size(56.dp).clip(RoundedCornerShape(12.dp))
                                                             .background(MaterialTheme.colorScheme.primaryContainer)
@@ -677,7 +734,7 @@ fun AnkiDeckScreen(
                                                 ) {
                                                     IconButton(
                                                         onClick = {
-                                                            AudioPlayer.playTts(context, item.japanese)
+                                                            AudioPlayer.playTts(context, item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } })
                                                         },
                                                         modifier = Modifier.size(56.dp).clip(RoundedCornerShape(12.dp))
                                                             .background(MaterialTheme.colorScheme.primaryContainer)
@@ -707,18 +764,25 @@ fun AnkiDeckScreen(
 
                         Spacer(modifier = Modifier.height(24.dp))
 
-                        // Answer buttons
+                        // Answer buttons (SM-2 SRS Algorithm: Again, Hard, Good, Easy)
                         if (isFlipped) {
+                            val currentSrsData = remember(item.audioId) { com.momin.japanesestudyappn5.util.SrsEngine.loadSrsData(prefs, item.audioId) }
+                            
+                            val againPreview = remember(currentSrsData) { com.momin.japanesestudyappn5.util.SrsEngine.getIntervalPreview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.AGAIN) }
+                            val hardPreview = remember(currentSrsData) { com.momin.japanesestudyappn5.util.SrsEngine.getIntervalPreview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.HARD) }
+                            val goodPreview = remember(currentSrsData) { com.momin.japanesestudyappn5.util.SrsEngine.getIntervalPreview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.GOOD) }
+                            val easyPreview = remember(currentSrsData) { com.momin.japanesestudyappn5.util.SrsEngine.getIntervalPreview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.EASY) }
+
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(10.dp)
+                                horizontalArrangement = Arrangement.spacedBy(6.dp)
                             ) {
-                                 // Again → push card to back + track weak
+                                // 1. AGAIN
                                 Button(
                                     onClick = {
                                         if (studyQueue.isNotEmpty()) {
-                                            val newAgainCount = prefs.getInt("weak_${item.audioId}", 0) + 1
-                                            prefs.edit().putInt("weak_${item.audioId}", newAgainCount).apply()
+                                            val updated = com.momin.japanesestudyappn5.util.SrsEngine.processReview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.AGAIN)
+                                            com.momin.japanesestudyappn5.util.SrsEngine.saveSrsData(prefs, updated)
                                             val temp = ArrayDeque(studyQueue)
                                             val card = temp.removeFirst()
                                             temp.addLast(card)
@@ -728,61 +792,84 @@ fun AnkiDeckScreen(
                                         }
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF5350)),
-                                    modifier = Modifier.weight(1f).height(52.dp)
+                                    modifier = Modifier.weight(1f).height(54.dp),
+                                    contentPadding = PaddingValues(horizontal = 4.dp)
                                 ) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Text("🔄", fontSize = 16.sp)
-                                        Text("Again", fontSize = 11.sp)
+                                        Text(againPreview, fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color.White.copy(alpha = 0.85f))
+                                        Text("Again", fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                     }
                                 }
 
-                                // Good → advance
+                                // 2. HARD
                                 Button(
                                     onClick = {
                                         if (studyQueue.isNotEmpty()) {
                                             haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                            val updated = com.momin.japanesestudyappn5.util.SrsEngine.processReview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.HARD)
+                                            com.momin.japanesestudyappn5.util.SrsEngine.saveSrsData(prefs, updated)
                                             val temp = ArrayDeque(studyQueue)
                                             temp.removeFirst()
                                             studyQueue = temp
                                             correctCount++
                                             isFlipped = false
-                                            prefs.edit()
-                                                .putInt("score_correct_${item.audioId}",
-                                                    prefs.getInt("score_correct_${item.audioId}", 0) + 1)
-                                                .apply()
+                                        }
+                                    },
+                                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF9800)),
+                                    modifier = Modifier.weight(1f).height(54.dp),
+                                    contentPadding = PaddingValues(horizontal = 4.dp)
+                                ) {
+                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Text(hardPreview, fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color.White.copy(alpha = 0.85f))
+                                        Text("Hard", fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                                    }
+                                }
+
+                                // 3. GOOD
+                                Button(
+                                    onClick = {
+                                        if (studyQueue.isNotEmpty()) {
+                                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                            val updated = com.momin.japanesestudyappn5.util.SrsEngine.processReview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.GOOD)
+                                            com.momin.japanesestudyappn5.util.SrsEngine.saveSrsData(prefs, updated)
+                                            val temp = ArrayDeque(studyQueue)
+                                            temp.removeFirst()
+                                            studyQueue = temp
+                                            correctCount++
+                                            isFlipped = false
                                         }
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF66BB6A)),
-                                    modifier = Modifier.weight(1f).height(52.dp)
+                                    modifier = Modifier.weight(1f).height(54.dp),
+                                    contentPadding = PaddingValues(horizontal = 4.dp)
                                 ) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Text("✅", fontSize = 16.sp)
-                                        Text("Good", fontSize = 11.sp)
+                                        Text(goodPreview, fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color.White.copy(alpha = 0.85f))
+                                        Text("Good", fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                     }
                                 }
 
-                                // Easy → advance + bonus
+                                // 4. EASY
                                 Button(
                                     onClick = {
                                         if (studyQueue.isNotEmpty()) {
                                             haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                            val updated = com.momin.japanesestudyappn5.util.SrsEngine.processReview(currentSrsData, com.momin.japanesestudyappn5.util.SrsRating.EASY)
+                                            com.momin.japanesestudyappn5.util.SrsEngine.saveSrsData(prefs, updated)
                                             val temp = ArrayDeque(studyQueue)
                                             temp.removeFirst()
                                             studyQueue = temp
                                             correctCount++
                                             isFlipped = false
-                                            prefs.edit()
-                                                .putInt("score_correct_${item.audioId}",
-                                                    prefs.getInt("score_correct_${item.audioId}", 0) + 2)
-                                                .apply()
                                         }
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF42A5F5)),
-                                    modifier = Modifier.weight(1f).height(52.dp)
+                                    modifier = Modifier.weight(1f).height(54.dp),
+                                    contentPadding = PaddingValues(horizontal = 4.dp)
                                 ) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Text("🚀", fontSize = 16.sp)
-                                        Text("Easy", fontSize = 11.sp)
+                                        Text(easyPreview, fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color.White.copy(alpha = 0.85f))
+                                        Text("Easy", fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                     }
                                 }
                             }

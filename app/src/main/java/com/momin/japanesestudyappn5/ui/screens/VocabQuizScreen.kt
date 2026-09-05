@@ -125,7 +125,9 @@ fun VocabQuizScreen(
     LaunchedEffect(selectedAnswer) {
         if (selectedAnswer != null) {
             if (mode == "en_to_jp" && currentIndex < questions.size) {
-                com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, questions[currentIndex].item.japanese)
+                val qItem = questions[currentIndex].item
+                val textToPlay = qItem.audioText.ifBlank { qItem.furigana.ifBlank { qItem.japanese } }
+                com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, textToPlay)
             }
             delay(1000)
             if (currentIndex + 1 < questions.size) {
@@ -421,7 +423,10 @@ fun VocabQuizScreen(
                                                 textAlign = TextAlign.Center
                                             )
                                             Spacer(Modifier.width(8.dp))
-                                            IconButton(onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, q.item.japanese) }) {
+                                            IconButton(onClick = {
+                                                val textToPlay = q.item.audioText.ifBlank { q.item.furigana.ifBlank { q.item.japanese } }
+                                                com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, textToPlay)
+                                            }) {
                                                  Text("🔊", fontSize = 24.sp)
                                              }
                                          }
@@ -457,7 +462,10 @@ fun VocabQuizScreen(
                                                      color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
                                                  )
                                                  Spacer(Modifier.width(6.dp))
-                                                 IconButton(onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, q.item.japanese) }) {
+                                                 IconButton(onClick = {
+                                                 val textToPlay = q.item.audioText.ifBlank { q.item.furigana.ifBlank { q.item.japanese } }
+                                                 com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, textToPlay)
+                                             }) {
                                                      Text("🔊", fontSize = 18.sp)
                                                  }
                                              }

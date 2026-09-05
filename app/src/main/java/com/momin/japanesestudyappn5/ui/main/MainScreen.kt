@@ -462,7 +462,7 @@ fun MainDashboardContent(
                             )
                         }
                         IconButton(onClick = {
-                            AudioPlayer.playTts(context, word.japanese)
+                            AudioPlayer.playTts(context, word.audioText.ifBlank { word.furigana.ifBlank { word.japanese } })
                         }) {
                             Text("🔊", fontSize = 24.sp)
                         }

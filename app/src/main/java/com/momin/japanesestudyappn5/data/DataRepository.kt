@@ -18,6 +18,7 @@ interface DataRepository {
     suspend fun getParticles(): List<com.momin.japanesestudyappn5.data.model.ParticleItem>
     suspend fun getGrammarLessons(language: String = "bn"): List<GrammarLesson>
     suspend fun getSentences(): Map<String, List<ExampleSentence>>
+    suspend fun searchDictionary(query: String, maxResults: Int = 50): List<com.momin.japanesestudyappn5.data.model.JMdictEntry>
 }
 
 class DefaultDataRepository(private val assetManager: AssetManager) : DataRepository {
@@ -161,6 +162,9 @@ class DefaultDataRepository(private val assetManager: AssetManager) : DataReposi
         }
     }
 
+    private var jmdictList: List<com.momin.japanesestudyappn5.data.model.JMdictEntry>? = null
+    private val jmdictLock = Any()
+
     override suspend fun getSentences(): Map<String, List<ExampleSentence>> = withContext(Dispatchers.IO) {
         sentencesMap ?: synchronized(sentencesLock) {
             sentencesMap ?: try {
@@ -172,4 +176,17 @@ class DefaultDataRepository(private val assetManager: AssetManager) : DataReposi
             }
         }
     }
+
+    override suspend fun searchDictionary(query: String, maxResults: Int): List<com.momin.japanesestudyappn5.data.model.JMdictEntry> = withContext(Dispatchers.IO) {
+        val entries = jmdictList ?: synchronized(jmdictLock) {
+            jmdictList ?: try {
+                val jsonString = assetManager.open("full_dictionary_data.json").bufferedReader().use { it.readText() }
+                json.decodeFromString<List<com.momin.japanesestudyappn5.data.model.JMdictEntry>>(cleanJsonString(jsonString)).also { jmdictList = it }
+            } catch (e: Exception) {
+                emptyList()
+            }
+        }
+        com.momin.japanesestudyappn5.util.SearchIndexEngine.search(entries, query, maxResults)
+    }
 }
+

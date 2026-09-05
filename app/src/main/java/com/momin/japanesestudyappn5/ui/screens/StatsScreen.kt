@@ -231,6 +231,10 @@ fun StatsScreen(
                 StatsProgressRow("Katakana Practiced", kPct, totalKatakana, practicedK, Color(0xFF7B1FA2))
             }
 
+            // SRS Memory Retention section
+            item { StatsSectionHeader("🧠 SRS Memory Retention") }
+            item { SrsAnalyticsCard(prefs, totalVocab) }
+
             // Flashcards section
             item { StatsSectionHeader("🃏 Flashcards") }
             item {
@@ -774,4 +778,95 @@ private fun RivalLeaderboard(prefs: android.content.SharedPreferences) {
 }
 
 private data class RivalEntry(val name: String, val xp: Int, val status: String)
+
+@Composable
+private fun SrsAnalyticsCard(prefs: android.content.SharedPreferences, totalVocab: Int) {
+    var learningCount by remember { mutableIntStateOf(0) }
+    var reviewCount by remember { mutableIntStateOf(0) }
+    var masteredCount by remember { mutableIntStateOf(0) }
+    var dueTodayCount by remember { mutableIntStateOf(0) }
+    var avgEaseFactor by remember { mutableFloatStateOf(2.5f) }
+
+    LaunchedEffect(Unit) {
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            val now = System.currentTimeMillis()
+            var learn = 0
+            var rev = 0
+            var mast = 0
+            var due = 0
+            var sumEf = 0f
+            var countSrs = 0
+
+            val allKeys = prefs.all
+            for ((key, value) in allKeys) {
+                if (key.startsWith("srs_card_") && value is String) {
+                    try {
+                        val json = org.json.JSONObject(value)
+                        val reps = json.optInt("reps", 0)
+                        val ef = json.optDouble("ef", 2.5).toFloat()
+                        val dueMillis = json.optLong("due", 0L)
+
+                        countSrs++
+                        sumEf += ef
+
+                        when {
+                            reps == 0 -> learn++
+                            reps in 1..2 -> rev++
+                            else -> mast++
+                        }
+
+                        if (dueMillis <= now) due++
+                    } catch (e: Exception) {}
+                }
+            }
+
+            learningCount = learn
+            reviewCount = rev
+            masteredCount = mast
+            dueTodayCount = due
+            avgEaseFactor = if (countSrs > 0) sumEf / countSrs else 2.5f
+        }
+    }
+
+    Card(
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+        modifier = Modifier.fillMaxWidth(),
+        elevation = CardDefaults.cardElevation(2.dp)
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column {
+                    Text("🧠 SuperMemo SM-2 Metrics", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                    Text("Memory retention & review scheduling", fontSize = 11.sp, color = MaterialTheme.colorScheme.outline)
+                }
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = MaterialTheme.colorScheme.primaryContainer
+                ) {
+                    Text(
+                        text = "Avg EF: ${String.format(java.util.Locale.US, "%.2f", avgEaseFactor)}",
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(14.dp))
+
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                StatsNumberCard("Learning", "$learningCount", Color(0xFFFFF3E0), Color(0xFFE65100), Modifier.weight(1f))
+                StatsNumberCard("Reviewing", "$reviewCount", Color(0xFFE8F0FE), Color(0xFF1976D2), Modifier.weight(1f))
+                StatsNumberCard("Mastered", "$masteredCount", Color(0xFFE8F5E9), Color(0xFF2E7D32), Modifier.weight(1f))
+                StatsNumberCard("Due Today", "$dueTodayCount", Color(0xFFFFEBEE), Color(0xFFC62828), Modifier.weight(1f))
+            }
+        }
+    }
+}
 

@@ -348,21 +348,47 @@ fun KanjiParticlesScreen(
 
                     Spacer(modifier = Modifier.height(12.dp))
 
-                    // Stroke order Canvas
-                    Box(
-                        modifier = Modifier
-                            .size(150.dp)
-                            .clip(RoundedCornerShape(16.dp))
-                            .background(MaterialTheme.colorScheme.surfaceVariant)
-                            .padding(8.dp),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        KanjiStrokeAnimation(
-                            svgPaths = item.svgPaths,
-                            activeColor = MaterialTheme.colorScheme.primary,
-                            baseColor = MaterialTheme.colorScheme.outlineVariant,
-                            strokeWidth = 6f
-                        )
+                    var isPlayingStrokes by remember { mutableStateOf(true) }
+                    var manualStrokeIndex by remember { mutableIntStateOf(0) }
+
+                    // Stroke order Canvas with interactive controls
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Box(
+                            modifier = Modifier
+                                .size(160.dp)
+                                .clip(RoundedCornerShape(16.dp))
+                                .background(MaterialTheme.colorScheme.surfaceVariant)
+                                .padding(8.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            KanjiStrokeAnimation(
+                                svgPaths = item.svgPaths,
+                                activeColor = MaterialTheme.colorScheme.primary,
+                                baseColor = MaterialTheme.colorScheme.outlineVariant,
+                                strokeWidth = 6f
+                            )
+                        }
+
+                        if (item.svgPaths.isNotEmpty()) {
+                            Spacer(Modifier.height(8.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = MaterialTheme.colorScheme.primaryContainer
+                                ) {
+                                    Text(
+                                        text = "✏️ ${item.strokes} Strokes",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                                    )
+                                }
+                            }
+                        }
                     }
 
                     Spacer(modifier = Modifier.height(12.dp))

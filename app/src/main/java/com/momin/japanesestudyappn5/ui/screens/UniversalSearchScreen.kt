@@ -358,7 +358,7 @@ private fun VocabSearchCard(item: VocabItem, appLanguage: String = "en") {
                 Text(displayMeaning, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             IconButton(
-                onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, item.japanese) },
+                onClick = { com.momin.japanesestudyappn5.util.AudioPlayer.playTts(context, item.audioText.ifBlank { item.furigana.ifBlank { item.japanese } }) },
                 modifier = Modifier.size(36.dp)
             ) {
                 Text("🔊", fontSize = 18.sp)

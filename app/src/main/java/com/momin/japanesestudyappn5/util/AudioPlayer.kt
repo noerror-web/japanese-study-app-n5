@@ -27,18 +27,25 @@ object AudioPlayer {
 
     /**
      * Sanitizes Japanese text for TTS engines by extracting furigana from bracket notation
-     * (e.g., "私[わたし]" -> "わたし") and converting remaining Kanji into pure Kana.
+     * (e.g., "私[わたし]" -> "わたし") and cleaning non-verbal symbols.
+     * Leaves clean Japanese text for Google TTS engine to pronounce natively with proper context and pitch accent.
      */
     fun cleanTextForJapaneseTts(raw: String): String {
         if (raw.isBlank()) return ""
-        // 1. Extract furigana reading from bracket notation like 私[わたし]
-        val cleanBracket = raw.replace(Regex("([^\\s\\[\\]]+?)\\[([^\\]]+)\\]")) { matchResult ->
+        // 1. Extract furigana reading from bracket notation ONLY for Kanji/words immediately preceding brackets (e.g., "84円[えん]" -> "84えん", "私[わたし]" -> "わたし")
+        val cleanBracket = raw.replace(Regex("([\\u4E00-\\u9FAF\\u3400-\\u4DBF]+)\\[([^\\]]+)\\]")) { matchResult ->
             matchResult.groupValues[2]
         }
-        // 2. Remove isolated brackets or symbols
-        val cleanSymbols = cleanBracket.replace("[", "").replace("]", "")
-        // 3. Convert any remaining Kanji to Kana using KanjiConverter
-        return KanjiConverter.toKana(cleanSymbols)
+        // 2. Remove isolated brackets, tildes (~/～), asterisks (*), or formatting symbols
+        val cleanSymbols = cleanBracket
+            .replace("[", "").replace("]", "")
+            .replace("~", "").replace("～", "")
+            .replace("*", "")
+            .trim()
+
+        // 3. Return cleaned string directly. Google TTS engine (com.google.android.tts) natively handles Kanji & Kana
+        // with context and proper pitch accents without relying on simplistic static dictionary converters.
+        return cleanSymbols
     }
 
     fun ensureTts(context: Context) {
