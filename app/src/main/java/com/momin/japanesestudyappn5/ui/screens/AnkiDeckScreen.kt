@@ -302,6 +302,32 @@ fun AnkiDeckScreen(
                                     }
                                 }
                             }
+                        } else if (selectedDeckType == "kanji") {
+                            val kanjiCount = remember(fullList, selectedKanjiRange) {
+                                val kanjiList = fullList.filter { it.audioId.startsWith("kanji_") }
+                                if (selectedKanjiRange == "all") kanjiList.size
+                                else {
+                                    val parts = selectedKanjiRange.split("-").mapNotNull { it.toIntOrNull() }
+                                    if (parts.size == 2) kanjiList.count { (it.lessonOrder ?: 0) in parts[0]..parts[1] }
+                                    else kanjiList.size
+                                }
+                            }
+                            Card(
+                                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f)),
+                                shape = RoundedCornerShape(12.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(16.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text("⛩️", fontSize = 24.sp, modifier = Modifier.padding(end = 12.dp))
+                                    Column {
+                                        Text("$kanjiCount Kanji Cards (${if (selectedKanjiRange == "all") "1-110" else selectedKanjiRange})", fontWeight = FontWeight.Bold)
+                                        Text("Sequential N5 Kanji Flashcards", fontSize = 12.sp, color = MaterialTheme.colorScheme.outline)
+                                    }
+                                }
+                            }
                         } else if (selectedDeckType == "weak") {
                             val weakCount = remember(fullList) {
                                 fullList.count { prefs.getInt("weak_${it.audioId}", 0) > 0 }
@@ -353,6 +379,7 @@ fun AnkiDeckScreen(
                             onClick = { startDeck() },
                             enabled = selectedDeckType == "lesson" ||
                                     selectedDeckType == "weak" ||
+                                    selectedDeckType == "kanji" ||
                                     (prefs.getStringSet("bookmarked_vocab", emptySet())?.isNotEmpty() == true),
                             modifier = Modifier.fillMaxWidth().height(52.dp)
                         ) {
